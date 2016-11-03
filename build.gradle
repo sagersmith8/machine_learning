@@ -1,0 +1,90 @@
+/*
+=========================================================
+  Apply Plugins
+=========================================================
+ */
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+/*
+=========================================================
+Repo Info
+=========================================================
+*/
+group = 'com.ai'
+description = 'Experiment with Machine Learning techniques'
+sourceCompatibility = 1.5
+
+/*
+=========================================================
+  Create self contained jar
+=========================================================
+*/
+
+def artifactName = 'machine_learning'
+
+task generatePom << {
+    pom {
+        project {
+            artifactId = artifactName
+            name = artifactName
+        }
+    }.writeTo("$buildDir/tmp/maven/pom.xml")
+}
+
+jar {
+    baseName = artifactName
+    manifest {
+        attributes(
+                "Implementation-Title": baseName,
+                "Implementation-Version": version,
+        )
+    }
+    into("META-INF/maven/$project.group/$baseName") {
+        from "$buildDir/tmp/maven/"
+    }
+}
+
+jar.dependsOn generatePom
+
+/*
+=========================================================
+    Javadocs Generation
+=========================================================
+*/
+task docs(type: Javadoc) {
+    source = sourceSets.main.allJava
+    destinationDir = file("$project.buildDir/javadocs")
+    failOnError = false
+}
+
+task docBundle(type: Tar) {
+    baseName = artifactName
+    version = project.version
+    extension = "tar.gz"
+    classifier = "javadoc"
+    destinationDir = file("$buildDir/")
+    from(project.files("$buildDir/javadocs"))
+}
+docBundle.dependsOn docs
+
+/*
+
+/*
+=========================================================
+   Load Dependencies
+=========================================================
+*/
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile (group: 'com.github.rschmitt', name: 'dynamic-object', version: '1.6.0')
+    compile(group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3')
+    compile(group: 'org.hamcrest', name: 'hamcrest-library', version: '1.3')
+    testCompile(group: 'junit', name: 'junit', version: '4.12')
+    testCompile(group: 'org.mockito', name: 'mockito-core', version: '1.8.5')
+}
