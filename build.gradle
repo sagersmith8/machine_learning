@@ -48,6 +48,28 @@ jar {
 
 jar.dependsOn generatePom
 
+/*
+=========================================================
+    Javadocs Generation
+=========================================================
+*/
+task docs(type: Javadoc) {
+    source = sourceSets.main.allJava
+    destinationDir = file("$project.buildDir/javadocs")
+    failOnError = false
+}
+
+task docBundle(type: Tar) {
+    baseName = artifactName
+    version = project.version
+    extension = "tar.gz"
+    classifier = "javadoc"
+    destinationDir = file("$buildDir/")
+    from(project.files("$buildDir/javadocs"))
+}
+docBundle.dependsOn docs
+
+/*
 
 /*
 =========================================================
