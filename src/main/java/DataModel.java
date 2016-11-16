@@ -74,6 +74,6 @@ public class DataModel {
      * @return the data with missing values generated
      */
     private String generateMissing(String dataRow) {
-        return dataRow;
+        return dataRow.replaceAll("\\?", String.valueOf((int)(Math.random()* Integer.MAX_VALUE)));
     }
 }
