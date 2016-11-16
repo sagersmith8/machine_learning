@@ -9,6 +9,11 @@ import java.util.List;
 public class DataModel {
     private List<List<Integer>> data;
 
+    /**
+     * Creates a DataModel object from the data at the given path
+     *
+     *  @param filePath path to file
+     */
     public DataModel(String filePath) {
         try {
             List<String> dataString = Files.readAllLines(Paths.get(filePath));
