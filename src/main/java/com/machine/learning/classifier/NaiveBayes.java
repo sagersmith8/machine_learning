@@ -1,11 +1,16 @@
 package com.machine.learning.classifier;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class NaiveBayes implements Classifier {
     //Keeps track of the occurences of each class
-    private Map<String, Counter> classCount = new Map<>();
+    private Map<String, Counter> classCount = new HashMap<>();
 
     //Keeps track of the occurences of an attribute value for each class
-    private Map<String, List<Map<String, Counter>>> attributeCount = new Map<>();
+    private Map<String, List<Map<String, Counter>>> attributeCount = new HashMap<>();
 
     private int numPoints, numAttributes;
 
@@ -68,9 +73,9 @@ public class NaiveBayes implements Classifier {
 	
 	classCount.put(pointClass, new Counter());
 	
-	List<Map<String, Counter>> classAttributeCounts = new List<>();
+	List<Map<String, Counter>> classAttributeCounts = new ArrayList<>();
 	for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
-	    classAttributeCounts.add(new Map<String, Counter>());
+	    classAttributeCounts.add(new HashMap<String, Counter>());
 	}
 	
 	attributeCount.put(pointClass, classAttributeCounts);
