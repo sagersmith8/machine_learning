@@ -12,6 +12,6 @@ public class MadScientistTest {
     @Test
     public void madScientistNoOp() {
         MadScientist madScientist = new MadScientist(Collections.emptyList(), Collections.emptyList());
-        assertThat(madScientist.getResults(), is(equalTo("")));
+        assertThat(madScientist.getResults(), is(equalTo("table begin")));
     }
 }
