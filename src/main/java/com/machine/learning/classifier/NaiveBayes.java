@@ -36,7 +36,7 @@ public class NaiveBayes implements Classifier {
 	}
 	
 	for (int i = 0; i < dataPoints.size(); i++) {
-	    countPoint(dataPoint.get(i), classLabel.get(i));
+	    countPoint(dataPoints.get(i), classLabel.get(i));
 	}
     }
 
@@ -68,17 +68,17 @@ public class NaiveBayes implements Classifier {
      * @param classLabel the class to ensure
      */
     private void ensureClass(String classLabel) {
-	if (classCount.containsKey(pointClass)) {
+	if (classCount.containsKey(classLabel)) {
 	    return;
 	}
-	classCount.put(pointClass, new Counter());
+	classCount.put(classLabel, new Counter());
 	
 	List<Map<String, Counter>> classAttributeCounts = new ArrayList<>();
 	for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
 	    classAttributeCounts.add(new HashMap<String, Counter>());
 	}
 	
-	attributeCount.put(pointClass, classAttributeCounts);
+	attributeCount.put(classLabel, classAttributeCounts);
     }
 
     /**
@@ -110,18 +110,18 @@ public class NaiveBayes implements Classifier {
 	//Calculate the unnormalized probability of observing each class for the given
 	//point, using the conditional independence assumption of naive bayes
 	for (String classLabel : classCount.keySet()) {
-	    final int classCount = classCount.get(classLabel).getValue();
-	    final double unseenPoints = classCount * MISSING_POINT_RATE;
+	    final int numClassPoints = classCount.get(classLabel).getValue();
+	    final double unseenPoints = numClassPoints * MISSING_POINT_RATE;
 	    
 	    //Start with the prior probability, P(class)
-	    double prob = (double)classCount / numPoints; 
+	    double prob = (double)numClassPoints / numPoints; 
 
 	    //Factor in each conditional probability, P(attribute n = data point value | class)
 	    for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
-		String attributeValue = dataPoint.get(attrNum);
+		String attributeValue = (String)dataPoint.get(attrNum);
 		int attrCount = attributeCount.get(classLabel).get(attrNum).get(attributeValue).getValue();
 		
-		prob *= (attrCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) / (classCount + unseenPoints);
+		prob *= (attrCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) / (numClassPoints + unseenPoints);
 	    }
 
 	    //Remember only the best class and probability
@@ -136,7 +136,7 @@ public class NaiveBayes implements Classifier {
 }
 
 /* A convenience class for counting points.
- * Stores only an  integer and only supports incrementing.
+ * Stores only an integer and only supports incrementing.
  */
 class Counter {
     private int value = 0;
