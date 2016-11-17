@@ -22,7 +22,7 @@ public class MadScientist {
         for (Classifier classifier : classifiers) {
             for (DataModel dataModel : dataModels) {
                 results.putIfAbsent(classifier.getClass(), new ArrayList<>());
-                Result result = new CrossValidator(classifier, dataModel).evaluate();
+                Result result = new CrossValidator(classifier, dataModel, 10).evaluate();
                 List<Result> resList = results.get(classifier.getClass());
                 resList.add(result);
                 results.put(classifier.getClass(), resList);
