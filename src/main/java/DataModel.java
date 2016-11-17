@@ -1,35 +1,52 @@
+import com.github.rschmitt.dynamicobject.DynamicObject;
+import com.github.rschmitt.dynamicobject.Key;
 import com.google.common.primitives.Ints;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
-public class DataModel {
-    private List<List<Integer>> data;
+public interface DataModel extends DynamicObject<DataModel> {
+    @Key("data")
+    /**
+     * Setter for data
+     */
+    DataModel withData(List<List<Integer>> data);
+
+    @Key("data")
+    /**
+     * Getter for data
+     */
+    Optional<List<List<Integer>>> getData();
 
     /**
      * Creates a DataModel object from the data at the given path
      *
      *  @param filePath path to file
      */
-    public DataModel(String filePath) {
-        try {
-            List<String> dataString = Files.readAllLines(Paths.get(filePath));
-            data = preprocessData(dataString);
+    default DataModel fromFile(String filePath) {
+        try (InputStream resource = DataModel.class.getResourceAsStream(filePath)) {
+            List<String> doc = new BufferedReader(new InputStreamReader(resource, StandardCharsets.UTF_8))
+                    .lines().collect(Collectors.toList());
+            List<List<Integer>> processedData = preprocessData(doc);
+            return DynamicObject.newInstance(DataModel.class)
+                    .withData(processedData);
         } catch (java.io.IOException ex) {
             ex.printStackTrace();
         }
-    }
 
-    /**
-     * Returns the data as a list of strings after running pre-processing on it
-     *
-     * @return data after pre-processing has been done
-     */
-    public List<List<Integer>> getData() {
-        return data;
+        return DynamicObject.newInstance(DataModel.class);
     }
 
     /**
@@ -38,7 +55,7 @@ public class DataModel {
      * @param data to preprocess
      *
      */
-    private List<List<Integer>> preprocessData(List<String> data) {
+     default List<List<Integer>> preprocessData(List<String> data) {
         List<List<Integer>> dataModel = new ArrayList<List<Integer>>(data.size());
 
         for (String dataRow : data) {
@@ -59,8 +76,8 @@ public class DataModel {
      * @param toParse String to change to int []
      * @return int[] created from String
      */
-    private int[] parseString(String toParse) {
-        return Arrays.stream(toParse.split(" ")).mapToInt(Integer::parseInt).toArray();
+    default int[] parseString(String toParse) {
+        return Arrays.stream(toParse.split(",")).mapToInt(Integer::parseInt).toArray();
     }
 
     /**
@@ -68,7 +85,7 @@ public class DataModel {
      *
      * @param dataRow to discretize
      */
-    private String discretize(String dataRow) {
+    default String discretize(String dataRow) {
         return dataRow;
     }
 
@@ -78,7 +95,48 @@ public class DataModel {
      * @param dataRow to generate missing data for
      * @return the data with missing values generated
      */
-    private String generateMissing(String dataRow) {
-        return dataRow.replaceAll("\\?", String.valueOf((int)(Math.random()* Integer.MAX_VALUE)));
+    default String generateMissing(String dataRow) {
+        return dataRow.replaceAll("\\?", String.valueOf((int)(Math.random()* 10)));
+    }
+
+    /**
+     * Save file as EDN
+     *
+     * @param fileName File name to save file as
+     */
+    default void save(String fileName) {
+        String serializedData = DynamicObject.serialize(this);
+        PrintWriter pw = null;
+        try {
+            File file = new File("/edn/"+fileName);
+            file.getParentFile().mkdirs();
+            pw = new PrintWriter(file);
+            pw.write(serializedData);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (pw != null) {
+                pw.close();
+            }
+        }
+    }
+
+    /**
+     * Load file from EDN
+     *
+     * @param filepath File to load from
+     * @return datamodel read from file
+     */
+    default DataModel loadFromEdn(String filepath) {
+        try {
+            String file = Files.readAllLines(Paths.get(new File("/edn/").getAbsolutePath()+filepath)).get(0);
+            return DynamicObject.deserialize(file, DataModel.class);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            System.err.println("File does not exist");
+        }
+
+        return DynamicObject.newInstance(DataModel.class);
     }
 }
