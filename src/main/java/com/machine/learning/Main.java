@@ -38,7 +38,7 @@ public class Main {
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } finally {
-            if (pw!=null) {
+            if (pw != null) {
                 pw.close();
             }
         }
