@@ -21,7 +21,7 @@ public class CrossValidatorTest {
         CrossValidator crossValidator = new CrossValidator(
                 new ClassifierDefault(), DynamicObject.newInstance(DataModel.class), 10
         );
-        assertThat(crossValidator.evaluate(), is(equalTo(DynamicObject.newInstance(Result.class))));
+        assertThat(crossValidator.evaluate(), is(equalTo(DynamicObject.newInstance(Result.class).withResults("         "))));
     }
 
     @Test
