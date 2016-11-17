@@ -58,7 +58,7 @@ public class CrossValidator {
                 }
             }
 
-            classifier.train(trainingData, "Class Label");
+            classifier.train(trainingData, Collections.emptyList());
             result.append(classifier.classify(folds.get(i)));
             if (i != folds.size()-1) {
                 result.append(" ");
