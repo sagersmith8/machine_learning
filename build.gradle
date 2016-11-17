@@ -3,9 +3,21 @@
   Apply Plugins
 =========================================================
  */
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
+    }
+}
+
+/*
+=========================================================
+Apply plugins
+=========================================================
+*/
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'maven'
+apply plugin: 'org.springframework.boot'
 
 /*
 =========================================================
@@ -22,6 +34,10 @@ description = 'Experiment with Machine Learning techniques'
 */
 
 def artifactName = 'machine_learning'
+
+springBoot {
+    mainClass = "com.machine.learning.Main"
+}
 
 task generatePom << {
     pom {
@@ -81,6 +97,11 @@ repositories {
 }
 
 dependencies {
+    compile(group: "org.springframework.boot", name: "spring-boot-starter-web") {
+        exclude(module: "spring-boot-starter-tomcat")
+        exclude(group: "org.hibernate")
+    }
+    compile(group: 'net.sf.jopt-simple', name: 'jopt-simple', version: '5.0.1')
     compile group: 'com.google.guava', name: 'guava', version: '19.0'
     compile (group: 'com.github.rschmitt', name: 'dynamic-object', version: '1.6.0')
     compile(group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3')

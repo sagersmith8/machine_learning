@@ -20,3 +20,6 @@ build
 
 #Saved generated code
 edn/
+
+#Saved Results
+results*
