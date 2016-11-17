@@ -1,4 +1,4 @@
-package com.machine.learning;
+package com.machine.learning.model;
 
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import org.junit.AfterClass;

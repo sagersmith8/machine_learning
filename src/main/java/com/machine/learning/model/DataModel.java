@@ -1,4 +1,4 @@
-package com.machine.learning;
+package com.machine.learning.model;
 
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.github.rschmitt.dynamicobject.Key;
@@ -33,7 +33,7 @@ public interface DataModel extends DynamicObject<DataModel> {
     Optional<List<List<Integer>>> getData();
 
     /**
-     * Creates a com.machine.learning.DataModel object from the data at the given path
+     * Creates a com.machine.learning.model.DataModel object from the data at the given path
      *
      *  @param filePath path to file
      */
