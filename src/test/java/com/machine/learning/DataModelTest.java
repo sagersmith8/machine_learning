@@ -1,10 +1,11 @@
+package com.machine.learning;
+
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
@@ -66,7 +67,7 @@ public class DataModelTest {
     @AfterClass
     public static void cleanUp() {
         try {
-            deleteFileOrFolder(Paths.get(new File("/edn/").getAbsolutePath()));
+            deleteFileOrFolder(Paths.get("edn"));
         } catch (IOException ex) {
             ex.printStackTrace();
         }

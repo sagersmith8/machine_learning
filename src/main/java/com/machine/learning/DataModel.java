@@ -1,3 +1,5 @@
+package com.machine.learning;
+
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.github.rschmitt.dynamicobject.Key;
 import com.google.common.primitives.Ints;
@@ -31,12 +33,16 @@ public interface DataModel extends DynamicObject<DataModel> {
     Optional<List<List<Integer>>> getData();
 
     /**
-     * Creates a DataModel object from the data at the given path
+     * Creates a com.machine.learning.DataModel object from the data at the given path
      *
      *  @param filePath path to file
      */
     default DataModel fromFile(String filePath) {
-        try (InputStream resource = DataModel.class.getResourceAsStream(filePath)) {
+        try (InputStream resource = Thread
+                .currentThread()
+                .getContextClassLoader()
+                .getResourceAsStream(filePath)) {
+            System.out.println(resource);
             List<String> doc = new BufferedReader(new InputStreamReader(resource, StandardCharsets.UTF_8))
                     .lines().collect(Collectors.toList());
             List<List<Integer>> processedData = preprocessData(doc);
@@ -108,9 +114,11 @@ public interface DataModel extends DynamicObject<DataModel> {
         String serializedData = DynamicObject.serialize(this);
         PrintWriter pw = null;
         try {
-            File file = new File("/edn/"+fileName);
-            file.getParentFile().mkdirs();
-            pw = new PrintWriter(file);
+            File file = new File("edn");
+            if (!file.exists()) {
+                file.mkdir();
+            }
+            pw = new PrintWriter(file.getAbsolutePath()+"/"+fileName, "UTF-8");
             pw.write(serializedData);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -129,7 +137,7 @@ public interface DataModel extends DynamicObject<DataModel> {
      */
     default DataModel loadFromEdn(String filepath) {
         try {
-            String file = Files.readAllLines(Paths.get(new File("/edn/").getAbsolutePath()+filepath)).get(0);
+            String file = Files.readAllLines(Paths.get("edn/"+filepath)).get(0);
             return DynamicObject.deserialize(file, DataModel.class);
         } catch (IOException ex) {
             ex.printStackTrace();
