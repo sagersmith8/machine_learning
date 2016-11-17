@@ -7,10 +7,10 @@ import java.util.Map;
 
 public class NaiveBayes implements Classifier {
     //Keeps track of the occurences of each class
-    private Map<String, Counter> classCount = new HashMap<>();
+    private Map<String, Counter> classCount;
 
     //Keeps track of the occurences of an attribute value for each class
-    private Map<String, List<Map<String, Counter>>> attributeCount = new HashMap<>();
+    private Map<String, List<Map<String, Counter>>> attributeCount;
 
     private int numPoints, numAttributes;
 
@@ -34,10 +34,19 @@ public class NaiveBayes implements Classifier {
 	if (numPoints > 0) {
 	    numAttributes = dataPoints.get(0).size();
 	}
+	resetData();
 	
 	for (int i = 0; i < dataPoints.size(); i++) {
 	    countPoint(dataPoints.get(i), classLabel.get(i));
 	}
+    }
+
+    /**
+     * Remove all of the data from previous training.
+     */
+    private void resetData() {
+	classCount = new HashMap<>();
+	attributeCount = new HashMap<>();
     }
 
     /**
@@ -137,14 +146,23 @@ public class NaiveBayes implements Classifier {
 
 /* A convenience class for counting points.
  * Stores only an integer and only supports incrementing.
+ * Starts at 0.
  */
 class Counter {
     private int value = 0;
 
+    /**
+     * Incrememnts the value stored in the counter.
+     */
     public void increment() {
 	value++;
     }
 
+    /**
+     * Gives the value stored in the counter.
+     *
+     * @return the counter's value
+     */
     public int getValue() {
 	return value;
     }
