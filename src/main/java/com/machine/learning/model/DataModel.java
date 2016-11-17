@@ -2,7 +2,6 @@ package com.machine.learning.model;
 
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.github.rschmitt.dynamicobject.Key;
-import com.google.common.primitives.Ints;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,13 +23,13 @@ public interface DataModel extends DynamicObject<DataModel> {
     /**
      * Setter for data
      */
-    DataModel withData(List<List<Integer>> data);
+    DataModel withData(List<List> data);
 
     @Key("data")
     /**
      * Getter for data
      */
-    Optional<List<List<Integer>>> getData();
+    Optional<List<List>> getData();
 
     /**
      * Creates a com.machine.learning.model.DataModel object from the data at the given path
@@ -44,7 +43,7 @@ public interface DataModel extends DynamicObject<DataModel> {
                 .getResourceAsStream(filePath)) {
             List<String> doc = new BufferedReader(new InputStreamReader(resource, StandardCharsets.UTF_8))
                     .lines().collect(Collectors.toList());
-            List<List<Integer>> processedData = preprocessData(doc);
+            List<List> processedData = preprocessData(doc);
             return DynamicObject.newInstance(DataModel.class)
                     .withData(processedData);
         } catch (java.io.IOException ex) {
@@ -60,8 +59,8 @@ public interface DataModel extends DynamicObject<DataModel> {
      * @param data to preprocess
      *
      */
-     default List<List<Integer>> preprocessData(List<String> data) {
-        List<List<Integer>> dataModel = new ArrayList<List<Integer>>(data.size());
+     default List<List> preprocessData(List<String> data) {
+        List<List> dataModel = new ArrayList<List>(data.size());
 
         for (String dataRow : data) {
             //Fill in missing values
@@ -69,7 +68,7 @@ public interface DataModel extends DynamicObject<DataModel> {
             //Discretize
             dataRow = discretize(dataRow);
             //Change from String to List<Integer>
-            List<Integer> dataModelRow = Ints.asList(parseString(dataRow));
+            List<String> dataModelRow = Arrays.asList(parseString(dataRow));
             dataModel.add(dataModelRow);
         }
 
@@ -81,8 +80,8 @@ public interface DataModel extends DynamicObject<DataModel> {
      * @param toParse String to change to int []
      * @return int[] created from String
      */
-    default int[] parseString(String toParse) {
-        return Arrays.stream(toParse.split(",")).mapToInt(Integer::parseInt).toArray();
+    default String[] parseString(String toParse) {
+        return toParse.split(",");
     }
 
     /**
