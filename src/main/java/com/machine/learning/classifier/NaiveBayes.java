@@ -68,9 +68,9 @@ public class NaiveBayes implements Classifier {
      * @param classLabel the class to ensure
      */
     private void ensureClass(String classLabel) {
-	if (classCount.containsKey(pointClass))
+	if (classCount.containsKey(pointClass)) {
 	    return;
-	
+	}
 	classCount.put(pointClass, new Counter());
 	
 	List<Map<String, Counter>> classAttributeCounts = new ArrayList<>();
@@ -90,9 +90,10 @@ public class NaiveBayes implements Classifier {
      * @param attributeValue the observed attribute value
      */
     private void ensureClassAttribute(String classLabel, int attributeNum, String attributeValue) {
-	if (attributeCount.get(classLabel).get(attributeNum).containsKey(attributeValue))
+	if (attributeCount.get(classLabel).get(attributeNum).containsKey(attributeValue)) {
 	    return;
-
+	}
+	
 	attributeCount.get(classLabel).get(attributeNum).put(attributeValue, new Counter());
     }
 
