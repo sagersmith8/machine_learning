@@ -42,7 +42,6 @@ public interface DataModel extends DynamicObject<DataModel> {
                 .currentThread()
                 .getContextClassLoader()
                 .getResourceAsStream(filePath)) {
-            System.out.println(resource);
             List<String> doc = new BufferedReader(new InputStreamReader(resource, StandardCharsets.UTF_8))
                     .lines().collect(Collectors.toList());
             List<List<Integer>> processedData = preprocessData(doc);
