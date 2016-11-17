@@ -6,7 +6,7 @@ public class ClassifierDefault implements Classifier {
     public void train(List<List<Integer>> dataPoints, String classLabel) {
     }
 
-    public String classify(Integer datapoint) {
+    public String classify(List datapoint) {
         return "";
     }
 }
