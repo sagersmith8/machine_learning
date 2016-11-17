@@ -3,6 +3,7 @@ package com.machine.learning.experimenter;
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.machine.learning.classifier.Classifier;
 import com.machine.learning.model.DataModel;
+import com.machine.learning.model.DataPoint;
 import com.machine.learning.model.Result;
 
 import java.util.ArrayList;
@@ -11,21 +12,19 @@ import java.util.List;
 
 public class CrossValidator {
     private Classifier classifier;
-    private List<String> classes;
-    private List<List<List>> folds;
+    private List<List<DataPoint>> folds;
 
     /**
      * Performs class validation on all of the data
      *
      * @param classifier Algorithm to test
-     * @param classes The classes to train with
      * @param dataModel Data to test on
      * @param numberOfFolds Number of folds to test with
      */
-    public CrossValidator(Classifier classifier, List<String> classes, DataModel dataModel, Integer numberOfFolds) {
+    public CrossValidator(Classifier classifier, DataModel dataModel, Integer numberOfFolds) {
         this.classifier = classifier;
-        this.classes = classes;
-        this.folds = createFolds(dataModel.getData().orElse(Collections.emptyList()), numberOfFolds);
+        List<DataPoint> data = dataModel.getData().orElse(new ArrayList<>());
+        this.folds = createFolds(data, numberOfFolds);
 
     }
 
@@ -36,8 +35,8 @@ public class CrossValidator {
      * @param numberOfFolds number of folds to create
      * @return List of folds to test with
      */
-    public List<List<List>> createFolds(List<List> data, Integer numberOfFolds) {
-        List<List<List>> folds = new ArrayList<>();
+    public List<List<DataPoint>> createFolds(List<DataPoint> data, Integer numberOfFolds) {
+        List<List<DataPoint>> folds = new ArrayList<>();
         Collections.shuffle(new ArrayList<>(data));
         Integer segmentSize = data.size()/numberOfFolds;
         for (int i = 0; i < numberOfFolds; i++) {
@@ -54,15 +53,22 @@ public class CrossValidator {
     public Result evaluate() {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < folds.size(); i++) {
-            List<List> trainingData = new ArrayList<>();
+            List<DataPoint> trainingData = new ArrayList<>();
             for (int j = 0; j < folds.size(); j++) {
                 if (j != i) {
                     trainingData.addAll(folds.get(j));
                 }
             }
 
-            classifier.train(trainingData, classes);
-            result.append(classifier.classify(folds.get(i)));
+            classifier.train(trainingData);
+            int numCorrect = 0;
+            for (DataPoint datapoint: folds.get(i)) {
+                if (classifier.classify(datapoint).equals(datapoint.getClazz().orElse(""))) {
+                    numCorrect++;
+                }
+            }
+
+            result.append((double)numCorrect/(double)folds.get(i).size());
             if (i != folds.size()-1) {
                 result.append(" ");
             }

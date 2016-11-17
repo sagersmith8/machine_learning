@@ -3,6 +3,7 @@ package com.machine.learning.experimenter;
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.machine.learning.classifier.ClassifierDefault;
 import com.machine.learning.model.DataModel;
+import com.machine.learning.model.DataPoint;
 import com.machine.learning.model.Result;
 import org.junit.Test;
 
@@ -26,16 +27,16 @@ public class CrossValidatorTest {
 
     @Test
     public void testCreateFolds () {
-        List<List> data = new ArrayList<>();
+        List<DataPoint> data = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            data.add(Collections.singletonList(i));
+            data.add(DynamicObject.newInstance(DataPoint.class).withData(Collections.singletonList(i)).withClass(""));
         }
 
         CrossValidator crossValidator = new CrossValidator(
            new ClassifierDefault(), DynamicObject.newInstance(DataModel.class).withData(data), 10
         );
 
-        List<List<List>> folds = crossValidator.createFolds(data, 10);
+        List<List<DataPoint>> folds = crossValidator.createFolds(data, 10);
         assertThat(folds.size(), is(equalTo(10)));
         boolean inOrder = true;
         for (int i = 0; i < folds.size(); i++) {
