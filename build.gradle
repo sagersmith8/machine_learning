@@ -14,7 +14,6 @@ Repo Info
 */
 group = 'com.ai'
 description = 'Experiment with Machine Learning techniques'
-sourceCompatibility = 1.8
 
 /*
 =========================================================
