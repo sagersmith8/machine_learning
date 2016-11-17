@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String ... args) {
-        System.out.println("Beggining testing...");
+        System.out.println("Beginning testing...");
         OptionSet optionSet = getOptions(args);
         List<DataModel> dataModelList = new ArrayList<>();
         if (optionSet.valueOf("files").equals("*")) {
