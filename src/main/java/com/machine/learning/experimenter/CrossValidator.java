@@ -11,17 +11,20 @@ import java.util.List;
 
 public class CrossValidator {
     private Classifier classifier;
+    private List<String> classes;
     private List<List<List>> folds;
 
     /**
      * Performs class validation on all of the data
      *
      * @param classifier Algorithm to test
+     * @param classes The classes to train with
      * @param dataModel Data to test on
      * @param numberOfFolds Number of folds to test with
      */
-    public CrossValidator(Classifier classifier, DataModel dataModel, Integer numberOfFolds) {
+    public CrossValidator(Classifier classifier, List<String> classes, DataModel dataModel, Integer numberOfFolds) {
         this.classifier = classifier;
+        this.classes = classes;
         this.folds = createFolds(dataModel.getData().orElse(Collections.emptyList()), numberOfFolds);
 
     }
@@ -58,7 +61,7 @@ public class CrossValidator {
                 }
             }
 
-            classifier.train(trainingData, new ArrayList<>());
+            classifier.train(trainingData, classes);
             result.append(classifier.classify(folds.get(i)));
             if (i != folds.size()-1) {
                 result.append(" ");
