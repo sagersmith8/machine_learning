@@ -59,7 +59,8 @@ public class DataModelTest {
 
     @Before
     public void setup() {
-        dataModel = DynamicObject.newInstance(DataModel.class).loadFromEdn("testFile");
+        dataModel = DynamicObject.newInstance(DataModel.class)
+                .loadFromEdn("testFile");
     }
 
     @AfterClass
