@@ -9,7 +9,7 @@ public interface Classifier {
      * @param dataPoints data to train with
      * @param classLabel type of the class for the data
      */
-    void train(List<List<Integer>> dataPoints, ClassLabel classLabel);
+    void train(List<List<Integer>> dataPoints, String classLabel);
 
     /**
      * Classifies an unknown datapoint using its training
@@ -17,5 +17,5 @@ public interface Classifier {
      * @param dataPoint data to classify
      * @return  class label
      */
-    ClassLabel classify(Integer dataPoint);
+    String classify(Integer dataPoint);
 }
