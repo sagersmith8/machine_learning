@@ -51,14 +51,14 @@ public class CrossValidator {
     public Result evaluate() {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < folds.size(); i++) {
-            List<List> trainingData = Collections.emptyList();
+            List<List> trainingData = new ArrayList<>();
             for (int j = 0; j < folds.size(); j++) {
                 if (j != i) {
                     trainingData.addAll(folds.get(j));
                 }
             }
 
-            classifier.train(trainingData, Collections.emptyList());
+            classifier.train(trainingData, new ArrayList<>());
             result.append(classifier.classify(folds.get(i)));
             if (i != folds.size()-1) {
                 result.append(" ");
