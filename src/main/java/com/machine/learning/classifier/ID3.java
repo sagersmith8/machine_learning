@@ -158,15 +158,15 @@ public class ID3 implements Classifier {
 	}
 
 	for (DataPoint dataPoint : remainingData) {
-	    if (allOneClass && !dataPoint.clazz.equals(classes.get(0))) {
+	    if (allOneClazz && !dataPoint.clazz.equals(classes.get(0))) {
 		allOneClazz = false;
 	    }
 	    if (!classes.contains(dataPoint.clazz)) {
 		classes.add(dataPoint.clazz);
-		classProportion.add(1.0);
+		//classProportion.add(1.0);
 	    } else {
-		int index = classes.indexOf(dataPoint.clazz);
-		classProportion.set(index, classProportion.get(index)++);
+		int index = classes.indexOf(dataPoint.getClassLabel().get());
+		//classProportion.set(index, classProportion.get(index)++);
 	    }
 	    /*
 	    ArrayList<String> curData = dataPoint.getData().get();
@@ -219,16 +219,19 @@ public class ID3 implements Classifier {
 	    }
 	}
 
+	posData.clear();
+	negData.clear();
+
 	//get attribute (attrValue) and index (attrIndex) of lowest entropy value
 	for (DataPoint dataPoint : remainingData) {
-	    if (dataPoint.getData().get().contains(attrValue)) {
+	    if (dataPoint.getData().get().contains(attributeValue)) {
 		posData.add(dataPoint);
 	    } else {
 		negData.add(dataPoint);
 	    }
 	}
 	
-	DecisionTree cur = new DecisionTree(attrIndex, attrValue);
+	DecisionTree cur = new DecisionTree(attrIndex, attributeValue);
 	cur.pos = constructDT(posData);
 	cur.neg = constructDT(negData);
 
@@ -237,7 +240,7 @@ public class ID3 implements Classifier {
     }
 
     public double calculateEntropy(List<DataPoint> remainingData) {
-	ArrayList<double> proportions = new ArrayList<>();
+	ArrayList<Double> proportions = new ArrayList<>();
 	ArrayList<String> classes = new ArrayList<>();
 
 	for (DataPoint dataPoint : remainingData) {
