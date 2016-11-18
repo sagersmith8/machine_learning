@@ -66,6 +66,7 @@ public class Main {
         try {
             String outfile = optionSet.valueOf("outdir").toString()+ System.nanoTime();
             pw = new PrintWriter(outfile);
+            pw.write(madScientist.getResults());
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } finally {
