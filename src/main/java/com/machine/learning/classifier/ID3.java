@@ -41,8 +41,8 @@ public class ID3 implements Classifier {
 	Collections.shuffle(dataPoints);
 	trainingData.clear();
 	validationData.clear();
-	trainingData.addAll(dataPoints.sublist(0, (int)(0.6*dataPoints.size())));
-	validationData.addAll(dataPoints.sublist((int)(0.6*dataPoints.size())), dataPoints.size()+1);
+	trainingData.addAll(dataPoints.subList(0, (int)(0.6*dataPoints.size())));
+	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size())), dataPoints.size()+1);
 
 
 	// Construct decision tree
@@ -79,7 +79,7 @@ public class ID3 implements Classifier {
 		}
 	    }
 
-	    majorityClass.append(maxClass);
+	    majorityClass.add(maxClass);
 
 	    toVisit.push(next.pos);
 	    toVisit.push(next.neg);
@@ -158,11 +158,11 @@ public class ID3 implements Classifier {
 	}
 
 	for (DataPoint dataPoint : remainingData) {
-	    if (allOneClazz && !dataPoint.clazz.equals(classes.get(0))) {
+	    if (allOneClazz && !dataPoint.getClassLabel().get().equals(classes.get(0))) {
 		allOneClazz = false;
 	    }
-	    if (!classes.contains(dataPoint.clazz)) {
-		classes.add(dataPoint.clazz);
+	    if (!classes.contains(dataPoint.getClassLabel().get())) {
+		classes.add(dataPoint.getClassLabel().get());
 		//classProportion.add(1.0);
 	    } else {
 		int index = classes.indexOf(dataPoint.getClassLabel().get());
@@ -246,7 +246,7 @@ public class ID3 implements Classifier {
 	for (DataPoint dataPoint : remainingData) {
 	    if (!classes.contains(dataPoint.getClassLabel().get())) {
 		classes.add(dataPoint.getClassLabel().get());
-		proportions.add(1/remainingData.size());
+		proportions.add(1.0/remainingData.size());
 	    } else {
 		int index = proportions.getIndexOf(dataPoint.getClassLabel().get());
 		proportions.set(index, proportions.get(index)+1/remainingData.size());
