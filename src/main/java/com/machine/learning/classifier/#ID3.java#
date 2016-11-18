@@ -18,7 +18,10 @@ public class ID3 implements Classifier {
     List<DataPoint> validationData = new ArrayList<>();
     DecisionTree dt;
     Set<DecisionTree> subtrees = new HashSet<>();
-    
+
+    /**
+     * Data structure for separating discrete data into a decision tree.
+     */
     public class DecisionTree {
 	int attributeIndex;
 	String attributeValue;
@@ -39,6 +42,7 @@ public class ID3 implements Classifier {
 	
     }
 
+    
     @Override
     public void train(List<DataPoint> dataPoints) {
 	// Seperate data into training and validation
@@ -53,9 +57,6 @@ public class ID3 implements Classifier {
 
 	// Prune decision tree
 	pruneTree();
-
-	System.out.println("Printing pruned decision tree:");
-	System.out.println(printTree(dt));
     }
 
     private void pruneTree() {
@@ -232,7 +233,7 @@ public class ID3 implements Classifier {
 	//     }
 	// }
 	int attrIndex = 0;
-	String attributeValue = "";
+	String attributeValue;
 	double minEntropy = Double.MAX_VALUE;
 	ArrayList<DataPoint> posData = new ArrayList<>();
 	ArrayList<DataPoint> negData = new ArrayList<>();
@@ -298,22 +299,5 @@ public class ID3 implements Classifier {
 	}
 
 	return -sum;
-    }
-
-    public String printTree(DecisionTree dt) {
-	String retS = "(";
-	if (dt.pos != null || dt.neg != null) {
-	    retS += "["+dt.attributeIndex+","+dt.attributeValue+"]";
-	    if (dt.pos != null) {
-		retS += printTree(dt.pos);
-	    }
-	    if (dt.neg != null) {
-		retS += printTree(dt.neg);
-	    }
-	} else {
-	    retS += "Class= " + dt.clazz;
-	}
-	retS += ")";
-	return retS;
     }
 }
