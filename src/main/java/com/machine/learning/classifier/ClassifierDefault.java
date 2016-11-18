@@ -11,4 +11,9 @@ public class ClassifierDefault implements Classifier {
     public String classify(List datapoint) {
         return "";
     }
+
+    @Override
+    public String toString() {
+	return ClassifierDefault.class.getName();
+    }
 }
