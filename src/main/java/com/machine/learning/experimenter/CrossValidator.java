@@ -25,7 +25,6 @@ public class CrossValidator {
         this.classifier = classifier;
         List<DataPoint> data = dataModel.getData().orElse(new ArrayList<>());
         this.folds = createFolds(data, numberOfFolds);
-
     }
 
     /**
@@ -43,6 +42,11 @@ public class CrossValidator {
             folds.add(data.subList(segmentSize*i, segmentSize*(i+1)));
         }
 
+        int c = 0;
+        for (int i = segmentSize*numberOfFolds; i < data.size(); i++, c++) {
+            folds.get(c).add(data.get(i));
+        }
+
         return folds;
     }
 
@@ -51,6 +55,7 @@ public class CrossValidator {
      * @return Result of k-fold-cross-validation
      */
     public Result evaluate() {
+        System.out.println("Performing K-Fold cross validation on " +classifier);
         List<Double> results = new ArrayList<>();
         for (int i = 0; i < folds.size(); i++) {
             List<DataPoint> trainingData = new ArrayList<>();
@@ -76,7 +81,7 @@ public class CrossValidator {
             average += result;
         }
         average/=(double)results.size();
-
+        System.out.println("Percent correct "+average);
         return DynamicObject.newInstance(Result.class).withResults(""+average);
     }
 }
