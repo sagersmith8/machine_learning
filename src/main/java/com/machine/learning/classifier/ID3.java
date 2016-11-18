@@ -158,7 +158,7 @@ public class ID3 implements Classifier {
     private int validationError(DecisionTree dt) {
 	int errors = 0;
 	for (DataPoint point : validationData) {
-	    if (classify(point.getData().get(), dt) == point.getClassLabel().get()) {
+	    if (classify(point.getData().get(), dt).equals(point.getClassLabel().get())) {
 		errors++;
 	    }
 	}
