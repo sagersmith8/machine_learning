@@ -24,7 +24,7 @@ public interface DataModel extends DynamicObject<DataModel> {
 
     @Key("name")
     Optional<String> getName();
-    
+
     @Key("data")
     /**
      * Setter for data
@@ -51,7 +51,7 @@ public interface DataModel extends DynamicObject<DataModel> {
                     .lines().collect(Collectors.toList());
             List<DataPoint> processedData = preprocessData(doc);
             return DynamicObject.newInstance(DataModel.class)
-		.withName(filePath)		
+		.withName(filePath)
 		.withData(processedData);
 
         } catch (java.io.IOException ex) {
@@ -68,7 +68,7 @@ public interface DataModel extends DynamicObject<DataModel> {
      *
      */
      default List<DataPoint> preprocessData(List<String> data) {
-        List<DataPoint> dataModel = new ArrayList<>(data.size());
+        List<DataPoint> dataModel = new ArrayList<DataPoint>(data.size());
 
         for (String dataRow : data) {
             List<String> dataModelRow = Arrays.asList(parseString(dataRow));
@@ -76,6 +76,8 @@ public interface DataModel extends DynamicObject<DataModel> {
                 dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
             }
         }
+         dataModel = discretize(dataModel);
+         dataModel = generateMissing(dataModel);
 
         return dataModel;
     }
@@ -94,8 +96,32 @@ public interface DataModel extends DynamicObject<DataModel> {
      *
      * @param dataRow to discretize
      */
-    default String discretize(String dataRow) {
+    default List<DataPoint> discretize(List<DataPoint> dataRow) {
         return dataRow;
+    }
+
+    /**
+     * Generates missing values
+     *
+     * @param dataPoints to generate missing data for
+     * @return the data with missing values generated
+     */
+    default List<DataPoint> generateMissing(List<DataPoint> dataPoints) {
+        for (int i = 0; i < dataPoints.size(); i++) {
+            DataPoint dataPoint = dataPoints.get(i);
+            for (int j = 0; j < dataPoint.getData().get().size(); j++) {
+                String value = (String) dataPoint.getData().get().get(j);
+                while ("?".equals(value)) {
+                    List<String> fixedDataPoint = new ArrayList<>(dataPoint.getData().get());
+                    List<String> randomDataPoint = dataPoints.get((int)(Math.random() * dataPoints.size())).getData().get();
+                    value = randomDataPoint.get(j);
+                    fixedDataPoint.set(j, value);
+                    dataPoint.withData(fixedDataPoint);
+                    dataPoints.set(i, dataPoint);
+                }
+            }
+        }
+        return dataPoints;
     }
 
     /**
