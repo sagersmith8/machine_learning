@@ -7,15 +7,16 @@ import com.machine.learning.classifier.KNearestNeighbors;
 import com.machine.learning.classifier.NaiveBayes;
 import com.machine.learning.classifier.TreeAugmentedNaiveBayes;
 import com.machine.learning.experimenter.MadScientist;
-
 import com.machine.learning.model.DataModel;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,7 +67,14 @@ public class Main {
         MadScientist madScientist = new MadScientist(dataModelList, classifiers);
         PrintWriter pw = null;
         try {
-            String outfile = optionSet.valueOf("outdir").toString()+ System.nanoTime();
+            Calendar calendar = Calendar.getInstance();
+            java.sql.Timestamp currentTimestamp = new java.sql.Timestamp(calendar.getTime().getTime());
+
+            File file = new File(optionSet.valueOf("outdir").toString());
+            if (!file.exists()) {
+                file.mkdir();
+            }
+            String outfile = optionSet.valueOf("outdir").toString()+File.separator+currentTimestamp;
             pw = new PrintWriter(outfile);
             pw.write(madScientist.getResults());
         } catch (FileNotFoundException ex) {
