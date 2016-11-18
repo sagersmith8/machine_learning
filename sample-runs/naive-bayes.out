@@ -1,0 +1,1669 @@
+Beginning testing...
+Preprocessing iris.data.txt
+Generating missing values...
+Discretizing data...
+Testing classifier: com.machine.learning.classifier.NaiveBayes
+Testing data set: iris.data.txt
+Performing K-Fold cross validation on com.machine.learning.classifier.NaiveBayes
+Training on data...
+Classifying data: ["2" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.005349483928103751
+Remember only the best class: Iris-setosaand probability: 0.005349483928103751
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.009603527428973331
+Remember only the best class: Iris-setosaand probability: 0.009603527428973331
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.009603527428973331
+Remember only the best class: Iris-setosaand probability: 0.009603527428973331
+Returning best class label:Iris-setosa
+Classifying data: ["0" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.011983091622458E-9
+Remember only the best class: Iris-versicolorand probability: 9.011983091622458E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3438922154173844E-8
+Remember only the best class: Iris-virginicaand probability: 1.3438922154173844E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004081992151534865
+Remember only the best class: Iris-setosaand probability: 0.004081992151534865
+Returning best class label:Iris-setosa
+Classifying data: ["1" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.0553645647559993E-9
+Remember only the best class: Iris-versicolorand probability: 2.0553645647559993E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-virginicaand probability: 3.952624162992307E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.005828184950752857
+Remember only the best class: Iris-setosaand probability: 0.005828184950752857
+Returning best class label:Iris-setosa
+Classifying data: ["3" "7" "1" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-virginicaand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.870848321684159E-4
+Remember only the best class: Iris-setosaand probability: 4.870848321684159E-4
+Returning best class label:Iris-setosa
+Classifying data: ["0" "5" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.3202042969135376E-9
+Remember only the best class: Iris-virginicaand probability: 3.3202042969135376E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0032796349718719926
+Remember only the best class: Iris-setosaand probability: 0.0032796349718719926
+Returning best class label:Iris-setosa
+Classifying data: ["1" "5" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.849828108280399E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.660102148456769E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.007715856189863094
+Remember only the best class: Iris-setosaand probability: 0.007715856189863094
+Returning best class label:Iris-setosa
+Classifying data: ["0" "3" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:8.37956322554369E-9
+Remember only the best class: Iris-versicolorand probability: 8.37956322554369E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.4823036273073824E-9
+Remember only the best class: Iris-versicolorand probability: 8.37956322554369E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:7.020625322050137E-5
+Remember only the best class: Iris-setosaand probability: 7.020625322050137E-5
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.009603527428973331
+Remember only the best class: Iris-setosaand probability: 0.009603527428973331
+Returning best class label:Iris-setosa
+Classifying data: ["3" "7" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-virginicaand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.003990903292974105
+Remember only the best class: Iris-setosaand probability: 0.003990903292974105
+Returning best class label:Iris-setosa
+Classifying data: ["1" "5" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.849828108280399E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.660102148456769E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.00356668843523144
+Remember only the best class: Iris-setosaand probability: 0.00356668843523144
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.009603527428973331
+Remember only the best class: Iris-setosaand probability: 0.009603527428973331
+Returning best class label:Iris-setosa
+Classifying data: ["0" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.011983091622458E-9
+Remember only the best class: Iris-versicolorand probability: 9.011983091622458E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3438922154173844E-8
+Remember only the best class: Iris-virginicaand probability: 1.3438922154173844E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004081992151534865
+Remember only the best class: Iris-setosaand probability: 0.004081992151534865
+Returning best class label:Iris-setosa
+Classifying data: ["4" "8" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:8.379563225543689E-9
+Remember only the best class: Iris-versicolorand probability: 8.379563225543689E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.217463895149846E-9
+Remember only the best class: Iris-versicolorand probability: 8.379563225543689E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.5940550248133163E-5
+Remember only the best class: Iris-setosaand probability: 1.5940550248133163E-5
+Returning best class label:Iris-setosa
+Training on data...
+Classifying data: ["3" "9" "0" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.646517811218664E-5
+Remember only the best class: Iris-setosaand probability: 6.646517811218664E-5
+Returning best class label:Iris-setosa
+Classifying data: ["3" "7" "0" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-virginicaand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.9272961423877945E-4
+Remember only the best class: Iris-setosaand probability: 2.9272961423877945E-4
+Returning best class label:Iris-setosa
+Classifying data: ["2" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0034296989521119953
+Remember only the best class: Iris-setosaand probability: 0.0034296989521119953
+Returning best class label:Iris-setosa
+Classifying data: ["3" "7" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-virginicaand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.08352770426035E-4
+Remember only the best class: Iris-setosaand probability: 6.08352770426035E-4
+Returning best class label:Iris-setosa
+Classifying data: ["2" "7" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0034296989521119953
+Remember only the best class: Iris-setosaand probability: 0.0034296989521119953
+Returning best class label:Iris-setosa
+Classifying data: ["3" "5" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.249140541401998E-8
+Remember only the best class: Iris-versicolorand probability: 9.249140541401998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.988183867222184E-8
+Remember only the best class: Iris-versicolorand probability: 9.249140541401998E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:7.259088613296167E-4
+Remember only the best class: Iris-setosaand probability: 7.259088613296167E-4
+Returning best class label:Iris-setosa
+Classifying data: ["2" "7" "0" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:3.492957232704277E-4
+Remember only the best class: Iris-setosaand probability: 3.492957232704277E-4
+Returning best class label:Iris-setosa
+Classifying data: ["0" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 1.5810496651969226E-10
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 7.905248325984614E-10
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004540532620812236
+Remember only the best class: Iris-setosaand probability: 0.004540532620812236
+Returning best class label:Iris-setosa
+Classifying data: ["2" "5" "1" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-versicolorand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.3202042969135376E-9
+Remember only the best class: Iris-versicolorand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:8.821571799777921E-5
+Remember only the best class: Iris-setosaand probability: 8.821571799777921E-5
+Returning best class label:Iris-setosa
+Classifying data: ["1" "5" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.849828108280399E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.660102148456769E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0021286312986815333
+Remember only the best class: Iris-setosaand probability: 0.0021286312986815333
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004886372252438985
+Remember only the best class: Iris-setosaand probability: 0.004886372252438985
+Returning best class label:Iris-setosa
+Classifying data: ["1" "5" "1" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.849828108280399E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.660102148456769E-8
+Remember only the best class: Iris-versicolorand probability: 1.849828108280399E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.1678923410790271E-4
+Remember only the best class: Iris-setosaand probability: 2.1678923410790271E-4
+Returning best class label:Iris-setosa
+Classifying data: ["2" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0034296989521119953
+Remember only the best class: Iris-setosaand probability: 0.0034296989521119953
+Returning best class label:Iris-setosa
+Classifying data: ["2" "5" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-versicolorand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.3202042969135376E-9
+Remember only the best class: Iris-versicolorand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004092442710974216
+Remember only the best class: Iris-setosaand probability: 0.004092442710974216
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004886372252438985
+Remember only the best class: Iris-setosaand probability: 0.004886372252438985
+Returning best class label:Iris-setosa
+Training on data...
+Classifying data: ["1" "4" "1" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.004695930732584258
+Remember only the best class: Iris-setosaand probability: 0.004695930732584258
+Returning best class label:Iris-setosa
+Classifying data: ["3" "5" "0" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.249140541401998E-8
+Remember only the best class: Iris-versicolorand probability: 9.249140541401998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.988183867222184E-8
+Remember only the best class: Iris-versicolorand probability: 9.249140541401998E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0010392997763626912
+Remember only the best class: Iris-setosaand probability: 0.0010392997763626912
+Returning best class label:Iris-setosa
+Classifying data: ["2" "8" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.343630191236908E-4
+Remember only the best class: Iris-setosaand probability: 9.343630191236908E-4
+Returning best class label:Iris-setosa
+Classifying data: ["3" "9" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.288492254047729E-4
+Remember only the best class: Iris-setosaand probability: 6.288492254047729E-4
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.011618678741307979
+Remember only the best class: Iris-setosaand probability: 0.011618678741307979
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.011618678741307979
+Remember only the best class: Iris-setosaand probability: 0.011618678741307979
+Returning best class label:Iris-setosa
+Classifying data: ["3" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386151E-9
+Remember only the best class: Iris-versicolorand probability: 1.0276822823779998E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.002769612545931659
+Remember only the best class: Iris-setosaand probability: 0.002769612545931659
+Returning best class label:Iris-setosa
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1715578019109196E-7
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 1.1715578019109196E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.011618678741307979
+Remember only the best class: Iris-setosaand probability: 0.011618678741307979
+Returning best class label:Iris-setosa
+Classifying data: ["0" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.011983091622458E-9
+Remember only the best class: Iris-versicolorand probability: 9.011983091622458E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3438922154173844E-8
+Remember only the best class: Iris-virginicaand probability: 1.3438922154173844E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.005445566696590267
+Remember only the best class: Iris-setosaand probability: 0.005445566696590267
+Returning best class label:Iris-setosa
+Classifying data: ["2" "5" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2806502288095073E-8
+Remember only the best class: Iris-versicolorand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.3202042969135376E-9
+Remember only the best class: Iris-versicolorand probability: 1.2806502288095073E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.00729598357485946
+Remember only the best class: Iris-setosaand probability: 0.00729598357485946
+Returning best class label:Iris-setosa
+Classifying data: ["1" "6" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.0553645647559993E-9
+Remember only the best class: Iris-versicolorand probability: 2.0553645647559993E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-virginicaand probability: 3.952624162992307E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.005909254298404795
+Remember only the best class: Iris-setosaand probability: 0.005909254298404795
+Returning best class label:Iris-setosa
+Classifying data: ["0" "1" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-versicolorand probability: 3.952624162992307E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 3.952624162992307E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.365839527305127E-5
+Remember only the best class: Iris-setosaand probability: 9.365839527305127E-5
+Returning best class label:Iris-setosa
+Classifying data: ["0" "4" "0" "0"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.011983091622458E-9
+Remember only the best class: Iris-versicolorand probability: 9.011983091622458E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3438922154173844E-8
+Remember only the best class: Iris-virginicaand probability: 1.3438922154173844E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.005445566696590267
+Remember only the best class: Iris-setosaand probability: 0.005445566696590267
+Returning best class label:Iris-setosa
+Classifying data: ["1" "6" "1" "2"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.0553645647559993E-9
+Remember only the best class: Iris-versicolorand probability: 2.0553645647559993E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-virginicaand probability: 3.952624162992307E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.4325995236561946E-5
+Remember only the best class: Iris-setosaand probability: 1.4325995236561946E-5
+Returning best class label:Iris-setosa
+Classifying data: ["2" "7" "1" "1"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.561047080812219E-4
+Remember only the best class: Iris-setosaand probability: 5.561047080812219E-4
+Returning best class label:Iris-setosa
+Training on data...
+Classifying data: ["1" "4" "0" "0"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:7.791412750090437E-8
+Remember only the best class: Iris-versicolorand probability: 7.791412750090437E-8
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.719461077086922E-8
+Remember only the best class: Iris-versicolorand probability: 7.791412750090437E-8
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.01637354957021683
+Remember only the best class: Iris-setosaand probability: 0.01637354957021683
+Returning best class label:Iris-setosa
+Classifying data: ["2" "7" "1" "0"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:7.589038392945234E-10
+Remember only the best class: Iris-versicolorand probability: 7.589038392945234E-10
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-virginicaand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.0018164204369196784
+Remember only the best class: Iris-setosaand probability: 0.0018164204369196784
+Returning best class label:Iris-setosa
+Classifying data: ["0" "4" "0" "0"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:7.083102500082216E-9
+Remember only the best class: Iris-versicolorand probability: 7.083102500082216E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3438922154173844E-8
+Remember only the best class: Iris-virginicaand probability: 1.3438922154173844E-8
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.007818429330335757
+Remember only the best class: Iris-setosaand probability: 0.007818429330335757
+Returning best class label:Iris-setosa
+Classifying data: ["2" "7" "0" "0"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:7.589038392945234E-10
+Remember only the best class: Iris-versicolorand probability: 7.589038392945234E-10
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-virginicaand probability: 1.4229446986772304E-9
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.004936651862303175
+Remember only the best class: Iris-setosaand probability: 0.004936651862303175
+Returning best class label:Iris-setosa
+Classifying data: ["1" "5" "0" "0"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:8.347942232239756E-9
+Remember only the best class: Iris-versicolorand probability: 8.347942232239756E-9
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.660102148456769E-8
+Remember only the best class: Iris-virginicaand probability: 1.660102148456769E-8
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.011769388003899268
+Remember only the best class: Iris-setosaand probability: 0.011769388003899268
+Returning best class label:Iris-setosa
+Classifying data: ["7" "4" "6" "5"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:1.987518561523069E-5
+Remember only the best class: Iris-versicolorand probability: 1.987518561523069E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.811701095604176E-4
+Remember only the best class: Iris-virginicaand probability: 1.811701095604176E-4
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:8.996172594970489E-9
+Remember only the best class: Iris-virginicaand probability: 1.811701095604176E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "4" "5" "5"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0012469518627294734
+Remember only the best class: Iris-versicolorand probability: 0.0012469518627294734
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.6297086821128893E-5
+Remember only the best class: Iris-versicolorand probability: 0.0012469518627294734
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:8.996172594970489E-9
+Remember only the best class: Iris-versicolorand probability: 0.0012469518627294734
+Returning best class label:Iris-versicolor
+Classifying data: ["7" "4" "6" "5"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:1.987518561523069E-5
+Remember only the best class: Iris-versicolorand probability: 1.987518561523069E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.811701095604176E-4
+Remember only the best class: Iris-virginicaand probability: 1.811701095604176E-4
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:8.996172594970489E-9
+Remember only the best class: Iris-virginicaand probability: 1.811701095604176E-4
+Returning best class label:Iris-virginica
+Classifying data: ["3" "1" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.001904923388657423
+Remember only the best class: Iris-versicolorand probability: 0.001904923388657423
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386152E-9
+Remember only the best class: Iris-versicolorand probability: 0.001904923388657423
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.1763287773806175E-8
+Remember only the best class: Iris-versicolorand probability: 0.001904923388657423
+Returning best class label:Iris-versicolor
+Classifying data: ["6" "3" "6" "5"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:4.7061600224635526E-4
+Remember only the best class: Iris-versicolorand probability: 4.7061600224635526E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.31321004940464E-4
+Remember only the best class: Iris-versicolorand probability: 4.7061600224635526E-4
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:7.747143359464921E-10
+Remember only the best class: Iris-versicolorand probability: 4.7061600224635526E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "3" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.004626242515310884
+Remember only the best class: Iris-versicolorand probability: 0.004626242515310884
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.9170366322883225E-7
+Remember only the best class: Iris-versicolorand probability: 0.004626242515310884
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.1763287773806175E-8
+Remember only the best class: Iris-versicolorand probability: 0.004626242515310884
+Returning best class label:Iris-versicolor
+Classifying data: ["5" "5" "6" "6"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:1.4522383868739993E-5
+Remember only the best class: Iris-versicolorand probability: 1.4522383868739993E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.660798442729323E-5
+Remember only the best class: Iris-virginicaand probability: 9.660798442729323E-5
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:6.466493130655413E-9
+Remember only the best class: Iris-virginicaand probability: 9.660798442729323E-5
+Returning best class label:Iris-virginica
+Classifying data: ["1" "1" "3" "3"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:9.963269054178145E-6
+Remember only the best class: Iris-versicolorand probability: 9.963269054178145E-6
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 9.963269054178145E-6
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:5.9308686385237014E-8
+Remember only the best class: Iris-versicolorand probability: 9.963269054178145E-6
+Returning best class label:Iris-versicolor
+Classifying data: ["6" "3" "6" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:7.020664951543988E-4
+Remember only the best class: Iris-versicolorand probability: 7.020664951543988E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.779392345695877E-5
+Remember only the best class: Iris-versicolorand probability: 7.020664951543988E-4
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:7.747143359464921E-10
+Remember only the best class: Iris-versicolorand probability: 7.020664951543988E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["2" "2" "4" "5"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:9.332695854108327E-5
+Remember only the best class: Iris-versicolorand probability: 9.332695854108327E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:8.426994715499597E-8
+Remember only the best class: Iris-versicolorand probability: 9.332695854108327E-5
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:6.466493130655413E-9
+Remember only the best class: Iris-versicolorand probability: 9.332695854108327E-5
+Returning best class label:Iris-versicolor
+Training on data...
+Classifying data: ["1" "0" "4" "3"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.704105329038247E-7
+Remember only the best class: Iris-versicolorand probability: 9.704105329038247E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-versicolorand probability: 9.704105329038247E-7
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2174082422016304E-8
+Remember only the best class: Iris-versicolorand probability: 9.704105329038247E-7
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "4" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0014230069303131795
+Remember only the best class: Iris-versicolorand probability: 0.0014230069303131795
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.8826488020702894E-5
+Remember only the best class: Iris-versicolorand probability: 0.0014230069303131795
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.138411411889999E-8
+Remember only the best class: Iris-versicolorand probability: 0.0014230069303131795
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "0" "5" "3"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.143650003771287E-6
+Remember only the best class: Iris-versicolorand probability: 9.143650003771287E-6
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3043659737874614E-7
+Remember only the best class: Iris-versicolorand probability: 9.143650003771287E-6
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 9.143650003771287E-6
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "3" "6" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.773264428128234E-4
+Remember only the best class: Iris-versicolorand probability: 6.773264428128234E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.696354036230069E-4
+Remember only the best class: Iris-versicolorand probability: 6.773264428128234E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-versicolorand probability: 6.773264428128234E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "3" "4" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0010638597705174356
+Remember only the best class: Iris-versicolorand probability: 0.0010638597705174356
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.8340732645766444E-8
+Remember only the best class: Iris-versicolorand probability: 0.0010638597705174356
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.924941880614307E-8
+Remember only the best class: Iris-versicolorand probability: 0.0010638597705174356
+Returning best class label:Iris-versicolor
+Classifying data: ["6" "4" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0014230069303131795
+Remember only the best class: Iris-versicolorand probability: 0.0014230069303131795
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.93088473009585E-5
+Remember only the best class: Iris-versicolorand probability: 0.0014230069303131795
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 0.0014230069303131795
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "4" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0030361321954455287
+Remember only the best class: Iris-versicolorand probability: 0.0030361321954455287
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.8617694601917E-6
+Remember only the best class: Iris-versicolorand probability: 0.0030361321954455287
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.8024244447985993E-7
+Remember only the best class: Iris-versicolorand probability: 0.0030361321954455287
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "2" "5" "3"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.793885073405804E-4
+Remember only the best class: Iris-versicolorand probability: 4.793885073405804E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0695800985057182E-6
+Remember only the best class: Iris-versicolorand probability: 4.793885073405804E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 4.793885073405804E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["5" "0" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.65474151890112E-5
+Remember only the best class: Iris-versicolorand probability: 1.65474151890112E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.7233580483017E-6
+Remember only the best class: Iris-versicolorand probability: 1.65474151890112E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 1.65474151890112E-5
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "2" "4" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011939955222626877
+Remember only the best class: Iris-versicolorand probability: 0.0011939955222626877
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.8340732645766444E-8
+Remember only the best class: Iris-versicolorand probability: 0.0011939955222626877
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-versicolorand probability: 0.0011939955222626877
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "4" "6" "7"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.3201862471342994E-5
+Remember only the best class: Iris-versicolorand probability: 1.3201862471342994E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:0.0024076769763753236
+Remember only the best class: Iris-virginicaand probability: 0.0024076769763753236
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.138411411889999E-8
+Remember only the best class: Iris-virginicaand probability: 0.0024076769763753236
+Returning best class label:Iris-virginica
+Classifying data: ["4" "3" "5" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.001654844215267654
+Remember only the best class: Iris-versicolorand probability: 0.001654844215267654
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0695800985057182E-6
+Remember only the best class: Iris-versicolorand probability: 0.001654844215267654
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-versicolorand probability: 0.001654844215267654
+Returning best class label:Iris-versicolor
+Classifying data: ["5" "2" "6" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.139677395232717E-4
+Remember only the best class: Iris-versicolorand probability: 5.139677395232717E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.7244473915210204E-4
+Remember only the best class: Iris-versicolorand probability: 5.139677395232717E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 5.139677395232717E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "3" "6" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.80380779641827E-4
+Remember only the best class: Iris-versicolorand probability: 9.80380779641827E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3048877201769762E-5
+Remember only the best class: Iris-versicolorand probability: 9.80380779641827E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-versicolorand probability: 9.80380779641827E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["5" "3" "5" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011188622831971588
+Remember only the best class: Iris-versicolorand probability: 0.0011188622831971588
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.7178104612364565E-6
+Remember only the best class: Iris-versicolorand probability: 0.0011188622831971588
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 0.0011188622831971588
+Returning best class label:Iris-versicolor
+Training on data...
+Classifying data: ["6" "4" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:7.606494398611152E-4
+Remember only the best class: Iris-versicolorand probability: 7.606494398611152E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.93088473009585E-5
+Remember only the best class: Iris-versicolorand probability: 7.606494398611152E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-versicolorand probability: 7.606494398611152E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["6" "3" "6" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.186638829443265E-4
+Remember only the best class: Iris-versicolorand probability: 5.186638829443265E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.31321004940464E-4
+Remember only the best class: Iris-versicolorand probability: 5.186638829443265E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 5.186638829443265E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["6" "4" "6" "6"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.109731459516415E-5
+Remember only the best class: Iris-versicolorand probability: 4.109731459516415E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.3200857181886484E-4
+Remember only the best class: Iris-virginicaand probability: 3.3200857181886484E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 3.3200857181886484E-4
+Returning best class label:Iris-virginica
+Classifying data: ["4" "3" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.002677246453684398
+Remember only the best class: Iris-versicolorand probability: 0.002677246453684398
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3904541280574337E-5
+Remember only the best class: Iris-versicolorand probability: 0.002677246453684398
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-versicolorand probability: 0.002677246453684398
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "2" "4" "3"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.1207055404538116E-4
+Remember only the best class: Iris-versicolorand probability: 2.1207055404538116E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.8340732645766444E-8
+Remember only the best class: Iris-versicolorand probability: 2.1207055404538116E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-versicolorand probability: 2.1207055404538116E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "1" "4" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.574365902193107E-4
+Remember only the best class: Iris-versicolorand probability: 2.574365902193107E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 2.574365902193107E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.924941880614307E-8
+Remember only the best class: Iris-versicolorand probability: 2.574365902193107E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "1" "4" "3"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:8.236379316135598E-5
+Remember only the best class: Iris-versicolorand probability: 8.236379316135598E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4229446986772304E-9
+Remember only the best class: Iris-versicolorand probability: 8.236379316135598E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.924941880614307E-8
+Remember only the best class: Iris-versicolorand probability: 8.236379316135598E-5
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "2" "4" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.977037233382203E-4
+Remember only the best class: Iris-versicolorand probability: 5.977037233382203E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.139160197011436E-7
+Remember only the best class: Iris-versicolorand probability: 5.977037233382203E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 5.977037233382203E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "2" "6" "6"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.0581749505998959E-4
+Remember only the best class: Iris-versicolorand probability: 1.0581749505998959E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1743989481592785E-4
+Remember only the best class: Iris-virginicaand probability: 1.1743989481592785E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 1.1743989481592785E-4
+Returning best class label:Iris-virginica
+Classifying data: ["3" "4" "5" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.002437671826956488
+Remember only the best class: Iris-versicolorand probability: 0.002437671826956488
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.8617694601917E-6
+Remember only the best class: Iris-versicolorand probability: 0.002437671826956488
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.8024244447985993E-7
+Remember only the best class: Iris-versicolorand probability: 0.002437671826956488
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "5" "5" "6"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.716736911919681E-5
+Remember only the best class: Iris-versicolorand probability: 2.716736911919681E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.9305033809166045E-6
+Remember only the best class: Iris-versicolorand probability: 2.716736911919681E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.557361746693076E-8
+Remember only the best class: Iris-versicolorand probability: 2.716736911919681E-5
+Returning best class label:Iris-versicolor
+Classifying data: ["6" "4" "6" "5"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.258381320818073E-4
+Remember only the best class: Iris-versicolorand probability: 4.258381320818073E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.7956793707169365E-4
+Remember only the best class: Iris-virginicaand probability: 4.7956793707169365E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 4.7956793707169365E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "1" "5" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.801281623841958E-4
+Remember only the best class: Iris-versicolorand probability: 6.801281623841958E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.189781612771845E-8
+Remember only the best class: Iris-versicolorand probability: 6.801281623841958E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 6.801281623841958E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "4" "5" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0032385496345807958
+Remember only the best class: Iris-versicolorand probability: 0.0032385496345807958
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.04751496937823E-7
+Remember only the best class: Iris-versicolorand probability: 0.0032385496345807958
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.8024244447985993E-7
+Remember only the best class: Iris-versicolorand probability: 0.0032385496345807958
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "2" "5" "4"]
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0028855741975692645
+Remember only the best class: Iris-versicolorand probability: 0.0028855741975692645
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.9170366322883225E-7
+Remember only the best class: Iris-versicolorand probability: 0.0028855741975692645
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-versicolorand probability: 0.0028855741975692645
+Returning best class label:Iris-versicolor
+Training on data...
+Classifying data: ["3" "2" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0017441856582352444
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.141036235409723E-7
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "4" "6" "5"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0023098422238918104
+Remember only the best class: Iris-versicolorand probability: 0.0023098422238918104
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.537888515563374E-4
+Remember only the best class: Iris-versicolorand probability: 0.0023098422238918104
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.138411411889999E-8
+Remember only the best class: Iris-versicolorand probability: 0.0023098422238918104
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "2" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0017441856582352444
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:1.0199544629588874E-6
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Returning best class label:Iris-versicolor
+Classifying data: ["1" "1" "3" "3"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:6.728441439185241E-6
+Remember only the best class: Iris-versicolorand probability: 6.728441439185241E-6
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:7.747143359464921E-10
+Remember only the best class: Iris-versicolorand probability: 6.728441439185241E-6
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.087041211008153E-8
+Remember only the best class: Iris-versicolorand probability: 6.728441439185241E-6
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "2" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0017441856582352444
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.141036235409723E-7
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-versicolorand probability: 0.0017441856582352444
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "4" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.00259500793054512
+Remember only the best class: Iris-versicolorand probability: 0.00259500793054512
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:6.545953563767146E-7
+Remember only the best class: Iris-versicolorand probability: 0.00259500793054512
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.8024244447985993E-7
+Remember only the best class: Iris-versicolorand probability: 0.00259500793054512
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "3" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0021695967943901823
+Remember only the best class: Iris-versicolorand probability: 0.0021695967943901823
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.141036235409723E-7
+Remember only the best class: Iris-versicolorand probability: 0.0021695967943901823
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.924941880614307E-8
+Remember only the best class: Iris-versicolorand probability: 0.0021695967943901823
+Returning best class label:Iris-versicolor
+Classifying data: ["5" "3" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0012010267968945653
+Remember only the best class: Iris-versicolorand probability: 0.0012010267968945653
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:1.5846351344932195E-6
+Remember only the best class: Iris-versicolorand probability: 0.0012010267968945653
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 0.0012010267968945653
+Returning best class label:Iris-versicolor
+Classifying data: ["2" "2" "3" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:1.2321562734785874E-5
+Remember only the best class: Iris-versicolorand probability: 1.2321562734785874E-5
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:5.834073264576645E-9
+Remember only the best class: Iris-versicolorand probability: 1.2321562734785874E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.74714335946492E-9
+Remember only the best class: Iris-versicolorand probability: 1.2321562734785874E-5
+Returning best class label:Iris-versicolor
+Classifying data: ["3" "3" "5" "4"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:0.0021695967943901823
+Remember only the best class: Iris-versicolorand probability: 0.0021695967943901823
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:3.141036235409723E-7
+Remember only the best class: Iris-versicolorand probability: 0.0021695967943901823
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.924941880614307E-8
+Remember only the best class: Iris-versicolorand probability: 0.0021695967943901823
+Returning best class label:Iris-versicolor
+Classifying data: ["5" "5" "8" "9"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:4.313103486657207E-8
+Remember only the best class: Iris-versicolorand probability: 4.313103486657207E-8
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:2.864195115913851E-4
+Remember only the best class: Iris-virginicaand probability: 2.864195115913851E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386153E-9
+Remember only the best class: Iris-virginicaand probability: 2.864195115913851E-4
+Returning best class label:Iris-virginica
+Classifying data: ["4" "2" "6" "7"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:1.150012521913348E-4
+Remember only the best class: Iris-versicolorand probability: 1.150012521913348E-4
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.0010646404951104263
+Remember only the best class: Iris-virginicaand probability: 0.0010646404951104263
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 0.0010646404951104263
+Returning best class label:Iris-virginica
+Classifying data: ["7" "4" "8" "8"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:8.487074602777085E-8
+Remember only the best class: Iris-versicolorand probability: 8.487074602777085E-8
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:2.0456332541658176E-4
+Remember only the best class: Iris-virginicaand probability: 2.0456332541658176E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 2.0456332541658176E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "3" "7" "7"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:1.1998269699246409E-6
+Remember only the best class: Iris-versicolorand probability: 1.1998269699246409E-6
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:0.0020028961646296035
+Remember only the best class: Iris-virginicaand probability: 0.0020028961646296035
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 0.0020028961646296035
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "8" "8"]
+Start with prior probability P(class): 0.2962962962962963
+Factor in each conditional probability:2.7775880518179553E-7
+Remember only the best class: Iris-versicolorand probability: 2.7775880518179553E-7
+Start with prior probability P(class): 0.3333333333333333
+Factor in each conditional probability:6.485767449254413E-4
+Remember only the best class: Iris-virginicaand probability: 6.485767449254413E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 6.485767449254413E-4
+Returning best class label:Iris-virginica
+Training on data...
+Classifying data: ["9" "4" "9" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.011983091622458E-9
+Remember only the best class: Iris-versicolorand probability: 9.011983091622458E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:8.139085299508257E-5
+Remember only the best class: Iris-virginicaand probability: 8.139085299508257E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 8.139085299508257E-5
+Returning best class label:Iris-virginica
+Classifying data: ["1" "2" "5" "6"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.729239869266165E-4
+Remember only the best class: Iris-versicolorand probability: 1.729239869266165E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.197433170385838E-8
+Remember only the best class: Iris-versicolorand probability: 1.729239869266165E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.2174082422016304E-8
+Remember only the best class: Iris-versicolorand probability: 1.729239869266165E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["8" "3" "8" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1897816127718457E-8
+Remember only the best class: Iris-versicolorand probability: 4.1897816127718457E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.0499988458798393E-4
+Remember only the best class: Iris-virginicaand probability: 4.0499988458798393E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 4.0499988458798393E-4
+Returning best class label:Iris-virginica
+Classifying data: ["6" "2" "8" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1233357871224134E-6
+Remember only the best class: Iris-versicolorand probability: 1.1233357871224134E-6
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.79369552444979E-4
+Remember only the best class: Iris-virginicaand probability: 5.79369552444979E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-virginicaand probability: 5.79369552444979E-4
+Returning best class label:Iris-virginica
+Classifying data: ["8" "6" "8" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 1.5810496651969226E-10
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.453751122287133E-6
+Remember only the best class: Iris-virginicaand probability: 5.453751122287133E-6
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.217463895149846E-9
+Remember only the best class: Iris-virginicaand probability: 5.453751122287133E-6
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.448404025225963E-5
+Remember only the best class: Iris-versicolorand probability: 7.448404025225963E-5
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0024754227258943096
+Remember only the best class: Iris-virginicaand probability: 0.0024754227258943096
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.0024754227258943096
+Returning best class label:Iris-virginica
+Classifying data: ["5" "2" "7" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1233357871224134E-6
+Remember only the best class: Iris-versicolorand probability: 1.1233357871224134E-6
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0015646478246718399
+Remember only the best class: Iris-virginicaand probability: 0.0015646478246718399
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-virginicaand probability: 0.0015646478246718399
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "7" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.613475096570513E-7
+Remember only the best class: Iris-versicolorand probability: 2.613475096570513E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011987195327212233
+Remember only the best class: Iris-virginicaand probability: 0.0011987195327212233
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.0011987195327212233
+Returning best class label:Iris-virginica
+Classifying data: ["3" "2" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.4351583073408768E-4
+Remember only the best class: Iris-versicolorand probability: 1.4351583073408768E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.2969743872941178E-4
+Remember only the best class: Iris-versicolorand probability: 1.4351583073408768E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-versicolorand probability: 1.4351583073408768E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "3" "6" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.531466050436749E-5
+Remember only the best class: Iris-versicolorand probability: 2.531466050436749E-5
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.773264428128234E-4
+Remember only the best class: Iris-virginicaand probability: 6.773264428128234E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:3.952624162992307E-9
+Remember only the best class: Iris-virginicaand probability: 6.773264428128234E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "4" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.613475096570513E-7
+Remember only the best class: Iris-versicolorand probability: 2.613475096570513E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.003076384853340285
+Remember only the best class: Iris-virginicaand probability: 0.003076384853340285
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.003076384853340285
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "7" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3067375482852567E-6
+Remember only the best class: Iris-versicolorand probability: 1.3067375482852567E-6
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.003139965739557212
+Remember only the best class: Iris-virginicaand probability: 0.003139965739557212
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.003139965739557212
+Returning best class label:Iris-virginica
+Classifying data: ["9" "7" "9" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-versicolorand probability: 1.5810496651969226E-10
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.9124730923784865E-6
+Remember only the best class: Iris-virginicaand probability: 5.9124730923784865E-6
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-virginicaand probability: 5.9124730923784865E-6
+Returning best class label:Iris-virginica
+Classifying data: ["9" "2" "9" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.74714335946492E-9
+Remember only the best class: Iris-versicolorand probability: 7.74714335946492E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.2908083862502815E-5
+Remember only the best class: Iris-virginicaand probability: 4.2908083862502815E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-virginicaand probability: 4.2908083862502815E-5
+Returning best class label:Iris-virginica
+Classifying data: ["4" "0" "6" "5"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.284386881588234E-4
+Remember only the best class: Iris-versicolorand probability: 4.284386881588234E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:3.0993681196267866E-6
+Remember only the best class: Iris-versicolorand probability: 4.284386881588234E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 4.284386881588234E-4
+Returning best class label:Iris-versicolor
+Training on data...
+Classifying data: ["7" "4" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:8.110784782460211E-8
+Remember only the best class: Iris-versicolorand probability: 8.110784782460211E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011169483243956366
+Remember only the best class: Iris-virginicaand probability: 0.0011169483243956366
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.0011169483243956366
+Returning best class label:Iris-virginica
+Classifying data: ["3" "3" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5523140875319688E-4
+Remember only the best class: Iris-versicolorand probability: 1.5523140875319688E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:6.349367132277405E-5
+Remember only the best class: Iris-versicolorand probability: 1.5523140875319688E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.924941880614307E-8
+Remember only the best class: Iris-versicolorand probability: 1.5523140875319688E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["9" "3" "9" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1897816127718457E-8
+Remember only the best class: Iris-versicolorand probability: 4.1897816127718457E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:7.039768284200505E-5
+Remember only the best class: Iris-virginicaand probability: 7.039768284200505E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 7.039768284200505E-5
+Returning best class label:Iris-virginica
+Classifying data: ["5" "2" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.403013986597757E-5
+Remember only the best class: Iris-versicolorand probability: 6.403013986597757E-5
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011374291809135378
+Remember only the best class: Iris-virginicaand probability: 0.0011374291809135378
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-virginicaand probability: 0.0011374291809135378
+Returning best class label:Iris-virginica
+Classifying data: ["6" "5" "7" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1265396261639676E-8
+Remember only the best class: Iris-versicolorand probability: 4.1265396261639676E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.078212405196298E-4
+Remember only the best class: Iris-virginicaand probability: 4.078212405196298E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386153E-9
+Remember only the best class: Iris-virginicaand probability: 4.078212405196298E-4
+Returning best class label:Iris-virginica
+Classifying data: ["8" "4" "8" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.5059915458112294E-8
+Remember only the best class: Iris-versicolorand probability: 4.5059915458112294E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.108085921001829E-4
+Remember only the best class: Iris-virginicaand probability: 5.108085921001829E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 5.108085921001829E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "3" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.92570900591186E-5
+Remember only the best class: Iris-versicolorand probability: 6.92570900591186E-5
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.417538409052578E-4
+Remember only the best class: Iris-virginicaand probability: 4.417538409052578E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 4.417538409052578E-4
+Returning best class label:Iris-virginica
+Classifying data: ["4" "4" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3612600459895726E-4
+Remember only the best class: Iris-versicolorand probability: 1.3612600459895726E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.001805022213618731
+Remember only the best class: Iris-virginicaand probability: 0.001805022213618731
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.138411411889999E-8
+Remember only the best class: Iris-virginicaand probability: 0.001805022213618731
+Returning best class label:Iris-virginica
+Classifying data: ["5" "3" "7" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.4300733354076697E-7
+Remember only the best class: Iris-versicolorand probability: 2.4300733354076697E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.4917842395120874E-4
+Remember only the best class: Iris-virginicaand probability: 2.4917842395120874E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 2.4917842395120874E-4
+Returning best class label:Iris-virginica
+Classifying data: ["8" "4" "8" "6"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.532037125575818E-7
+Remember only the best class: Iris-versicolorand probability: 1.532037125575818E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.234215842805748E-5
+Remember only the best class: Iris-virginicaand probability: 4.234215842805748E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 4.234215842805748E-5
+Returning best class label:Iris-virginica
+Classifying data: ["8" "3" "8" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1897816127718457E-8
+Remember only the best class: Iris-versicolorand probability: 4.1897816127718457E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.44289537070207E-5
+Remember only the best class: Iris-virginicaand probability: 9.44289537070207E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 9.44289537070207E-5
+Returning best class label:Iris-virginica
+Classifying data: ["9" "7" "9" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984613E-10
+Remember only the best class: Iris-versicolorand probability: 7.905248325984613E-10
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.60526857761751E-5
+Remember only the best class: Iris-virginicaand probability: 2.60526857761751E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.849883761228613E-9
+Remember only the best class: Iris-virginicaand probability: 2.60526857761751E-5
+Returning best class label:Iris-virginica
+Classifying data: ["5" "3" "7" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.4300733354076697E-7
+Remember only the best class: Iris-versicolorand probability: 2.4300733354076697E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.4917842395120874E-4
+Remember only the best class: Iris-virginicaand probability: 2.4917842395120874E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 2.4917842395120874E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "3" "6" "5"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.557478428158367E-4
+Remember only the best class: Iris-versicolorand probability: 9.557478428158367E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:3.661804324964218E-5
+Remember only the best class: Iris-versicolorand probability: 9.557478428158367E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-versicolorand probability: 9.557478428158367E-4
+Returning best class label:Iris-versicolor
+Classifying data: ["4" "2" "7" "5"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.833130326556322E-5
+Remember only the best class: Iris-versicolorand probability: 2.833130326556322E-5
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.221563721028985E-5
+Remember only the best class: Iris-virginicaand probability: 9.221563721028985E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 9.221563721028985E-5
+Returning best class label:Iris-virginica
+Training on data...
+Classifying data: ["9" "4" "8" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:9.011983091622458E-9
+Remember only the best class: Iris-versicolorand probability: 9.011983091622458E-9
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:3.866270881443798E-4
+Remember only the best class: Iris-virginicaand probability: 3.866270881443798E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 3.866270881443798E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "5" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1265396261639676E-8
+Remember only the best class: Iris-versicolorand probability: 4.1265396261639676E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.4795446361793975E-4
+Remember only the best class: Iris-virginicaand probability: 1.4795446361793975E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386153E-9
+Remember only the best class: Iris-virginicaand probability: 1.4795446361793975E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "4" "7" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3067375482852567E-6
+Remember only the best class: Iris-versicolorand probability: 1.3067375482852567E-6
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0019912402842608193
+Remember only the best class: Iris-virginicaand probability: 0.0019912402842608193
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.0019912402842608193
+Returning best class label:Iris-virginica
+Classifying data: ["4" "4" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3612600459895726E-4
+Remember only the best class: Iris-versicolorand probability: 1.3612600459895726E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011231246289972465
+Remember only the best class: Iris-virginicaand probability: 0.0011231246289972465
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.138411411889999E-8
+Remember only the best class: Iris-virginicaand probability: 0.0011231246289972465
+Returning best class label:Iris-virginica
+Classifying data: ["7" "4" "7" "8"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:8.110784782460211E-8
+Remember only the best class: Iris-versicolorand probability: 8.110784782460211E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:2.3857247175998228E-4
+Remember only the best class: Iris-virginicaand probability: 2.3857247175998228E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 2.3857247175998228E-4
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.613475096570513E-7
+Remember only the best class: Iris-versicolorand probability: 2.613475096570513E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.116196678127442E-4
+Remember only the best class: Iris-virginicaand probability: 5.116196678127442E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 5.116196678127442E-4
+Returning best class label:Iris-virginica
+Classifying data: ["7" "4" "6" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.6231473260023215E-6
+Remember only the best class: Iris-versicolorand probability: 4.6231473260023215E-6
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.80206117812586E-4
+Remember only the best class: Iris-virginicaand probability: 1.80206117812586E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 1.80206117812586E-4
+Returning best class label:Iris-virginica
+Classifying data: ["4" "2" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.1702060044471764E-4
+Remember only the best class: Iris-versicolorand probability: 1.1702060044471764E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:8.216146614812073E-4
+Remember only the best class: Iris-virginicaand probability: 8.216146614812073E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.905248325984614E-10
+Remember only the best class: Iris-virginicaand probability: 8.216146614812073E-4
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "8" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.613475096570513E-7
+Remember only the best class: Iris-versicolorand probability: 2.613475096570513E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:4.613376365780765E-4
+Remember only the best class: Iris-virginicaand probability: 4.613376365780765E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 4.613376365780765E-4
+Returning best class label:Iris-virginica
+Classifying data: ["6" "5" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1265396261639676E-8
+Remember only the best class: Iris-versicolorand probability: 4.1265396261639676E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:9.957698232597035E-5
+Remember only the best class: Iris-virginicaand probability: 9.957698232597035E-5
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386153E-9
+Remember only the best class: Iris-virginicaand probability: 9.957698232597035E-5
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:2.613475096570513E-7
+Remember only the best class: Iris-versicolorand probability: 2.613475096570513E-7
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:5.116196678127442E-4
+Remember only the best class: Iris-virginicaand probability: 5.116196678127442E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 5.116196678127442E-4
+Returning best class label:Iris-virginica
+Classifying data: ["5" "2" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:6.403013986597757E-5
+Remember only the best class: Iris-versicolorand probability: 6.403013986597757E-5
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0014566791341236866
+Remember only the best class: Iris-virginicaand probability: 0.0014566791341236866
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.5810496651969226E-10
+Remember only the best class: Iris-virginicaand probability: 0.0014566791341236866
+Returning best class label:Iris-virginica
+Classifying data: ["6" "4" "7" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3067375482852567E-6
+Remember only the best class: Iris-versicolorand probability: 1.3067375482852567E-6
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0013401535428131397
+Remember only the best class: Iris-virginicaand probability: 0.0013401535428131397
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.0276822823779998E-8
+Remember only the best class: Iris-virginicaand probability: 0.0013401535428131397
+Returning best class label:Iris-virginica
+Classifying data: ["5" "5" "7" "9"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:4.1265396261639676E-8
+Remember only the best class: Iris-versicolorand probability: 4.1265396261639676E-8
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:1.4795446361793975E-4
+Remember only the best class: Iris-virginicaand probability: 1.4795446361793975E-4
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:7.114723493386153E-9
+Remember only the best class: Iris-virginicaand probability: 1.4795446361793975E-4
+Returning best class label:Iris-virginica
+Classifying data: ["4" "4" "6" "7"]
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:1.3612600459895726E-4
+Remember only the best class: Iris-versicolorand probability: 1.3612600459895726E-4
+Start with prior probability P(class): 0.25925925925925924
+Factor in each conditional probability:0.0011231246289972465
+Remember only the best class: Iris-virginicaand probability: 0.0011231246289972465
+Start with prior probability P(class): 0.37037037037037035
+Factor in each conditional probability:5.138411411889999E-8
+Remember only the best class: Iris-virginicaand probability: 0.0011231246289972465
+Returning best class label:Iris-virginica
+Percent correct 0.9199999999999999
+All tests finished
