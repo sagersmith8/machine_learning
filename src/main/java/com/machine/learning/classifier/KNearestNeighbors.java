@@ -1,36 +1,58 @@
+package com.machine.learning.classifier;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.List;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicInteger;
+import com.machine.learning.model.DataPoint;
 
-public class KNearestNeighbors extends Classifier {
+public class KNearestNeighbors implements Classifier {
 
     int k;
-    ArrayList<DataWithDistance> data;
-    ArrayList<String> classLabel;
-    HashSet<String> possibleClasses;
+    List<DataWithDistance> data = new ArrayList();
+    List<String> classLabel;
+    Set<String> possibleClasses;
     Map<String, AtomicInteger> voteResults;
     
     class DataWithDistance implements Comparable {
-	ArrayList data;
+        List data;
 	double distance;
+	String clazz;
 
-	public int compareTo(DataWithDistance other) {
-	    return distance - other.distance;
+	public DataWithDistance(DataPoint data){
+	    this.data = data.getData().get();
+	    this.clazz = data.getClassLabel().get();
+	}
+
+	public int compareTo(Object other) {
+	    DataWithDistance otherD = (DataWithDistance) other;
+	    if (distance > otherD.distance) {
+		return 1;
+	    } else if (distance < otherD.distance) {
+		return -1;
+	    } else {
+		return 0;
+	    }
 	}
     }
     
     public KNearestNeighbors(int k) {
 	this.k = (int)Math.max(k,1);
     }
+
+    public double calculateDistance(List d1, List d2){
+	return 0.0;
+    }
     
     @Override
-    public void train(List<List> dataPoints, List<String> classLabel) {
-	data = new ArrayList (dataPoints.length);
-	possibleClasses = new HashSet(classLabel);
-	for (int i = 0; i < dataPoints.length; i++) {
-	    data = dataPoints;
+    public void train(List<DataPoint> dataPoints) {
+	for(DataPoint dataPoint : dataPoints){
+	    data.add(new DataWithDistance(dataPoint));
 	}
-	this.classLabel = classLabel;
     }
 
     @Override
@@ -42,10 +64,10 @@ public class KNearestNeighbors extends Classifier {
     }
 
     public String vote(int k) {
-	data = Collections.sort(data);
-	//voteReseults = new Map<>();
+	Collections.sort(data);
+	voteResults = new HashMap<>();
 	for (int i = 0; i < k; i++) {
-	    String classLabel = data.get(i).data.classifier;
+	    String classLabel = data.get(i).clazz;
 	    if (!voteResults.containsKey(classLabel)) {
 		voteResults.put(classLabel, new AtomicInteger());
 	    }
