@@ -42,7 +42,7 @@ public class ID3 implements Classifier {
 	trainingData.clear();
 	validationData.clear();
 	trainingData.addAll(dataPoints.subList(0, (int)(0.6*dataPoints.size())));
-	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size())), dataPoints.size()+1);
+	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size()+1));
 
 
 	// Construct decision tree
@@ -104,7 +104,7 @@ public class ID3 implements Classifier {
 	return classCounts;
     }
 
-    private boolean reaches(DecisionTree curDT, DecisionTree count, DataPoint point) {
+    private boolean reaches(DecisionTree curDT, DecisionTree count, DataPoint dataPoint) {
 	while (curDT.clazz == null) {
 	    if (curDT == count) {
 		return true;
@@ -248,7 +248,7 @@ public class ID3 implements Classifier {
 		classes.add(dataPoint.getClassLabel().get());
 		proportions.add(1.0/remainingData.size());
 	    } else {
-		int index = proportions.getIndexOf(dataPoint.getClassLabel().get());
+		int index = proportions.indexOf(dataPoint.getClassLabel().get());
 		proportions.set(index, proportions.get(index)+1/remainingData.size());
 	    }
 	}
