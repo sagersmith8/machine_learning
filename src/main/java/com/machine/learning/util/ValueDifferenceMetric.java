@@ -130,8 +130,8 @@ public class ValueDifferenceMetric {
 
             double sum = 0.0;
             for (String classLabel : classLabels) {
-                double diff = (classOccurancesA.getOrDefault(classLabel, ).doubleValue() / valueOccurancesA -
-                               classOccurancesB.getOrDefault(classLabel, ).doubleValue() / valueOccurancesB);
+                double diff = (classOccurancesA.getOrDefault(classLabel, ZERO).doubleValue() / valueOccurancesA -
+                               classOccurancesB.getOrDefault(classLabel, ZERO).doubleValue() / valueOccurancesB);
                 sum += Math.pow(Math.abs(diff), Q);
             }
             double res =  Math.pow(sum, 1 / Q);
