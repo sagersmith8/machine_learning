@@ -39,7 +39,7 @@ public class CrossValidator {
         Collections.shuffle(new ArrayList<>(data));
         Integer segmentSize = data.size()/numberOfFolds;
         for (int i = 0; i < numberOfFolds; i++) {
-            folds.add(data.subList(segmentSize*i, segmentSize*(i+1)));
+            folds.add(new ArrayList<>(data.subList(segmentSize*i, segmentSize*(i+1))));
         }
 
         int c = 0;
