@@ -2,12 +2,14 @@ package com.machine.learning.classifier;
 
 import com.machine.learning.model.DataPoint;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Stack;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Stack;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ID3 implements Classifier {
@@ -15,12 +17,14 @@ public class ID3 implements Classifier {
     List<DataPoint> trainingData = new ArrayList<>();
     List<DataPoint> validationData = new ArrayList<>();
     DecisionTree dt;
-
+    Set<DecisionTree> subtrees = new HashSet<>();
+    
     public class DecisionTree {
 	int attributeIndex;
 	String attributeValue;
 	String clazz;
-
+	String maxClass;
+	
 	DecisionTree pos;
 	DecisionTree neg;
 
@@ -44,7 +48,6 @@ public class ID3 implements Classifier {
 	trainingData.addAll(dataPoints.subList(0, (int)(0.6*dataPoints.size())));
 	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size()+1));
 
-
 	// Construct decision tree
 	dt = constructDT(trainingData);
 
@@ -56,39 +59,72 @@ public class ID3 implements Classifier {
     }
 
     private void pruneTree() {
-	return;
-	//	while(pruneNode());
+	while(pruneNode());
     }
 
     private boolean pruneNode() {
 	int initialError = validationError(dt);
 
-	//find the majority node for each subtree
-	Stack<DecisionTree> toVisit = new Stack<>();
-	List<DecisionTree> subtrees;
-	List<String> majorityClass;
+	if (dt.maxClass == null) {
+	    //find the majority node for each subtree, if it hasn't been determined yet
+	    Stack<DecisionTree> toVisit = new Stack<>();
 
-	while(!toVisit.empty()) {
-	    DecisionTree next = toVisit.pop();
-	    Map<String, Integer> classCounts = countClasses(dt, next);
+	    while(!toVisit.empty()) {
+		DecisionTree next = toVisit.pop();
+		if (next.clazz != null)
+		    continue;
 
-	    String maxClass = null;
-	    int maxOccurences = 0;
-	    
-	    for (String classLabel : classCounts.keySet()) {
-		if (classCounts.get(classLabel) > maxOccurences) {
-		    maxOccurences = classCounts.get(classLabel);
-		    maxClass = classLabel;
+		subtrees.add(next);
+		
+		Map<String, AtomicInteger> classCounts = countClasses(dt, next);
+
+		String maxClass = null;
+		int maxOccurences = 0;
+		
+		for (String classLabel : classCounts.keySet()) {
+		    if (classCounts.get(classLabel).intValue() > maxOccurences) {
+			maxOccurences = classCounts.get(classLabel).intValue();
+			maxClass = classLabel;
+		    }
 		}
+
+		next.maxClass = maxClass;
+
+		toVisit.push(next.pos);
+		toVisit.push(next.neg);
 	    }
-
-	    majorityClass.add(maxClass);
-
-	    toVisit.push(next.pos);
-	    toVisit.push(next.neg);
 	}
 
+	int bestError = initialError;
+	DecisionTree bestSubtree = null;
+	
 	//test on each of the subtree nodes
+	for (DecisionTree subtree : subtrees) {
+	    subtree.clazz = subtree.maxClass; //prune the node to be its majority class
+	    int newError = validationError(subtree);
+	    subtree.clazz = null; //unprune the node for now
+
+	    if (newError < bestError) {
+		bestError = newError;
+		bestSubtree = subtree;
+	    }
+	}
+
+	if (bestSubtree != null) {
+	    bestSubtree.clazz = bestSubtree.maxClass;
+	    removeSubtree(bestSubtree);
+	    
+	    bestSubtree.pos = bestSubtree.neg = null;	    
+	    return true;
+	}
+	return false;
+    }
+
+    private void removeSubtree(DecisionTree subtree) {
+	subtrees.remove(subtree);
+	
+	removeSubtree(subtree.pos);
+	removeSubtree(subtree.neg);
     }
 
     private Map<String, AtomicInteger> countClasses(DecisionTree dt, DecisionTree count) {
@@ -107,7 +143,7 @@ public class ID3 implements Classifier {
 	return classCounts;
     }
 
-    private boolean reaches(DecisionTree curDT, DecisionTree count, DataPoint dataPoint) {
+    private boolean reaches(DecisionTree curDT, DecisionTree count, List dataPoint) {
 	while (curDT.clazz == null) {
 	    if (curDT == count) {
 		return true;
@@ -134,7 +170,7 @@ public class ID3 implements Classifier {
 
     @Override
     public String classify(List dataPoint) {
-	classify(dataPoint, dt);
+	return classify(dataPoint, dt);
     }
 
     private String classify(List dataPoint, DecisionTree curDT) {
