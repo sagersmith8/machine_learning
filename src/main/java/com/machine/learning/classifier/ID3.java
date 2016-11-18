@@ -3,6 +3,8 @@ package com.machine.learning.classifier;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Stack;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ID3 implements Comparable {
 
@@ -43,13 +45,92 @@ public class ID3 implements Comparable {
 	dt = constructDT(trainingData);
 
 	// Prune decision tree
+	pruneTree();
+    }
+
+    private void pruneTree() {
+	while(pruneNode());
+    }
+
+    private boolean pruneNode() {
+	int initialError = validationError(dt);
+
+	//find the majority node for each subtree
+	Stack<DecisionTree> toVisit = new Stack<>();
+	List<DecisionTree> subtrees;
+	List<String> majorityClass;
+
+	while(!toVisit.empty()) {
+	    DecisionTree next = toVisit.pop();
+	    Map<String, Integer> classCounts = countClasses(dt, next);
+
+	    String maxClass = null;
+	    int maxOccurences = 0;
+	    
+	    for (String classLabel : classCounts.keySet()) {
+		if (classCounts.get(classLabel) > maxOccurences) {
+		    maxOccurences = classCounts.get(classLabel);
+		    maxClass = classLabel;
+		}
+	    }
+
+	    majorityClass.append(maxClass);
+
+	    toVisit.push(next.pos);
+	    toVisit.push(next.neg);
+	}
+
+	//test on each of the subtree nodes
+    }
+
+    private Map<String, AtomicInteger> countClasses(DecisionTree dt, DecisionTree count) {
+	Map<String, AtomicInteger> classCounts = new HashMap<>();
+
+	for (DataPoint point : trainingData) {
+	    String classLabel = point.getClassLabel().get();
+	    if (!classCounts.containsKey(point.getClassLabel().get())) {
+		classCounts.put(point.getClassLabel().get(), new AtomicInteger)
+	    }
+	    if (reaches(dt, count, point.getData().get())) {
+		classCounts.get(classLabel).incrementAndGet();
+	    }
+	}
+
+	return classCounts;
+    }
+
+    private boolean reaches(DecisionTree dt, DecisionTree count, DataPoint point) {
+	while (curDT.clazz == null) {
+	    if (curDT == count) {
+		return true;
+	    }
+	    if (dataPoint.get(curDT.attributeIndex).equals(curDT.attributeValue)) {
+		curDT = curDT.pos;
+	    } else {
+		curDT = curDT.neg;
+	    }
+	}
+	
+	    return false;
+    }
+
+    private void validationError(DecisionTree dt) {
+	int errors = 0;
+	for (DataPoint point : validationData) {
+	    if (classify(point.getData().get(), dt)) {
+		errors++;
+	    }
+	}
+	return errors;
     }
 
     @Override
     public String classify(List dataPoint) {
-	DecisionTree curDT = dt;
+	classify(dataPoint, dt);
+    }
 
-	while (curDT.pos != null && curDT.neg != null) {
+    private String classify(List dataPoint, DecisionTree curDT) {
+	while (curDT.clazz == null) {
 	    if (dataPoint.get(curDT.attributeIndex).equals(curDT.attributeValue)) {
 		curDT = curDT.pos;
 	    } else {
