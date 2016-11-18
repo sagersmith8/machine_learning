@@ -3,6 +3,7 @@ package com.machine.learning;
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.machine.learning.classifier.Classifier;
 import com.machine.learning.classifier.ClassifierDefault;
+import com.machine.learning.classifier.NaiveBayes;
 import com.machine.learning.experimenter.MadScientist;
 import com.machine.learning.model.DataModel;
 import joptsimple.OptionParser;
@@ -22,7 +23,7 @@ public class Main {
         System.out.println("Beginning testing...");
         OptionSet optionSet = getOptions(args);
         List<DataModel> dataModelList = new ArrayList<>();
-        if (((List) optionSet.valueOf("files")).size() == 0) {
+        if (((String) optionSet.valueOf("files")).equals("")) {
             dataModelList = Arrays.asList(
                     DynamicObject.newInstance(DataModel.class).fromFile("breast-cancer-wisconsin.data.txt"),
                     DynamicObject.newInstance(DataModel.class).fromFile("glass.data.txt"),
@@ -40,10 +41,10 @@ public class Main {
         List<Classifier> classifiers = new ArrayList<>();
         Map<String, Classifier> classifierRegistry = new HashMap<>();
         classifierRegistry.put("default", new ClassifierDefault());
+	classifierRegistry.put("naive-bayes", new NaiveBayes());
 
-        if (((List) optionSet.valueOf("classifiers")).size() == 0) {
-            Classifier classifier = new ClassifierDefault();
-            classifiers.add(classifier);
+        if (((String) optionSet.valueOf("classifiers")).equals("")) {
+            classifiers.addAll(classifierRegistry.values());
         } else {
             List<String> classifierList = (List<String>) optionSet.valueOf("classifiers");
             for (String classifierId: classifierList) {
@@ -74,8 +75,8 @@ public class Main {
 
     private static OptionSet getOptions(String... args) {
         OptionParser parser = new OptionParser();
-        parser.accepts("files").withRequiredArg().ofType(List.class).defaultsTo(Collections.emptyList());
-        parser.accepts("classifiers").withRequiredArg().ofType(List.class).defaultsTo(Collections.emptyList());
+        parser.accepts("files").withRequiredArg().ofType(String.class).defaultsTo("");
+        parser.accepts("classifiers").withRequiredArg().ofType(String.class).defaultsTo("");
         parser.accepts("outdir").withRequiredArg().ofType(String.class).defaultsTo("results");
         OptionSet options = parser.parse(args);
         return options;

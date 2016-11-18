@@ -1,5 +1,7 @@
 package com.machine.learning.classifier;
 
+import com.machine.learning.model.DataPoint;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,8 +20,8 @@ public class NaiveBayes implements Classifier {
     /* Constants for smoothing, assumes some number of possible missing points and a rate of
        occurance of any attribute in those missing points.
     */
-    private final double MISSING_POINT_RATE = 0.1; 
-    private final double ATTRIBUTE_OCCURANCE_RATE = 0.05;
+    private static final double MISSING_POINT_RATE = 0.1; 
+    private static final double ATTRIBUTE_OCCURANCE_RATE = 0.05;
     
     /**
      * Gather the data to perform classification based on a naive bayes model.
@@ -30,15 +32,15 @@ public class NaiveBayes implements Classifier {
      * @param dataPoints the points to use to construct the naive bayes model
      * @param classLabel the labels for the given points
      */
-    public void train(List<List> dataPoints, List<String> classLabel) {
+    public void train(List<DataPoint> dataPoints) {
 	numPoints = dataPoints.size();
 	if (numPoints > 0) {
 	    numAttributes = dataPoints.get(0).size();
 	}
 	resetData();
 	
-	for (int i = 0; i < dataPoints.size(); i++) {
-	    countPoint(dataPoints.get(i), classLabel.get(i));
+	for(DataPoint point : dataPoints) {
+	    countPoint(point.getData().get(), point.getClassLabel().get());
 	}
     }
 
@@ -129,7 +131,7 @@ public class NaiveBayes implements Classifier {
 	    //Factor in each conditional probability, P(attribute n = data point value | class)
 	    for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
 		String attributeValue = (String)dataPoint.get(attrNum);
-		int attrCount = attributeCount.get(classLabel).get(attrNum).get(attributeValue).intValue();
+		int attrCount = attributeCount.get(classLabel).get(attrNum).getOrDefault(attributeValue, new AtomicInteger(0)).intValue();
 		
 		prob *= (attrCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) / (numClassPoints + unseenPoints);
 	    }
@@ -142,5 +144,10 @@ public class NaiveBayes implements Classifier {
 	}
 
 	return bestClassLabel;
+    }
+
+    @Override
+    public String toString() {
+	return NaiveBayes.class.getName();
     }
 }
