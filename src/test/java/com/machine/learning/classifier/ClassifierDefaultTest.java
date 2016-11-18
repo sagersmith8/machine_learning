@@ -12,7 +12,7 @@ public class ClassifierDefaultTest {
     @Test
     public void testClassifyNoOp() {
         ClassifierDefault classifierDefault = new ClassifierDefault();
-        classifierDefault.train(Collections.emptyList(), Collections.emptyList());
+        classifierDefault.train(Collections.emptyList());
         assertThat(classifierDefault.classify(null), is(equalTo("")));
     }
 }
