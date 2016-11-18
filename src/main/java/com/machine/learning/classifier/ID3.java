@@ -50,6 +50,9 @@ public class ID3 implements Classifier {
 
 	// Prune decision tree
 	pruneTree();
+
+	System.out.println("Printing pruned decision tree:");
+	System.out.println(printTree(dt));
     }
 
     private void pruneTree() {
@@ -259,5 +262,22 @@ public class ID3 implements Classifier {
 	}
 
 	return -sum;
+    }
+
+    public String printTree(DecisionTree dt) {
+	String retS = "(";
+	if (dt.pos != null || dt.neg != null) {
+	    retS += "["+dt.attrIndex+","+attrValue+"]";
+	    if (dt.pos != null) {
+		retS += printTree(dt.pos);
+	    }
+	    if (dt.neg != null) {
+		retS += printTree(dt.neg);
+	    }
+	} else {
+	    retS += "Class= " + dt.clazz;
+	}
+	retS += ")";
+	return retS;
     }
 }
