@@ -156,6 +156,6 @@ public class NaiveBayes implements Classifier {
 
     @Override
     public String toString() {
-        return NaiveBayes.class.getName();
+        return "NaiveBayes";
     }
 }
