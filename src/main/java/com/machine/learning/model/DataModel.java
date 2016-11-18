@@ -60,7 +60,7 @@ public interface DataModel extends DynamicObject<DataModel> {
      *
      */
      default List<DataPoint> preprocessData(List<String> data) {
-        List<DataPoint> dataModel = new ArrayList<DataPoint>(data.size());
+        List<DataPoint> dataModel = new ArrayList<>(data.size());
 
         for (String dataRow : data) {
             List<String> dataModelRow = Arrays.asList(parseString(dataRow));
