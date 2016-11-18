@@ -17,7 +17,7 @@ public class MadScientist {
      * @param classifiers List of classifiers to evaluate
      */
     public MadScientist(List<DataModel> dataModels, List<Classifier> classifiers) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder("\\begin{table}\n\\begin{tabular}{c|c|c|c|c|c|}\n");
         for (DataModel dataModel: dataModels) {
             stringBuilder
                     .append(" & ")
@@ -25,6 +25,7 @@ public class MadScientist {
         }
 
         stringBuilder.append("\\\\\n");
+        stringBuilder.append("\\hline\n");
         for (Classifier classifier : classifiers) {
             System.out.println("Testing classifier: " + classifier);
             String [] classifierName = classifier.getClass().getName().split("\\.");
@@ -34,10 +35,12 @@ public class MadScientist {
                 stringBuilder.append(" & ");
                 Double result = Double.parseDouble(new CrossValidator(classifier, dataModel, 10).evaluate().getResults());
                 stringBuilder.append(String.format("%.2f", result*100D));
-                stringBuilder.append("%%");
+                stringBuilder.append("\\%");
             }
             stringBuilder.append("\\\\\n");
+            stringBuilder.append("\\hline\n");
         }
+        stringBuilder.append("\\end{tabular}\n\\end{table}");
 
         results = DynamicObject.newInstance(Result.class).withResults(stringBuilder.toString());
     }
