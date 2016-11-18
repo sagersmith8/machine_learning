@@ -20,9 +20,12 @@ public class MadScientist {
      */
     public MadScientist(List<DataModel> dataModels, List<Classifier> classifiers) {
         for (Classifier classifier : classifiers) {
+	    System.out.println("Testing classifier: " + classifier);
             for (DataModel dataModel : dataModels) {
+		System.out.println("Testing data set: " + dataModel.getName().get());
+		    
                 results.putIfAbsent(classifier.getClass(), new ArrayList<>());
-                Result result = new CrossValidator(classifier, dataModel).evaluate();
+                Result result = new CrossValidator(classifier, dataModel, 10).evaluate();
                 List<Result> resList = results.get(classifier.getClass());
                 resList.add(result);
                 results.put(classifier.getClass(), resList);
