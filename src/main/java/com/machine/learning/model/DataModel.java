@@ -77,9 +77,9 @@ public interface DataModel extends DynamicObject<DataModel> {
             dataRow = discretize(dataRow);
             //Change from String to List<Integer>
             List<String> dataModelRow = Arrays.asList(parseString(dataRow));
-	    if(dataModelRow.size() > 0) {
-		dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
-	    }
+            if(dataModelRow.size() > 0) {
+                dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
+            }
         }
 
         return dataModel;
