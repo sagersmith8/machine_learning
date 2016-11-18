@@ -49,6 +49,7 @@ public interface DataModel extends DynamicObject<DataModel> {
                 .getResourceAsStream(filePath)) {
             List<String> doc = new BufferedReader(new InputStreamReader(resource, StandardCharsets.UTF_8))
                     .lines().collect(Collectors.toList());
+	    System.out.println("Preprocessing " + filePath);
             List<DataPoint> processedData = preprocessData(doc);
             return DynamicObject.newInstance(DataModel.class)
 		.withName(filePath)
@@ -76,8 +77,14 @@ public interface DataModel extends DynamicObject<DataModel> {
                 dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
             }
         }
-         dataModel = discretize(dataModel);
-         dataModel = generateMissing(dataModel);
+
+	List<String> discretizationParams = dataModel.remove(0).getData().get();
+
+	System.out.println("Generating missing values...");
+	dataModel = generateMissing(dataModel);
+
+	System.out.println("Discretizing data...");
+	dataModel = discretize(dataModel, discretizationParams);
 
         return dataModel;
     }
@@ -96,8 +103,46 @@ public interface DataModel extends DynamicObject<DataModel> {
      *
      * @param dataRow to discretize
      */
-    default List<DataPoint> discretize(List<DataPoint> dataRow) {
+    default List<DataPoint> discretize(List<DataPoint> dataRow, List<String> discretizationParams) {
+	if (dataRow.size() == 0) {
+	    return dataRow;
+	}
+	int numAttributes = dataRow.get(0).getData().get().size();
+
+	final int NUM_BUCKETS = 10;
+
+	for (int i = 0; i < numAttributes; i++) {
+	    if (discretizationParams.get(i).equals("=")) {
+		continue;
+	    }
+
+	    Double min = Double.MAX_VALUE;
+	    Double max = Double.MIN_VALUE;
+
+	    for (int j = 0; j < dataRow.size(); j++) {
+		Double num = asNumber((String)dataRow.get(j).getData().get().get(i));
+		min = Math.min(min, num);
+		max = Math.max(max, num);
+	    }
+
+	    max += 0.001;
+
+	    for (int j = 0; j < dataRow.size(); j++) {
+		Double num = asNumber((String)dataRow.get(j).getData().get().get(i));
+		List<String> modifiedData = new ArrayList(dataRow.get(j).getData().get());
+		modifiedData.set(i, Integer.toString((int)((num - min) * NUM_BUCKETS / (max - min))));
+		dataRow.set(j, dataRow.get(j).withData(modifiedData));
+	    }	    
+	}
+
         return dataRow;
+    }
+
+    default Double asNumber(String str) {
+	try {
+	    return new Double(str);
+	} catch (NumberFormatException nfe) { }
+	return null;
     }
 
     /**
@@ -116,7 +161,7 @@ public interface DataModel extends DynamicObject<DataModel> {
                     List<String> randomDataPoint = dataPoints.get((int)(Math.random() * dataPoints.size())).getData().get();
                     value = randomDataPoint.get(j);
                     fixedDataPoint.set(j, value);
-                    dataPoint.withData(fixedDataPoint);
+                    dataPoint = dataPoint.withData(fixedDataPoint);
                     dataPoints.set(i, dataPoint);
                 }
             }

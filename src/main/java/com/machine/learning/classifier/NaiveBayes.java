@@ -32,18 +32,18 @@ public class NaiveBayes implements Classifier {
      * and counting all of the occurences of attribute values, based on the point's class label.
      *
      * @param dataPoints the points to use to construct the naive bayes model
-     * @param classLabel the labels for the given points
      */
     public void train(List<DataPoint> dataPoints) {
         numPoints = dataPoints.size();
         if (numPoints > 0) {
-            numAttributes = dataPoints.get(0).size();
+            numAttributes = dataPoints.get(0).getData().get().size();
         }
         resetData();
         
         for(DataPoint point : dataPoints) {
             countPoint(point.getData().get(), point.getClassLabel().get());
         }
+        System.out.println("Training on data...");
     }
 
     /**
@@ -118,6 +118,7 @@ public class NaiveBayes implements Classifier {
      * @return predicted class label for the given data point
      */
     public String classify(List dataPoint) {
+        System.out.println("Classifying data: "+dataPoint);
         double bestProb = 0;
         String bestClassLabel = null;
 
@@ -128,7 +129,8 @@ public class NaiveBayes implements Classifier {
             final double unseenPoints = numClassPoints * MISSING_POINT_RATE;
             
             //Start with the prior probability, P(class)
-            double prob = (double)numClassPoints / numPoints; 
+            double prob = (double)numClassPoints / numPoints;
+            System.out.println("Start with prior probability P(class): "+prob);
 
             //Factor in each conditional probability, P(attribute n = data point value | class)
             for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
@@ -138,18 +140,22 @@ public class NaiveBayes implements Classifier {
                 prob *= (attrCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) / (numClassPoints + unseenPoints);
             }
 
+            System.out.println("Factor in each conditional probability:"+prob);
+
             //Remember only the best class and probability
             if(prob > bestProb) {
                 bestProb = prob;
                 bestClassLabel = classLabel;
             }
+            System.out.println("Remember only the best class: "+bestClassLabel+ "and probability: "+bestProb);
         }
 
+        System.out.println("Returning best class label:" +bestClassLabel);
         return bestClassLabel;
     }
 
     @Override
     public String toString() {
-        return NaiveBayes.class.getName();
+        return "NaiveBayes";
     }
 }

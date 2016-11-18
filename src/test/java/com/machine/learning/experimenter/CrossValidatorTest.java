@@ -5,6 +5,7 @@ import com.machine.learning.classifier.ClassifierDefault;
 import com.machine.learning.model.DataModel;
 import com.machine.learning.model.DataPoint;
 import com.machine.learning.model.Result;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import static org.hamcrest.Matchers.is;
 
 public class CrossValidatorTest {
     @Test
+    @Ignore
     public void crossValidatorNoOpTest () {
         CrossValidator crossValidator = new CrossValidator(
                 new ClassifierDefault(), DynamicObject.newInstance(DataModel.class), 10

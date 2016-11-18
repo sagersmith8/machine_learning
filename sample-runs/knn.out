@@ -1,0 +1,1819 @@
+Beginning testing...
+Preprocessing iris.data.txt
+Generating missing values...
+Discretizing data...
+Testing classifier: 7-Nearest-Neighbors
+Testing data set: iris.data.txt
+Performing K-Fold cross validation on 7-Nearest-Neighbors
+Training on data...
+Classifying datapoint: ["2" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.24935418947996726
+Class Label: Iris-setosa Distance: 0.24935418947996726
+Class Label: Iris-setosa Distance: 0.24935418947996726
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "7" "1" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Class Label: Iris-setosa Distance: 0.4444444444444444
+Class Label: Iris-setosa Distance: 0.4444444444444444
+Class Label: Iris-setosa Distance: 0.48888888888888893
+Class Label: Iris-setosa Distance: 0.48888888888888893
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "5" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.3076923076923077
+Class Label: Iris-setosa Distance: 0.3076923076923077
+Class Label: Iris-setosa Distance: 0.3076923076923077
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.577656387389623
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "5" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.5253518765548691
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "3" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.5082125603864733
+Class Label: Iris-setosa Distance: 0.5082125603864733
+Class Label: Iris-setosa Distance: 0.5082125603864733
+Class Label: Iris-setosa Distance: 0.7129375895087695
+Class Label: Iris-setosa Distance: 0.7129375895087695
+Class Label: Iris-setosa Distance: 0.7129375895087695
+Class Label: Iris-setosa Distance: 0.7129375895087695
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "7" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.15873015873015867
+Class Label: Iris-setosa Distance: 0.4444444444444444
+Class Label: Iris-setosa Distance: 0.4444444444444444
+Class Label: Iris-setosa Distance: 0.48888888888888893
+Class Label: Iris-setosa Distance: 0.48888888888888893
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "5" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.1923076923076923
+Class Label: Iris-setosa Distance: 0.5253518765548691
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["4" "8" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.6019047619047619
+Class Label: Iris-setosa Distance: 0.6019047619047619
+Class Label: Iris-setosa Distance: 0.6662747147122219
+Class Label: Iris-setosa Distance: 0.7482113381934005
+Class Label: Iris-setosa Distance: 0.7482113381934005
+Class Label: Iris-setosa Distance: 1.110585635381054
+Class Label: Iris-setosa Distance: 1.110585635381054
+Shuffling results...
+Voted data to be class: Iris-setosa
+Training on data...
+Classifying datapoint: ["3" "9" "0" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.33333333333333326
+Class Label: Iris-setosa Distance: 0.5533596837944663
+Class Label: Iris-setosa Distance: 0.5714285714285714
+Class Label: Iris-setosa Distance: 0.5714285714285714
+Class Label: Iris-setosa Distance: 1.0652173913043477
+Class Label: Iris-setosa Distance: 1.076923076923077
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "7" "0" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.5054945054945055
+Class Label: Iris-setosa Distance: 0.5714285714285714
+Class Label: Iris-setosa Distance: 0.7954480196053101
+Class Label: Iris-setosa Distance: 1.0652173913043477
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "7" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.5054945054945055
+Class Label: Iris-setosa Distance: 0.5714285714285714
+Class Label: Iris-setosa Distance: 0.7954480196053101
+Class Label: Iris-setosa Distance: 1.0652173913043477
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "7" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.3010363107818861
+Class Label: Iris-setosa Distance: 0.3010363107818861
+Class Label: Iris-setosa Distance: 0.3010363107818861
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "5" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.5054945054945055
+Class Label: Iris-setosa Distance: 0.5054945054945055
+Class Label: Iris-setosa Distance: 0.7435897435897436
+Class Label: Iris-setosa Distance: 1.0652173913043477
+Class Label: Iris-setosa Distance: 1.076923076923077
+Class Label: Iris-setosa Distance: 1.1441647597254003
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "7" "0" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.3010363107818861
+Class Label: Iris-setosa Distance: 0.3010363107818861
+Class Label: Iris-setosa Distance: 0.3010363107818861
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.42105263157894735
+Class Label: Iris-setosa Distance: 0.42105263157894735
+Class Label: Iris-setosa Distance: 0.42105263157894735
+Class Label: Iris-setosa Distance: 0.5
+Class Label: Iris-setosa Distance: 0.5537953976006194
+Class Label: Iris-setosa Distance: 0.5537953976006194
+Class Label: Iris-setosa Distance: 0.5537953976006194
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "5" "1" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.3969761721092878
+Class Label: Iris-setosa Distance: 0.3969761721092878
+Class Label: Iris-setosa Distance: 0.3969761721092878
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "5" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.3516483516483516
+Class Label: Iris-setosa Distance: 0.3516483516483516
+Class Label: Iris-setosa Distance: 0.3516483516483516
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "5" "1" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.3516483516483516
+Class Label: Iris-setosa Distance: 0.3516483516483516
+Class Label: Iris-setosa Distance: 0.3516483516483516
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Class Label: Iris-setosa Distance: 0.2380952380952381
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "5" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.1842105263157895
+Class Label: Iris-setosa Distance: 0.3969761721092878
+Class Label: Iris-setosa Distance: 0.3969761721092878
+Class Label: Iris-setosa Distance: 0.3969761721092878
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Training on data...
+Classifying datapoint: ["1" "4" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "5" "0" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.47500000000000003
+Class Label: Iris-setosa Distance: 0.47500000000000003
+Class Label: Iris-setosa Distance: 0.47500000000000003
+Class Label: Iris-setosa Distance: 0.47500000000000003
+Class Label: Iris-setosa Distance: 0.875
+Class Label: Iris-setosa Distance: 1.0294117647058822
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "8" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.33333333333333326
+Class Label: Iris-setosa Distance: 0.33333333333333326
+Class Label: Iris-setosa Distance: 0.33333333333333326
+Class Label: Iris-setosa Distance: 0.35348541916313614
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "9" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Class Label: Iris-setosa Distance: 0.39999999999999997
+Class Label: Iris-setosa Distance: 0.5606060606060606
+Class Label: Iris-setosa Distance: 0.875
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["3" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Class Label: Iris-setosa Distance: 0.33333333333333326
+Class Label: Iris-setosa Distance: 0.5416666666666667
+Class Label: Iris-setosa Distance: 0.6522194924251782
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.461111111111111
+Class Label: Iris-setosa Distance: 0.4705882352941177
+Class Label: Iris-setosa Distance: 0.4705882352941177
+Class Label: Iris-setosa Distance: 0.4705882352941177
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "5" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "6" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.11764705882352951
+Class Label: Iris-setosa Distance: 0.1352230560750328
+Class Label: Iris-setosa Distance: 0.1352230560750328
+Class Label: Iris-setosa Distance: 0.1352230560750328
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "1" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.9166666666666666
+Class Label: Iris-setosa Distance: 1.3777777777777778
+Class Label: Iris-setosa Distance: 1.3777777777777778
+Class Label: Iris-setosa Distance: 1.3777777777777778
+Class Label: Iris-setosa Distance: 1.4559275023624987
+Class Label: Iris-setosa Distance: 1.4559275023624987
+Class Label: Iris-setosa Distance: 1.4559275023624987
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.461111111111111
+Class Label: Iris-setosa Distance: 0.4705882352941177
+Class Label: Iris-setosa Distance: 0.4705882352941177
+Class Label: Iris-setosa Distance: 0.4705882352941177
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "6" "1" "2"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 1.0
+Class Label: Iris-setosa Distance: 1.0068966334484524
+Class Label: Iris-setosa Distance: 1.0068966334484524
+Class Label: Iris-setosa Distance: 1.0068966334484524
+Class Label: Iris-setosa Distance: 1.0091012213322663
+Class Label: Iris-setosa Distance: 1.0091012213322663
+Class Label: Iris-setosa Distance: 1.0091012213322663
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "7" "1" "1"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Class Label: Iris-setosa Distance: 0.06666666666666668
+Shuffling results...
+Voted data to be class: Iris-setosa
+Training on data...
+Classifying datapoint: ["1" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "7" "1" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.22222222222222215
+Class Label: Iris-setosa Distance: 0.22222222222222215
+Class Label: Iris-setosa Distance: 0.22222222222222215
+Class Label: Iris-setosa Distance: 0.2516935799700561
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["0" "4" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.30000000000000004
+Class Label: Iris-setosa Distance: 0.30000000000000004
+Class Label: Iris-setosa Distance: 0.30000000000000004
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["2" "7" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.22222222222222215
+Class Label: Iris-setosa Distance: 0.22222222222222215
+Class Label: Iris-setosa Distance: 0.22222222222222215
+Class Label: Iris-setosa Distance: 0.2516935799700561
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["1" "5" "0" "0"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.0
+Class Label: Iris-setosa Distance: 0.11818181818181818
+Class Label: Iris-setosa Distance: 0.11818181818181818
+Class Label: Iris-setosa Distance: 0.11818181818181818
+Shuffling results...
+Voted data to be class: Iris-setosa
+Classifying datapoint: ["7" "4" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.625
+Class Label: Iris-versicolor Distance: 0.7420411039827916
+Class Label: Iris-virginica Distance: 0.7564923251977779
+Class Label: Iris-versicolor Distance: 0.808865664232633
+Class Label: Iris-versicolor Distance: 0.8241070150678657
+Class Label: Iris-virginica Distance: 0.85
+Class Label: Iris-versicolor Distance: 1.2727272727272727
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "4" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.06944444444444442
+Class Label: Iris-versicolor Distance: 0.06944444444444442
+Class Label: Iris-versicolor Distance: 0.6508753050888461
+Class Label: Iris-versicolor Distance: 0.6508753050888461
+Class Label: Iris-versicolor Distance: 0.7171717171717171
+Class Label: Iris-versicolor Distance: 0.8820283071906071
+Class Label: Iris-versicolor Distance: 0.9684905444481777
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["7" "4" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.625
+Class Label: Iris-versicolor Distance: 0.7420411039827916
+Class Label: Iris-virginica Distance: 0.7564923251977779
+Class Label: Iris-versicolor Distance: 0.808865664232633
+Class Label: Iris-versicolor Distance: 0.8241070150678657
+Class Label: Iris-virginica Distance: 0.85
+Class Label: Iris-versicolor Distance: 1.2727272727272727
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "1" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0869565217391304
+Class Label: Iris-versicolor Distance: 0.0869565217391304
+Class Label: Iris-versicolor Distance: 0.8035890566084299
+Class Label: Iris-versicolor Distance: 0.9523809523809523
+Class Label: Iris-versicolor Distance: 0.9523809523809523
+Class Label: Iris-versicolor Distance: 0.9523809523809523
+Class Label: Iris-versicolor Distance: 0.9523809523809524
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["6" "3" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-virginica Distance: 0.06944444444444442
+Class Label: Iris-versicolor Distance: 0.11786783127205673
+Class Label: Iris-versicolor Distance: 0.5134575569358177
+Class Label: Iris-versicolor Distance: 0.6477272727272727
+Class Label: Iris-versicolor Distance: 0.6508753050888462
+Class Label: Iris-versicolor Distance: 0.7612822208844172
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "3" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.0869565217391304
+Class Label: Iris-versicolor Distance: 0.09523809523809529
+Class Label: Iris-versicolor Distance: 0.09523809523809529
+Class Label: Iris-versicolor Distance: 0.09523809523809529
+Class Label: Iris-versicolor Distance: 0.1289640704132293
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "5" "6" "6"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.6450533291169345
+Class Label: Iris-versicolor Distance: 0.759008430391152
+Class Label: Iris-versicolor Distance: 1.041924439895558
+Class Label: Iris-virginica Distance: 1.132436859983498
+Class Label: Iris-virginica Distance: 1.2220781712678377
+Class Label: Iris-versicolor Distance: 1.2240496671105874
+Class Label: Iris-virginica Distance: 1.2864523239917969
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["1" "1" "3" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.5
+Class Label: Iris-versicolor Distance: 0.9596855842445536
+Class Label: Iris-versicolor Distance: 0.9800000000000001
+Class Label: Iris-versicolor Distance: 0.9800000000000001
+Class Label: Iris-virginica Distance: 1.2468323524560219
+Class Label: Iris-versicolor Distance: 1.3665392341451634
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["6" "3" "6" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.39999999999999997
+Class Label: Iris-virginica Distance: 0.405983412055465
+Class Label: Iris-versicolor Distance: 0.4170045870836171
+Class Label: Iris-versicolor Distance: 0.6477272727272727
+Class Label: Iris-versicolor Distance: 0.6508753050888461
+Class Label: Iris-versicolor Distance: 0.7612822208844172
+Class Label: Iris-versicolor Distance: 0.9182533869304317
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["2" "2" "4" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.39999999999999997
+Class Label: Iris-virginica Distance: 0.4260614730549199
+Class Label: Iris-versicolor Distance: 0.6153173719519528
+Class Label: Iris-versicolor Distance: 1.0397097771045583
+Class Label: Iris-versicolor Distance: 1.1687614409215954
+Class Label: Iris-versicolor Distance: 1.1687614409215954
+Class Label: Iris-versicolor Distance: 1.1719917842963286
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Training on data...
+Classifying datapoint: ["1" "0" "4" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.9530484382299498
+Class Label: Iris-versicolor Distance: 1.0449759781929446
+Class Label: Iris-virginica Distance: 1.1637426900584795
+Class Label: Iris-versicolor Distance: 1.3610910728819106
+Class Label: Iris-versicolor Distance: 1.365618756348629
+Class Label: Iris-versicolor Distance: 1.365618756348629
+Class Label: Iris-versicolor Distance: 1.365618756348629
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "4" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.2274509803921569
+Class Label: Iris-versicolor Distance: 0.46274509803921565
+Class Label: Iris-versicolor Distance: 0.5755879059350504
+Class Label: Iris-versicolor Distance: 0.5914153139231305
+Class Label: Iris-versicolor Distance: 0.8045070792142901
+Class Label: Iris-versicolor Distance: 0.8121436569463888
+Class Label: Iris-versicolor Distance: 0.8538781719928052
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "0" "5" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.9473684210526316
+Class Label: Iris-versicolor Distance: 0.953861941907791
+Class Label: Iris-versicolor Distance: 1.0397982470631075
+Class Label: Iris-versicolor Distance: 1.0543433743174373
+Class Label: Iris-virginica Distance: 1.17019335228561
+Class Label: Iris-versicolor Distance: 1.2080938347156571
+Class Label: Iris-versicolor Distance: 1.2735343696798886
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "3" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.2274509803921569
+Class Label: Iris-versicolor Distance: 0.2274509803921569
+Class Label: Iris-versicolor Distance: 0.26032609322463324
+Class Label: Iris-virginica Distance: 0.46274509803921565
+Class Label: Iris-versicolor Distance: 0.48518802321276283
+Class Label: Iris-versicolor Distance: 0.5755879059350504
+Class Label: Iris-versicolor Distance: 0.6188985263676507
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "3" "4" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.10526315789473684
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["6" "4" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.23529411764705876
+Class Label: Iris-versicolor Distance: 0.6188985263676507
+Class Label: Iris-versicolor Distance: 0.6336450284064007
+Class Label: Iris-versicolor Distance: 0.7552074077005333
+Class Label: Iris-versicolor Distance: 0.8360416191717139
+Class Label: Iris-versicolor Distance: 0.8433927127973107
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "4" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.4285714285714286
+Class Label: Iris-versicolor Distance: 0.4285714285714286
+Class Label: Iris-versicolor Distance: 0.7176175212788853
+Class Label: Iris-versicolor Distance: 0.7176175212788853
+Class Label: Iris-versicolor Distance: 0.7176175212788853
+Class Label: Iris-versicolor Distance: 0.8045070792142901
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "2" "5" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.44130919070162977
+Class Label: Iris-versicolor Distance: 0.4745664949923199
+Class Label: Iris-versicolor Distance: 0.8360416191717139
+Class Label: Iris-versicolor Distance: 0.8999999999999999
+Class Label: Iris-versicolor Distance: 0.8999999999999999
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "0" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 1.0397982470631075
+Class Label: Iris-versicolor Distance: 1.0543433743174373
+Class Label: Iris-versicolor Distance: 1.1063829787234043
+Class Label: Iris-versicolor Distance: 1.1311262605952446
+Class Label: Iris-versicolor Distance: 1.1381183683408482
+Class Label: Iris-versicolor Distance: 1.1435292297825974
+Class Label: Iris-virginica Distance: 1.1831365255561177
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "2" "4" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.11111111111111113
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "4" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.2274509803921569
+Class Label: Iris-virginica Distance: 0.26666666666666666
+Class Label: Iris-virginica Distance: 0.5755879059350504
+Class Label: Iris-virginica Distance: 0.6808510638297871
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "3" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.10526315789473684
+Class Label: Iris-versicolor Distance: 0.1530555827871626
+Class Label: Iris-versicolor Distance: 0.4285714285714286
+Class Label: Iris-versicolor Distance: 0.46274509803921565
+Class Label: Iris-versicolor Distance: 0.7528006743672623
+Class Label: Iris-versicolor Distance: 0.8538781719928052
+Class Label: Iris-versicolor Distance: 0.8999999999999999
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "2" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.10526315789473684
+Class Label: Iris-versicolor Distance: 0.25776666621050953
+Class Label: Iris-versicolor Distance: 0.25776666621050953
+Class Label: Iris-versicolor Distance: 0.5001171098823108
+Class Label: Iris-versicolor Distance: 0.5204059647649625
+Class Label: Iris-versicolor Distance: 0.7085230570473147
+Class Label: Iris-versicolor Distance: 0.7085230570473147
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "3" "6" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.2274509803921569
+Class Label: Iris-versicolor Distance: 0.48518802321276283
+Class Label: Iris-versicolor Distance: 0.48518802321276283
+Class Label: Iris-virginica Distance: 0.6307190302718624
+Class Label: Iris-versicolor Distance: 0.6749257565498719
+Class Label: Iris-versicolor Distance: 0.7176175212788853
+Class Label: Iris-versicolor Distance: 0.7528006743672623
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "3" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.4745664949923199
+Class Label: Iris-versicolor Distance: 0.4874002843471075
+Class Label: Iris-versicolor Distance: 0.6307190302718624
+Class Label: Iris-versicolor Distance: 0.7176175212788853
+Class Label: Iris-versicolor Distance: 0.7552074077005333
+Class Label: Iris-versicolor Distance: 1.0526315789473684
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Training on data...
+Classifying datapoint: ["6" "4" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.20300751879699244
+Class Label: Iris-versicolor Distance: 0.6825396825396826
+Class Label: Iris-versicolor Distance: 0.7561233032141891
+Class Label: Iris-versicolor Distance: 0.7561233032141891
+Class Label: Iris-versicolor Distance: 0.9981837582413351
+Class Label: Iris-versicolor Distance: 1.0534668316142248
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["6" "3" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-virginica Distance: 0.20300751879699244
+Class Label: Iris-versicolor Distance: 0.28639869886644825
+Class Label: Iris-versicolor Distance: 0.39999999999999997
+Class Label: Iris-versicolor Distance: 0.653605186162911
+Class Label: Iris-versicolor Distance: 0.653605186162911
+Class Label: Iris-versicolor Distance: 0.6825396825396826
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["6" "4" "6" "6"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.5797101449275363
+Class Label: Iris-versicolor Distance: 0.6319596310174518
+Class Label: Iris-virginica Distance: 0.7079080355865955
+Class Label: Iris-virginica Distance: 0.8647463800418257
+Class Label: Iris-versicolor Distance: 0.8955022447617179
+Class Label: Iris-virginica Distance: 0.8955022447617179
+Class Label: Iris-virginica Distance: 0.8955022447617179
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "3" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.39999999999999997
+Class Label: Iris-versicolor Distance: 0.4481207002854066
+Class Label: Iris-versicolor Distance: 0.4481207002854066
+Class Label: Iris-versicolor Distance: 0.6086956521739131
+Class Label: Iris-versicolor Distance: 0.6244606441271909
+Class Label: Iris-versicolor Distance: 0.6244606441271909
+Class Label: Iris-versicolor Distance: 0.6403124237432849
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "2" "4" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.2020202020202021
+Class Label: Iris-versicolor Distance: 0.22779924151378464
+Class Label: Iris-versicolor Distance: 0.22779924151378464
+Class Label: Iris-versicolor Distance: 0.22779924151378464
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "1" "4" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.7950310559006211
+Class Label: Iris-versicolor Distance: 0.7950310559006211
+Class Label: Iris-versicolor Distance: 0.9042365279599957
+Class Label: Iris-versicolor Distance: 0.9090909090909092
+Class Label: Iris-versicolor Distance: 0.915164801225281
+Class Label: Iris-versicolor Distance: 0.915164801225281
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "1" "4" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.7950310559006211
+Class Label: Iris-versicolor Distance: 0.7950310559006211
+Class Label: Iris-versicolor Distance: 0.9042365279599957
+Class Label: Iris-versicolor Distance: 0.9090909090909092
+Class Label: Iris-versicolor Distance: 0.915164801225281
+Class Label: Iris-versicolor Distance: 0.915164801225281
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "2" "4" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.22779924151378464
+Class Label: Iris-versicolor Distance: 0.530889433402099
+Class Label: Iris-versicolor Distance: 0.530889433402099
+Class Label: Iris-versicolor Distance: 0.6201105728282893
+Class Label: Iris-versicolor Distance: 0.746031746031746
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "2" "6" "6"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.5797101449275363
+Class Label: Iris-virginica Distance: 0.5797101449275363
+Class Label: Iris-virginica Distance: 0.696603622204714
+Class Label: Iris-virginica Distance: 0.7523396494906083
+Class Label: Iris-virginica Distance: 0.7523396494906083
+Class Label: Iris-virginica Distance: 0.7789910848141554
+Class Label: Iris-versicolor Distance: 0.9055361943080179
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["3" "4" "5" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.39999999999999997
+Class Label: Iris-versicolor Distance: 0.7283614466564148
+Class Label: Iris-versicolor Distance: 0.7283614466564148
+Class Label: Iris-versicolor Distance: 0.7283614466564148
+Class Label: Iris-versicolor Distance: 0.7359284811619928
+Class Label: Iris-versicolor Distance: 0.746031746031746
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "5" "5" "6"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 1.1087254094944852
+Class Label: Iris-versicolor Distance: 1.19515683051487
+Class Label: Iris-versicolor Distance: 1.2079830833759468
+Class Label: Iris-versicolor Distance: 1.301972523481231
+Class Label: Iris-versicolor Distance: 1.3363515255148584
+Class Label: Iris-versicolor Distance: 1.3757447176500848
+Class Label: Iris-virginica Distance: 1.3757447176500848
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["6" "4" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.2380952380952381
+Class Label: Iris-versicolor Distance: 0.2380952380952381
+Class Label: Iris-versicolor Distance: 0.6086956521739131
+Class Label: Iris-virginica Distance: 0.641656021294538
+Class Label: Iris-versicolor Distance: 0.6825396825396826
+Class Label: Iris-versicolor Distance: 0.7246681997701117
+Class Label: Iris-versicolor Distance: 0.7283614466564148
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "1" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.6403124237432849
+Class Label: Iris-versicolor Distance: 0.6927850287526038
+Class Label: Iris-versicolor Distance: 0.9090909090909092
+Class Label: Iris-versicolor Distance: 0.9090909090909092
+Class Label: Iris-versicolor Distance: 1.027811936618505
+Class Label: Iris-versicolor Distance: 1.1779448621553885
+Class Label: Iris-versicolor Distance: 1.17864585399913
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "4" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.39999999999999997
+Class Label: Iris-versicolor Distance: 0.6086956521739131
+Class Label: Iris-versicolor Distance: 0.6086956521739131
+Class Label: Iris-versicolor Distance: 0.6086956521739131
+Class Label: Iris-versicolor Distance: 0.6177303047328969
+Class Label: Iris-versicolor Distance: 0.6956521739130435
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "2" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.2020202020202021
+Class Label: Iris-versicolor Distance: 0.2020202020202021
+Class Label: Iris-versicolor Distance: 0.2020202020202021
+Class Label: Iris-versicolor Distance: 0.22779924151378464
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Training on data...
+Classifying datapoint: ["3" "2" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.1588235294117647
+Class Label: Iris-versicolor Distance: 0.1905393552649478
+Class Label: Iris-versicolor Distance: 0.6808510638297873
+Class Label: Iris-versicolor Distance: 0.7129186602870814
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "4" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.4396284829721363
+Class Label: Iris-versicolor Distance: 0.4631578947368421
+Class Label: Iris-versicolor Distance: 0.4631578947368421
+Class Label: Iris-versicolor Distance: 0.5624837842957161
+Class Label: Iris-versicolor Distance: 0.5808510638297872
+Class Label: Iris-versicolor Distance: 0.6611436682310028
+Class Label: Iris-versicolor Distance: 0.7284649349094146
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "2" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.1588235294117647
+Class Label: Iris-versicolor Distance: 0.3534797097211669
+Class Label: Iris-versicolor Distance: 0.5588235294117647
+Class Label: Iris-versicolor Distance: 0.5794660844074159
+Class Label: Iris-versicolor Distance: 0.7129186602870814
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["1" "1" "3" "3"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.5
+Class Label: Iris-versicolor Distance: 0.9090909090909091
+Class Label: Iris-versicolor Distance: 0.9090909090909091
+Class Label: Iris-versicolor Distance: 0.9151648012252808
+Class Label: Iris-versicolor Distance: 1.1112888816829598
+Class Label: Iris-virginica Distance: 1.2556400930562879
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "2" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.1588235294117647
+Class Label: Iris-versicolor Distance: 0.1905393552649478
+Class Label: Iris-versicolor Distance: 0.6808510638297873
+Class Label: Iris-versicolor Distance: 0.7129186602870814
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "4" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.31578947368421056
+Class Label: Iris-versicolor Distance: 0.31578947368421056
+Class Label: Iris-versicolor Distance: 0.5808510638297872
+Class Label: Iris-versicolor Distance: 0.5903120283055122
+Class Label: Iris-versicolor Distance: 0.6808510638297873
+Class Label: Iris-versicolor Distance: 0.6889401305832934
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "3" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.1588235294117647
+Class Label: Iris-versicolor Distance: 0.1905393552649478
+Class Label: Iris-versicolor Distance: 0.1905393552649478
+Class Label: Iris-versicolor Distance: 0.5808510638297872
+Class Label: Iris-versicolor Distance: 0.6611436682310028
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "3" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.5572755417956656
+Class Label: Iris-versicolor Distance: 0.5794660844074159
+Class Label: Iris-versicolor Distance: 0.5889492978079137
+Class Label: Iris-versicolor Distance: 0.5913738172169535
+Class Label: Iris-versicolor Distance: 0.640530265618576
+Class Label: Iris-versicolor Distance: 0.6611436682310028
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["2" "2" "3" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.31578947368421056
+Class Label: Iris-versicolor Distance: 0.5713286772521122
+Class Label: Iris-virginica Distance: 0.6853156187340571
+Class Label: Iris-versicolor Distance: 1.027972027972028
+Class Label: Iris-versicolor Distance: 1.027972027972028
+Class Label: Iris-versicolor Distance: 1.033347387233788
+Class Label: Iris-versicolor Distance: 1.0401689304087742
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["3" "3" "5" "4"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-versicolor Distance: 0.10526315789473689
+Class Label: Iris-versicolor Distance: 0.1588235294117647
+Class Label: Iris-versicolor Distance: 0.1905393552649478
+Class Label: Iris-versicolor Distance: 0.1905393552649478
+Class Label: Iris-versicolor Distance: 0.5808510638297872
+Class Label: Iris-versicolor Distance: 0.6611436682310028
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["5" "5" "8" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11764705882352938
+Class Label: Iris-virginica Distance: 0.11764705882352938
+Class Label: Iris-virginica Distance: 0.6132665832290363
+Class Label: Iris-virginica Distance: 0.6204466404077837
+Class Label: Iris-virginica Distance: 0.6204466404077837
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "2" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.18518965489300473
+Class Label: Iris-virginica Distance: 0.5572755417956656
+Class Label: Iris-virginica Distance: 0.5572755417956656
+Class Label: Iris-virginica Distance: 0.5794660844074159
+Class Label: Iris-versicolor Distance: 0.6808510638297873
+Class Label: Iris-virginica Distance: 0.6808510638297873
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["7" "4" "8" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.09411764705882358
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "3" "7" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.09523809523809529
+Class Label: Iris-virginica Distance: 0.09523809523809529
+Class Label: Iris-virginica Distance: 0.1588235294117647
+Class Label: Iris-virginica Distance: 0.19765056019307578
+Class Label: Iris-virginica Distance: 0.5808510638297872
+Class Label: Iris-virginica Distance: 0.5886070447563264
+Class Label: Iris-virginica Distance: 0.5926455844786347
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "8" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.09523809523809529
+Shuffling results...
+Voted data to be class: Iris-virginica
+Training on data...
+Classifying datapoint: ["9" "4" "9" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.6160803737264745
+Class Label: Iris-virginica Distance: 0.6160803737264745
+Class Label: Iris-virginica Distance: 0.6666666666666667
+Class Label: Iris-virginica Distance: 0.6666666666666667
+Class Label: Iris-virginica Distance: 0.6666666666666667
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["1" "2" "5" "6"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.18991824429115567
+Class Label: Iris-versicolor Distance: 0.4002107726015441
+Class Label: Iris-versicolor Distance: 0.7113513627214575
+Class Label: Iris-versicolor Distance: 0.7113513627214575
+Class Label: Iris-versicolor Distance: 0.7113513627214575
+Class Label: Iris-versicolor Distance: 1.1095731718098523
+Class Label: Iris-versicolor Distance: 1.1095731718098523
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["8" "3" "8" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.6047430830039526
+Class Label: Iris-virginica Distance: 0.6160803737264745
+Class Label: Iris-virginica Distance: 0.7777777777777777
+Class Label: Iris-virginica Distance: 0.7866251343904319
+Class Label: Iris-virginica Distance: 0.7866251343904319
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "2" "8" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.319778235623654
+Class Label: Iris-virginica Distance: 0.3407329605840975
+Class Label: Iris-virginica Distance: 0.3407329605840975
+Class Label: Iris-virginica Distance: 0.80306905370844
+Class Label: Iris-virginica Distance: 0.8116407675037006
+Class Label: Iris-virginica Distance: 0.8116407675037006
+Class Label: Iris-virginica Distance: 0.8116407675037006
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["8" "6" "8" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.23203626968607083
+Class Label: Iris-virginica Distance: 1.0999438818457403
+Class Label: Iris-virginica Distance: 1.0999438818457403
+Class Label: Iris-virginica Distance: 1.0999438818457403
+Class Label: Iris-virginica Distance: 1.2668615834434866
+Class Label: Iris-virginica Distance: 1.2668615834434866
+Class Label: Iris-virginica Distance: 1.3043478260869565
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.3534854191631362
+Class Label: Iris-versicolor Distance: 0.4
+Class Label: Iris-virginica Distance: 0.4
+Class Label: Iris-virginica Distance: 0.4
+Class Label: Iris-virginica Distance: 0.4
+Class Label: Iris-virginica Distance: 0.6442801506258813
+Class Label: Iris-virginica Distance: 0.8332482349657585
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "2" "7" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.22994652406417115
+Class Label: Iris-virginica Distance: 0.25829485937397484
+Class Label: Iris-virginica Distance: 0.25829485937397484
+Class Label: Iris-virginica Distance: 0.80306905370844
+Class Label: Iris-virginica Distance: 0.8110571345682944
+Class Label: Iris-virginica Distance: 0.8110571345682944
+Class Label: Iris-virginica Distance: 0.8192108486136775
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "7" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.25144292891073655
+Class Label: Iris-virginica Distance: 0.3333333333333333
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["3" "2" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.22994652406417115
+Class Label: Iris-virginica Distance: 0.5923076923076922
+Class Label: Iris-virginica Distance: 0.5923076923076922
+Class Label: Iris-versicolor Distance: 0.9978718892678724
+Class Label: Iris-virginica Distance: 0.9978718892678724
+Class Label: Iris-virginica Distance: 0.9978718892678724
+Class Label: Iris-virginica Distance: 0.9978718892678724
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "3" "6" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.25829485937397484
+Class Label: Iris-virginica Distance: 0.25829485937397484
+Class Label: Iris-virginica Distance: 0.6038784917652646
+Class Label: Iris-versicolor Distance: 0.6160803737264745
+Class Label: Iris-virginica Distance: 0.6160803737264745
+Class Label: Iris-virginica Distance: 0.6160803737264745
+Class Label: Iris-virginica Distance: 0.6160803737264745
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "4" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.11111111111111105
+Class Label: Iris-virginica Distance: 0.11111111111111105
+Class Label: Iris-virginica Distance: 0.11111111111111105
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.22222222222222227
+Class Label: Iris-virginica Distance: 0.22222222222222227
+Class Label: Iris-virginica Distance: 0.22222222222222227
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "7" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.22222222222222227
+Class Label: Iris-virginica Distance: 0.3534854191631362
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["9" "7" "9" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.9688990825151839
+Class Label: Iris-virginica Distance: 0.9688990825151839
+Class Label: Iris-virginica Distance: 0.9688990825151839
+Class Label: Iris-virginica Distance: 1.1043478260869566
+Class Label: Iris-virginica Distance: 1.1105966646054786
+Class Label: Iris-virginica Distance: 1.1549143520165583
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["9" "2" "9" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.25829485937397484
+Class Label: Iris-virginica Distance: 0.25829485937397484
+Class Label: Iris-virginica Distance: 0.80306905370844
+Class Label: Iris-virginica Distance: 0.8110571345682944
+Class Label: Iris-virginica Distance: 0.8110571345682944
+Class Label: Iris-virginica Distance: 0.8116407675037006
+Class Label: Iris-virginica Distance: 0.819545304412123
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "0" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.6179976037607143
+Class Label: Iris-versicolor Distance: 0.8181818181818181
+Class Label: Iris-versicolor Distance: 0.84483301145445
+Class Label: Iris-versicolor Distance: 0.8562600393997348
+Class Label: Iris-versicolor Distance: 0.9048322107661116
+Class Label: Iris-versicolor Distance: 0.9107258026449595
+Class Label: Iris-versicolor Distance: 0.9107258026449595
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Training on data...
+Classifying datapoint: ["7" "4" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Class Label: Iris-virginica Distance: 0.0235294117647058
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["3" "3" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.44705882352941173
+Class Label: Iris-virginica Distance: 0.6071294591309514
+Class Label: Iris-virginica Distance: 0.7420848968024922
+Class Label: Iris-virginica Distance: 0.7420848968024922
+Class Label: Iris-virginica Distance: 1.0860266871187048
+Class Label: Iris-versicolor Distance: 1.1056955393962773
+Class Label: Iris-virginica Distance: 1.1056955393962773
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["9" "3" "9" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.4665183484851153
+Class Label: Iris-virginica Distance: 0.9333333333333333
+Class Label: Iris-virginica Distance: 0.9370497765524648
+Class Label: Iris-virginica Distance: 0.9431394389228659
+Class Label: Iris-virginica Distance: 0.9431394389228659
+Class Label: Iris-virginica Distance: 1.0348781101205171
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "2" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.4666666666666667
+Class Label: Iris-virginica Distance: 0.4666666666666667
+Class Label: Iris-virginica Distance: 0.6598614606499286
+Class Label: Iris-virginica Distance: 0.6896485135995019
+Class Label: Iris-virginica Distance: 0.7064798133518809
+Class Label: Iris-versicolor Distance: 0.825430765658714
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "5" "7" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.1098039215686275
+Class Label: Iris-virginica Distance: 0.1098039215686275
+Class Label: Iris-virginica Distance: 0.1098039215686275
+Class Label: Iris-virginica Distance: 0.6132665832290363
+Class Label: Iris-virginica Distance: 0.6132665832290363
+Class Label: Iris-virginica Distance: 0.6132665832290363
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["8" "4" "8" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.1333333333333333
+Class Label: Iris-virginica Distance: 0.1333333333333333
+Class Label: Iris-virginica Distance: 0.693783791174117
+Class Label: Iris-virginica Distance: 0.8110350040397627
+Class Label: Iris-virginica Distance: 0.8110350040397627
+Class Label: Iris-virginica Distance: 0.8235294117647058
+Class Label: Iris-virginica Distance: 0.8235294117647058
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "3" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.44705882352941173
+Class Label: Iris-virginica Distance: 0.4853406592853679
+Class Label: Iris-virginica Distance: 0.6462502375034608
+Class Label: Iris-virginica Distance: 0.6462502375034608
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Class Label: Iris-virginica Distance: 0.9525176003778177
+Class Label: Iris-versicolor Distance: 1.0437969157128881
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "4" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.5764705882352943
+Class Label: Iris-virginica Distance: 0.6146362971528593
+Class Label: Iris-virginica Distance: 0.6808510638297872
+Class Label: Iris-virginica Distance: 0.6808510638297872
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "3" "7" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.1333333333333333
+Class Label: Iris-virginica Distance: 0.4665183484851153
+Class Label: Iris-virginica Distance: 0.4792663879985
+Class Label: Iris-virginica Distance: 0.9336670838548184
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["8" "4" "8" "6"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 1.4280447483018985
+Class Label: Iris-versicolor Distance: 1.4438032765008424
+Class Label: Iris-versicolor Distance: 1.4438032765008424
+Class Label: Iris-versicolor Distance: 1.4569724064909706
+Class Label: Iris-virginica Distance: 1.6
+Class Label: Iris-virginica Distance: 1.6
+Class Label: Iris-versicolor Distance: 1.6150288308038463
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["8" "3" "8" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.4665183484851153
+Class Label: Iris-virginica Distance: 0.9333333333333333
+Class Label: Iris-virginica Distance: 0.9370497765524648
+Class Label: Iris-virginica Distance: 0.9431394389228659
+Class Label: Iris-virginica Distance: 0.9431394389228659
+Class Label: Iris-virginica Distance: 1.0348781101205171
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["9" "7" "9" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.1333333333333333
+Class Label: Iris-virginica Distance: 0.13517250067329376
+Class Label: Iris-virginica Distance: 0.9756512823937666
+Class Label: Iris-virginica Distance: 1.0699560009206874
+Class Label: Iris-virginica Distance: 1.0699560009206874
+Class Label: Iris-virginica Distance: 1.0699560009206874
+Class Label: Iris-virginica Distance: 1.1270634938230841
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "3" "7" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.1333333333333333
+Class Label: Iris-virginica Distance: 0.4665183484851153
+Class Label: Iris-virginica Distance: 0.4792663879985
+Class Label: Iris-virginica Distance: 0.9336670838548184
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Class Label: Iris-virginica Distance: 0.9401016565594436
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "3" "6" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.1098039215686275
+Class Label: Iris-versicolor Distance: 0.1098039215686275
+Class Label: Iris-versicolor Distance: 0.15621325233217245
+Class Label: Iris-versicolor Distance: 0.44705882352941173
+Class Label: Iris-versicolor Distance: 0.4666666666666667
+Class Label: Iris-versicolor Distance: 0.4797118476649534
+Class Label: Iris-virginica Distance: 0.4892893574927135
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Classifying datapoint: ["4" "2" "7" "5"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 1.20190178518653
+Class Label: Iris-virginica Distance: 1.2046207333061767
+Class Label: Iris-versicolor Distance: 1.249388931760888
+Class Label: Iris-versicolor Distance: 1.2543198881541175
+Class Label: Iris-versicolor Distance: 1.2565384549980507
+Class Label: Iris-versicolor Distance: 1.3508031989262033
+Class Label: Iris-versicolor Distance: 1.375969128253595
+Shuffling results...
+Voted data to be class: Iris-versicolor
+Training on data...
+Classifying datapoint: ["9" "4" "8" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.7070114480293924
+Class Label: Iris-virginica Distance: 0.7070114480293924
+Class Label: Iris-virginica Distance: 0.7070114480293924
+Class Label: Iris-virginica Distance: 0.7804878048780488
+Class Label: Iris-virginica Distance: 0.8558758314855877
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "5" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Class Label: Iris-virginica Distance: 0.697471454875053
+Class Label: Iris-virginica Distance: 0.697471454875053
+Class Label: Iris-virginica Distance: 0.7152722274488267
+Class Label: Iris-virginica Distance: 0.7152722274488267
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "4" "7" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.17165614014601108
+Class Label: Iris-virginica Distance: 0.17165614014601108
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.23369586954824387
+Class Label: Iris-virginica Distance: 0.23369586954824387
+Class Label: Iris-virginica Distance: 0.6961912530442695
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "4" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.39676113360323895
+Class Label: Iris-virginica Distance: 0.7070114480293924
+Class Label: Iris-virginica Distance: 0.7804878048780488
+Class Label: Iris-virginica Distance: 0.8950967863065008
+Class Label: Iris-virginica Distance: 0.9189380507565835
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["7" "4" "7" "8"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.125
+Class Label: Iris-virginica Distance: 0.1405631182534757
+Class Label: Iris-virginica Distance: 0.6904770742963424
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["7" "4" "6" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.1405631182534757
+Class Label: Iris-versicolor Distance: 0.4880753648277754
+Class Label: Iris-virginica Distance: 0.4880753648277754
+Class Label: Iris-virginica Distance: 0.7179764534054152
+Class Label: Iris-virginica Distance: 0.799141441806882
+Class Label: Iris-virginica Distance: 0.8428529459500812
+Class Label: Iris-virginica Distance: 0.9205317894104045
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "2" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.16568627450980392
+Class Label: Iris-virginica Distance: 0.5614035087719298
+Class Label: Iris-virginica Distance: 0.5733977770906907
+Class Label: Iris-virginica Distance: 0.5986842105263157
+Class Label: Iris-virginica Distance: 0.6099458132036231
+Class Label: Iris-versicolor Distance: 0.7804878048780488
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "8" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "5" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Class Label: Iris-virginica Distance: 0.6904770742963424
+Class Label: Iris-virginica Distance: 0.6904770742963424
+Class Label: Iris-virginica Distance: 0.6961912530442695
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.07692307692307687
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "2" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11666666666666667
+Class Label: Iris-virginica Distance: 0.5986842105263157
+Class Label: Iris-virginica Distance: 0.6211881562734886
+Class Label: Iris-virginica Distance: 0.8061849307432123
+Class Label: Iris-virginica Distance: 0.9768518518518519
+Class Label: Iris-versicolor Distance: 0.9836584760458648
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["6" "4" "7" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.11764705882352942
+Class Label: Iris-virginica Distance: 0.1405631182534757
+Class Label: Iris-virginica Distance: 0.1405631182534757
+Class Label: Iris-virginica Distance: 0.23369586954824387
+Class Label: Iris-virginica Distance: 0.6961912530442695
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["5" "5" "7" "9"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.20192307692307687
+Class Label: Iris-virginica Distance: 0.6861788617886179
+Class Label: Iris-virginica Distance: 0.697471454875053
+Class Label: Iris-virginica Distance: 0.697471454875053
+Class Label: Iris-virginica Distance: 0.7152722274488267
+Class Label: Iris-virginica Distance: 0.7152722274488267
+Shuffling results...
+Voted data to be class: Iris-virginica
+Classifying datapoint: ["4" "4" "6" "7"]
+Voting on class with k=7...
+Sorting data...
+Class Label: Iris-versicolor Distance: 0.0
+Class Label: Iris-virginica Distance: 0.0
+Class Label: Iris-virginica Distance: 0.39676113360323895
+Class Label: Iris-virginica Distance: 0.7070114480293924
+Class Label: Iris-virginica Distance: 0.7804878048780488
+Class Label: Iris-virginica Distance: 0.8950967863065008
+Class Label: Iris-virginica Distance: 0.9189380507565835
+Shuffling results...
+Voted data to be class: Iris-virginica
+Percent correct 0.9466666666666669
+All tests finished
