@@ -19,6 +19,12 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public interface DataModel extends DynamicObject<DataModel> {
+    @Key("name")
+    DataModel withName(String name);
+
+    @Key("name")
+    Optional<String> getName();
+
     @Key("data")
     /**
      * Setter for data
@@ -45,7 +51,9 @@ public interface DataModel extends DynamicObject<DataModel> {
                     .lines().collect(Collectors.toList());
             List<DataPoint> processedData = preprocessData(doc);
             return DynamicObject.newInstance(DataModel.class)
-                    .withData(processedData);
+		.withName(filePath)
+		.withData(processedData);
+
         } catch (java.io.IOException ex) {
             ex.printStackTrace();
         }
@@ -63,14 +71,13 @@ public interface DataModel extends DynamicObject<DataModel> {
         List<DataPoint> dataModel = new ArrayList<DataPoint>(data.size());
 
         for (String dataRow : data) {
-            //Fill in missing values
-            dataRow = generateMissing(dataRow);
-            //Discretize
-            dataRow = discretize(dataRow);
-            //Change from String to List<Integer>
             List<String> dataModelRow = Arrays.asList(parseString(dataRow));
-            dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
+            if(dataModelRow.size() > 0) {
+                dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
+            }
         }
+         dataModel = discretize(dataModel);
+         dataModel = generateMissing(dataModel);
 
         return dataModel;
     }
@@ -81,7 +88,7 @@ public interface DataModel extends DynamicObject<DataModel> {
      * @return int[] created from String
      */
     default String[] parseString(String toParse) {
-        return toParse.split(",");
+        return toParse.split(",", 0);
     }
 
     /**
@@ -89,18 +96,32 @@ public interface DataModel extends DynamicObject<DataModel> {
      *
      * @param dataRow to discretize
      */
-    default String discretize(String dataRow) {
+    default List<DataPoint> discretize(List<DataPoint> dataRow) {
         return dataRow;
     }
 
     /**
      * Generates missing values
      *
-     * @param dataRow to generate missing data for
+     * @param dataPoints to generate missing data for
      * @return the data with missing values generated
      */
-    default String generateMissing(String dataRow) {
-        return dataRow.replaceAll("\\?", String.valueOf((int)(Math.random()* 10)));
+    default List<DataPoint> generateMissing(List<DataPoint> dataPoints) {
+        for (int i = 0; i < dataPoints.size(); i++) {
+            DataPoint dataPoint = dataPoints.get(i);
+            for (int j = 0; j < dataPoint.getData().get().size(); j++) {
+                String value = (String) dataPoint.getData().get().get(j);
+                while ("?".equals(value)) {
+                    List<String> fixedDataPoint = new ArrayList<>(dataPoint.getData().get());
+                    List<String> randomDataPoint = dataPoints.get((int)(Math.random() * dataPoints.size())).getData().get();
+                    value = randomDataPoint.get(j);
+                    fixedDataPoint.set(j, value);
+                    dataPoint.withData(fixedDataPoint);
+                    dataPoints.set(i, dataPoint);
+                }
+            }
+        }
+        return dataPoints;
     }
 
     /**

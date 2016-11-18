@@ -15,7 +15,7 @@ public class CrossValidator {
     private List<List<DataPoint>> folds;
 
     /**
-     * Performs class validation on all of the data
+     * Performs cross validation on all of the data
      *
      * @param classifier Algorithm to test
      * @param dataModel Data to test on

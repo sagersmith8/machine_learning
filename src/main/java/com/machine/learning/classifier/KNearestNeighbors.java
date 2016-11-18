@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicInteger;
 import com.machine.learning.model.DataPoint;
+import com.machine.learning.util.ValueDifferenceMetric;
 
 public class KNearestNeighbors implements Classifier {
 
@@ -17,17 +18,24 @@ public class KNearestNeighbors implements Classifier {
     List<String> classLabel;
     Set<String> possibleClasses;
     Map<String, AtomicInteger> voteResults;
+    ValueDifferenceMetric vdm;
     
     class DataWithDistance implements Comparable {
         List data;
 	double distance;
 	String clazz;
 
+	/**
+	 * Combines data points with the distance to a query point
+	 *
+	 * @param data a single data point in the training data
+	 */
 	public DataWithDistance(DataPoint data){
 	    this.data = data.getData().get();
 	    this.clazz = data.getClassLabel().get();
 	}
 
+	@Override
 	public int compareTo(Object other) {
 	    DataWithDistance otherD = (DataWithDistance) other;
 	    if (distance > otherD.distance) {
@@ -39,30 +47,44 @@ public class KNearestNeighbors implements Classifier {
 	    }
 	}
     }
-    
+
+    /**
+     * Performs classification via k-Nearest-Neighbors on a given training set
+     *
+     * @param k the number of neighbors to check, with a minimum of 1
+     */
     public KNearestNeighbors(int k) {
 	this.k = (int)Math.max(k,1);
     }
 
-    public double calculateDistance(List d1, List d2){
-	return 0.0;
-    }
-    
     @Override
     public void train(List<DataPoint> dataPoints) {
+	data.clear();
 	for(DataPoint dataPoint : dataPoints){
 	    data.add(new DataWithDistance(dataPoint));
 	}
+	vdm = new ValueDifferenceMetric(dataPoints);
     }
 
     @Override
     public String classify(List dataPoint) {
 	for (int i = 0; i < data.size(); i++) {
-	    data.get(i).distance = calculateDistance(data.get(i).data, dataPoint);
+	    data.get(i).distance = vdm.calculateDistance(data.get(i).data, dataPoint);
 	}
 	return vote(k);
     }
 
+    @Override
+    public String toString(){
+	return k+"-Nearest-Neighbors";
+    }
+
+    /**
+     * Votes on the class of a queried object, with a sorted data set, and given k
+     *
+     * @param k the number of nearest neighbors to vote
+     * @return the class of a queried point, as voted on by the k nearest neighbors
+     */
     public String vote(int k) {
 	Collections.sort(data);
 	voteResults = new HashMap<>();

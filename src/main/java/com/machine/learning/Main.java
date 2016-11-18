@@ -4,6 +4,7 @@ import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.machine.learning.classifier.Classifier;
 import com.machine.learning.classifier.ClassifierDefault;
 import com.machine.learning.classifier.KNearestNeighbors;
+import com.machine.learning.classifier.NaiveBayes;
 import com.machine.learning.experimenter.MadScientist;
 
 import com.machine.learning.model.DataModel;
@@ -14,7 +15,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Beginning testing...");
         OptionSet optionSet = getOptions(args);
         List<DataModel> dataModelList = new ArrayList<>();
-        if (((List) optionSet.valueOf("files")).size() == 0) {
+        if ((optionSet.valueOf("files")).equals("")) {
             dataModelList = Arrays.asList(
                     DynamicObject.newInstance(DataModel.class).fromFile("breast-cancer-wisconsin.data.txt"),
                     DynamicObject.newInstance(DataModel.class).fromFile("glass.data.txt"),
@@ -33,7 +33,7 @@ public class Main {
                     DynamicObject.newInstance(DataModel.class).fromFile("soybean-small.data.txt")
             );
         } else {
-            List<String> files = (List<String>) optionSet.valueOf("files");
+            List<String> files = Arrays.asList(optionSet.valueOf("files").toString().split(",", 0));
             for (String fileName: files) {
                 dataModelList.add(DynamicObject.newInstance(DataModel.class).fromFile(fileName+".data.txt"));
             }
@@ -42,13 +42,15 @@ public class Main {
         List<Classifier> classifiers = new ArrayList<>();
         Map<String, Classifier> classifierRegistry = new HashMap<>();
         classifierRegistry.put("default", new ClassifierDefault());
-	classifierRegistry.put("kNN5", new KNearestNeighbors(5));
+	for (int i = 1; i <= 15; i+=2) { 
+	    classifierRegistry.put("kNN"+i, new KNearestNeighbors(i));
+	}
+        classifierRegistry.put("naive-bayes", new NaiveBayes());
 
-        if (((List) optionSet.valueOf("classifiers")).size() == 0) {
-            Classifier classifier = new ClassifierDefault();
-            classifiers.add(classifier);
+        if ((optionSet.valueOf("classifiers")).equals("")) {
+            classifiers.addAll(classifierRegistry.values());
         } else {
-            List<String> classifierList = (List<String>) optionSet.valueOf("classifiers");
+            List<String> classifierList = Arrays.asList(optionSet.valueOf("classifiers").toString().split(",", 0));
             for (String classifierId: classifierList) {
                 Classifier classifier = classifierRegistry.get(classifierId);
                 if (classifier != null) {
@@ -77,8 +79,8 @@ public class Main {
 
     private static OptionSet getOptions(String... args) {
         OptionParser parser = new OptionParser();
-        parser.accepts("files").withRequiredArg().ofType(List.class).defaultsTo(Collections.emptyList());
-        parser.accepts("classifiers").withRequiredArg().ofType(List.class).defaultsTo(Collections.emptyList());
+        parser.accepts("files").withRequiredArg().ofType(String.class).defaultsTo("");
+        parser.accepts("classifiers").withRequiredArg().ofType(String.class).defaultsTo("");
         parser.accepts("outdir").withRequiredArg().ofType(String.class).defaultsTo("results");
         OptionSet options = parser.parse(args);
         return options;
