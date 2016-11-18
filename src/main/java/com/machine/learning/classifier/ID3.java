@@ -49,7 +49,8 @@ public class ID3 implements Comparable {
     }
 
     private void pruneTree() {
-	while(pruneNode());
+	return;
+	//	while(pruneNode());
     }
 
     private boolean pruneNode() {
@@ -89,7 +90,7 @@ public class ID3 implements Comparable {
 	for (DataPoint point : trainingData) {
 	    String classLabel = point.getClassLabel().get();
 	    if (!classCounts.containsKey(point.getClassLabel().get())) {
-		classCounts.put(point.getClassLabel().get(), new AtomicInteger)
+		classCounts.put(point.getClassLabel().get(), new AtomicInteger());
 	    }
 	    if (reaches(dt, count, point.getData().get())) {
 		classCounts.get(classLabel).incrementAndGet();
@@ -143,8 +144,8 @@ public class ID3 implements Comparable {
 
     public DecisionTree constructDT(List<DataPoint> remainingData) {
 	ArrayList<String> classes = new ArrayList<>();
-        remainingData.get(0).getClassLabel().get()
-	ArrayList<double> classProportion = new ArrayList<>();
+        remainingData.get(0).getClassLabel().get();
+	//ArrayList<double> classProportion = new ArrayList<>();
 	boolean allOneClazz = true;
 	ArrayList<ArrayList<String>> usedAttrValues = new ArrayList<>();
 
@@ -163,21 +164,23 @@ public class ID3 implements Comparable {
 		int index = classes.indexOf(dataPoint.clazz);
 		classProportion.set(index, classProportion.get(index)++);
 	    }
+	    /*
 	    ArrayList<String> curData = dataPoint.getData().get();
 	    for(int j = 0; j < curData.size(); j++){
 		if (!usedAttrValues.get(j).contains(curData.get(j))) {
 		    usedAttrValues.get(j).add(curData.get(j));
 		}
 	    }
+	    */
 	}
 
 	if (allOneClazz) {
 	    return new DecisionTree(classes.get(0));
 	}
 
-	for (int i = 0;  i < classProportion.size(); i++) {
-	    classProportion.set(i, classProportion.get(i)/remainingData.size());
-	}
+	// for (int i = 0;  i < classProportion.size(); i++) {
+	//     classProportion.set(i, classProportion.get(i)/remainingData.size());
+	// }
 	
 	// for (DataPoint dataPoint : remainingData) {
 	//     for (String attr : dataPoint.getData().get()) {
@@ -203,6 +206,11 @@ public class ID3 implements Comparable {
 			negData.add(dataPoint);
 		    }
 		    double entropy = Math.min(calculateEntropy(posData), calculateEntropy(negData));
+		    if(entropy < minEntropy){
+			minEntropy = entropy;
+			attrIndex = i;
+			attributeValue = attrValue;
+		    }
 		}
 	    }
 	}
@@ -217,15 +225,32 @@ public class ID3 implements Comparable {
 	}
 	
 	DecisionTree cur = new DecisionTree(attrIndex, attrValue);
-	cur.pos = constructDT(posList);
-	cur.neg = constructDT(negList);
+	cur.pos = constructDT(posData);
+	cur.neg = constructDT(negData);
 
 	return cur;
 	
     }
 
-    //maybe doesn't need to be a method
     public double calculateEntropy(List<DataPoint> remainingData) {
+	ArrayList<double> proportions = new ArrayList<>();
+	ArrayList<String> classes = new ArrayList<>();
 
+	for (DataPoint dataPoint : remainingData) {
+	    if (!classes.contains(dataPoint.getClassLabel().get())) {
+		classes.add(dataPoint.getClassLabel().get());
+		proportions.add(1/remainingData.size());
+	    } else {
+		int index = proportions.getIndexOf(dataPoint.getClassLabel().get());
+		proportions.set(index, proportions.get(index)+1/remainingData.size());
+	    }
+	}
+
+	double sum = 0.0;
+	for (double proportion : proportions) {
+	    sum += proportion * Math.log(proportion);
+	}
+
+	return -sum;
     }
 }

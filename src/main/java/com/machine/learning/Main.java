@@ -49,6 +49,7 @@ public class Main {
 	}
         classifierRegistry.put("naive-bayes", new NaiveBayes());
         classifierRegistry.put("tree-naive-bayes", new TreeAugmentedNaiveBayes());
+        classifierRegistry.put("iterative-dichotomiser-3", new ID3());
 
         if ((optionSet.valueOf("classifiers")).equals("")) {
             classifiers.addAll(classifierRegistry.values());
