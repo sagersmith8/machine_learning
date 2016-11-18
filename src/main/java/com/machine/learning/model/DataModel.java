@@ -19,6 +19,12 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public interface DataModel extends DynamicObject<DataModel> {
+    @Key("name")
+    DataModel withName(String name);
+
+    @Key("name")
+    Optional<String> getName();
+    
     @Key("data")
     /**
      * Setter for data
@@ -45,7 +51,9 @@ public interface DataModel extends DynamicObject<DataModel> {
                     .lines().collect(Collectors.toList());
             List<DataPoint> processedData = preprocessData(doc);
             return DynamicObject.newInstance(DataModel.class)
-                    .withData(processedData);
+		.withName(filePath)		
+		.withData(processedData);
+
         } catch (java.io.IOException ex) {
             ex.printStackTrace();
         }
@@ -69,7 +77,9 @@ public interface DataModel extends DynamicObject<DataModel> {
             dataRow = discretize(dataRow);
             //Change from String to List<Integer>
             List<String> dataModelRow = Arrays.asList(parseString(dataRow));
-            dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
+	    if(dataModelRow.size() > 0) {
+		dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
+	    }
         }
 
         return dataModel;
@@ -81,7 +91,7 @@ public interface DataModel extends DynamicObject<DataModel> {
      * @return int[] created from String
      */
     default String[] parseString(String toParse) {
-        return toParse.split(",");
+        return toParse.split(",", 0);
     }
 
     /**
