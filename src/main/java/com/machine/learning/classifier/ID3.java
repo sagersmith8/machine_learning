@@ -43,6 +43,7 @@ public class ID3 implements Comparable {
 	dt = constructDT(trainingData);
 
 	// Prune decision tree
+	dt = pruneDT();
     }
 
     @Override
@@ -62,42 +63,73 @@ public class ID3 implements Comparable {
 
     public DecisionTree constructDT(List<DataPoint> remainingData) {
 	ArrayList<String> classes = new ArrayList<>();
-	classes.add(remainingData.getData(0).get());
+        remainingData.get(0).getClassLabel().get()
 	ArrayList<double> classProportion = new ArrayList<>();
 	boolean allOneClazz = true;
+	ArrayList<ArrayList<String>> usedAttrValues = new ArrayList<>();
+
+	for(int i = 0; i < remainingData.get(0).getData().get().size(); i++) {
+	    usedAttrValues.set(i, new ArrayList<>());
+	}
+
 	for (DataPoint dataPoint : remainingData) {
-	    if (!dataPoint.clazz.equals(classes.get(0))) {
+	    if (allOneClass && !dataPoint.clazz.equals(classes.get(0))) {
 		allOneClazz = false;
 	    }
 	    if (!classes.contains(dataPoint.clazz)) {
-
+		classes.add(dataPoint.clazz);
+		classProportion.add(1.0);
 	    } else {
 		int index = classes.indexOf(dataPoint.clazz);
 		classProportion.set(index, classProportion.get(index)++);
 	    }
+	    ArrayList<String> curData = dataPoint.getData().get();
+	    for(int j = 0; j < curData.size(); j++){
+		if (!usedAttrValues.get(j).contains(curData.get(j))) {
+		    usedAttrValues.get(j).add(curData.get(j));
+		}
+	    }
 	}
 
 	if (allOneClazz) {
-	    return new DecisionTree(clazz);
+	    return new DecisionTree(classes.get(0));
 	}
 
-	for (double clazz : classProportion) {
-	    clazz = clazz / remainingData.size();
+	for (int i = 0;  i < classProportion.size(); i++) {
+	    classProportion.set(i, classProportion.get(i)/remainingData.size());
 	}
 	
-	for (DataPoint dataPoint : remainingData) {
-	    for (String attr : dataPoint.getData().get()) {
-		//store somewhere//
-		calculateEntropy(attr, remainingData);
+	// for (DataPoint dataPoint : remainingData) {
+	//     for (String attr : dataPoint.getData().get()) {
+	// 	//store somewhere//
+	// 	calculateEntropy(attr, remainingData);
+	//     }
+	// }
+	int attrIndex = 0;
+	String attributeValue;
+	double minEntropy = Double.MAX_VALUE;
+	ArrayList<DataPoint> posData = new ArrayList<>();
+	ArrayList<DataPoint> negData = new ArrayList<>();
+
+	for (int i = 0; i < usedAttrValues.size(); i++) {
+	    for (String attrValue : usedAttrValues.get(i)) {
+		for (DataPoint dataPoint : remainingData) {
+		    posData.clear();
+		    negData.clear();
+
+		    if (dataPoint.getData().get().contains(attrValue)) {
+			posData.add(dataPoint);
+		    } else {
+			negData.add(dataPoint);
+		    }
+		    double entropy = Math.min(calculateEntropy(posData), calculateEntropy(negData));
+		}
 	    }
 	}
 
 	//get attribute (attrValue) and index (attrIndex) of lowest entropy value
-	ArrayList<DataPoint> posData = new ArrayList<>();
-	ArrayList<DataPoint> negData = new ArrayList<>();
-	
 	for (DataPoint dataPoint : remainingData) {
-	    if (dataPoint.getData().get().equals(attrValue)) {
+	    if (dataPoint.getData().get().contains(attrValue)) {
 		posData.add(dataPoint);
 	    } else {
 		negData.add(dataPoint);
@@ -113,7 +145,7 @@ public class ID3 implements Comparable {
     }
 
     //maybe doesn't need to be a method
-    public double calculateEntropy(String attr, List<DataPoint> remainingData) {
+    public double calculateEntropy(List<DataPoint> remainingData) {
 
     }
 }
