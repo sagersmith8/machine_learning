@@ -3,6 +3,7 @@ package com.machine.learning.util;
 import com.machine.learning.model.DataPoint;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -97,6 +98,8 @@ public class ValueDifferenceMetric {
      */
     public double calculateDistance(List<String> pointA, List<String> pointB) {
         double sum = 0.0;
+	if(pointA.size() != pointB.size())
+	    System.out.println(pointA + " " + pointB + "!");
         for (int i = 0; i < pointA.size(); i++) {
             sum += Math.pow(attributeDifference(i, pointA.get(i), pointB.get(i)), 2);
         }
@@ -123,10 +126,12 @@ public class ValueDifferenceMetric {
         String pairName = valueA + "," + valueB;
         
         if (!attributeDistance.get(attributeNum).containsKey(pairName)) {
-            Map<String, AtomicInteger> classOccurancesA = attributeClassCount.get(attributeNum).get(valueA);
-            Map<String, AtomicInteger> classOccurancesB = attributeClassCount.get(attributeNum).get(valueB);
-            int valueOccurancesA = attributeCount.get(attributeNum).get(valueA).intValue();
-            int valueOccurancesB = attributeCount.get(attributeNum).get(valueB).intValue();
+            Map<String, AtomicInteger> classOccurancesA = attributeClassCount.get(attributeNum).getOrDefault(valueA,
+													     Collections.emptyMap());
+            Map<String, AtomicInteger> classOccurancesB = attributeClassCount.get(attributeNum).getOrDefault(valueB,
+													     Collections.emptyMap());
+            int valueOccurancesA = attributeCount.get(attributeNum).getOrDefault(valueA, new AtomicInteger(1)).intValue();
+            int valueOccurancesB = attributeCount.get(attributeNum).getOrDefault(valueB, new AtomicInteger(1)).intValue();
 
             double sum = 0.0;
             for (String classLabel : classLabels) {
