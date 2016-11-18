@@ -1,9 +1,13 @@
 package com.machine.learning.classifier;
 
+import com.machine.learning.model.DataPoint;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ID3 implements Comparable {
@@ -100,7 +104,7 @@ public class ID3 implements Comparable {
 	return classCounts;
     }
 
-    private boolean reaches(DecisionTree dt, DecisionTree count, DataPoint point) {
+    private boolean reaches(DecisionTree curDT, DecisionTree count, DataPoint point) {
 	while (curDT.clazz == null) {
 	    if (curDT == count) {
 		return true;
@@ -115,7 +119,7 @@ public class ID3 implements Comparable {
 	    return false;
     }
 
-    private void validationError(DecisionTree dt) {
+    private int validationError(DecisionTree dt) {
 	int errors = 0;
 	for (DataPoint point : validationData) {
 	    if (classify(point.getData().get(), dt)) {

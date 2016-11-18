@@ -6,6 +6,7 @@ import com.machine.learning.classifier.ClassifierDefault;
 import com.machine.learning.classifier.KNearestNeighbors;
 import com.machine.learning.classifier.NaiveBayes;
 import com.machine.learning.classifier.TreeAugmentedNaiveBayes;
+import com.machine.learning.classifier.ID3;
 import com.machine.learning.experimenter.MadScientist;
 import com.machine.learning.model.DataModel;
 import joptsimple.OptionParser;
