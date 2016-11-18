@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ID3 implements Comparable {
+public class ID3 implements Classifier {
 
     List<DataPoint> trainingData = new ArrayList<>();
     List<DataPoint> validationData = new ArrayList<>();
