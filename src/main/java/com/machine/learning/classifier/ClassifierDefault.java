@@ -14,6 +14,6 @@ public class ClassifierDefault implements Classifier {
 
     @Override
     public String toString() {
-	return ClassifierDefault.class.getName();
+        return "Default Classifier";
     }
 }

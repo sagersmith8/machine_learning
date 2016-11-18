@@ -81,7 +81,18 @@ public class CrossValidator {
             average += result;
         }
         average/=(double)results.size();
+
+        double standardDeviation = 0D;
+        for (Double result :results) {
+            Double num = result - average;
+            standardDeviation += num*num;
+        }
+        standardDeviation = Math.sqrt(standardDeviation);
+        double confidenceInterval = standardDeviation/Math.sqrt(results.size());
+        confidenceInterval*=1.96;
         System.out.println("Percent correct "+average);
-        return DynamicObject.newInstance(Result.class).withResults(""+average);
+        return DynamicObject.newInstance(Result.class).withResults(
+                "$"+ String.format("%.2f", average*100D)+" \\pm "+String.format("%.2f", confidenceInterval) + "$"
+        );
     }
 }

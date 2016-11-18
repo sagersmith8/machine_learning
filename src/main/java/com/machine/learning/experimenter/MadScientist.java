@@ -5,6 +5,7 @@ import com.machine.learning.classifier.Classifier;
 import com.machine.learning.model.DataModel;
 import com.machine.learning.model.Result;
 
+import java.util.Collections;
 import java.util.List;
 
 public class MadScientist {
@@ -21,20 +22,20 @@ public class MadScientist {
         for (DataModel dataModel: dataModels) {
             stringBuilder
                     .append(" & ")
-                    .append(dataModel.getName().get().split("\\.")[0]);
+                    .append(dataModel.getName().get().split("\\.")[0].split("-")[0]);
         }
 
         stringBuilder.append("\\\\\n");
         stringBuilder.append("\\hline\n");
+        Collections.sort(classifiers, (x, y) -> x.toString().compareTo(y.toString()));
         for (Classifier classifier : classifiers) {
             System.out.println("Testing classifier: " + classifier);
-            String [] classifierName = classifier.getClass().getName().split("\\.");
-            stringBuilder.append(classifierName[classifierName.length-1]);
+            stringBuilder.append(classifier);
             for (DataModel dataModel : dataModels) {
                 System.out.println("Testing data set: " + dataModel.getName().get());
                 stringBuilder.append(" & ");
-                Double result = Double.parseDouble(new CrossValidator(classifier, dataModel, 10).evaluate().getResults());
-                stringBuilder.append(String.format("%.2f", result*100D));
+                String result = new CrossValidator(classifier, dataModel, 10).evaluate().getResults();
+                stringBuilder.append(result);
                 stringBuilder.append("\\%");
             }
             stringBuilder.append("\\\\\n");
