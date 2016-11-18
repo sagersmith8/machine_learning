@@ -63,11 +63,6 @@ public interface DataModel extends DynamicObject<DataModel> {
         List<DataPoint> dataModel = new ArrayList<DataPoint>(data.size());
 
         for (String dataRow : data) {
-            //Fill in missing values
-            dataRow = generateMissing(dataRow);
-            //Discretize
-            dataRow = discretize(dataRow);
-            //Change from String to List<Integer>
             List<String> dataModelRow = Arrays.asList(parseString(dataRow));
             dataModel.add(DynamicObject.newInstance(DataPoint.class).fromData(dataModelRow));
         }
@@ -91,16 +86,6 @@ public interface DataModel extends DynamicObject<DataModel> {
      */
     default String discretize(String dataRow) {
         return dataRow;
-    }
-
-    /**
-     * Generates missing values
-     *
-     * @param dataRow to generate missing data for
-     * @return the data with missing values generated
-     */
-    default String generateMissing(String dataRow) {
-        return dataRow.replaceAll("\\?", String.valueOf((int)(Math.random()* 10)));
     }
 
     /**

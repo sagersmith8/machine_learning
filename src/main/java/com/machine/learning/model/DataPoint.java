@@ -35,9 +35,14 @@ public interface DataPoint extends DynamicObject<DataPoint> {
      */
     Optional<String> getClassLabel();
 
-    default DataPoint fromData(List data) {
+    default DataPoint fromData(List<String> data) {
         data = new ArrayList(data);
         String clazz = ""+data.remove(data.size()-1);
+        for (String dataValue : data) {
+            while ("?".equals(dataValue)) {
+                dataValue = data.get((int)(Math.random() * data.size()));
+            }
+        }
         return DynamicObject.newInstance(DataPoint.class)
                 .withClass(clazz)
                 .withData(data);
