@@ -37,7 +37,7 @@ public class NaiveBayes implements Classifier {
     public void train(List<DataPoint> dataPoints) {
         numPoints = dataPoints.size();
         if (numPoints > 0) {
-            numAttributes = dataPoints.get(0).size();
+            numAttributes = dataPoints.get(0).getData().get().size();
         }
         resetData();
         

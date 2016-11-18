@@ -5,6 +5,7 @@ import com.machine.learning.classifier.Classifier;
 import com.machine.learning.classifier.ClassifierDefault;
 import com.machine.learning.classifier.KNearestNeighbors;
 import com.machine.learning.classifier.NaiveBayes;
+import com.machine.learning.classifier.TreeAugmentedNaiveBayes;
 import com.machine.learning.experimenter.MadScientist;
 
 import com.machine.learning.model.DataModel;
@@ -46,6 +47,7 @@ public class Main {
 	    classifierRegistry.put("kNN"+i, new KNearestNeighbors(i));
 	}
         classifierRegistry.put("naive-bayes", new NaiveBayes());
+        classifierRegistry.put("tree-naive-bayes", new TreeAugmentedNaiveBayes());
 
         if ((optionSet.valueOf("classifiers")).equals("")) {
             classifiers.addAll(classifierRegistry.values());

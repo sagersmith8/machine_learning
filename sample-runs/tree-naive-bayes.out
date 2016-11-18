@@ -1,0 +1,659 @@
+Beginning testing...
+Preprocessing iris.data.txt
+Generating missing values...
+Discretizing data...
+Testing classifier: com.machine.learning.classifier.TreeAugmentedNaiveBayes
+Testing data set: iris.data.txt
+Performing K-Fold cross validation on com.machine.learning.classifier.TreeAugmentedNaiveBayes
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -12.865834800662775
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.91299441661649
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.91299441661649
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.380496707827543
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -8.69082945409078
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.91299441661649
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -12.563985213389257
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -13.468488110447908
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.380496707827543
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -8.69082945409078
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.27598152859559
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.91299441661649
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -8.69082945409078
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.91299441661649
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.608507651112681
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -12.666884711934
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.27598152859559
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -13.953164195416663
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.91299441661649
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.380496707827543
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -8.69082945409078
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.505704582503054
+Class Iris-virginica Log Probability: -12.670675785979348
+Class Iris-setosa Log Probability: -14.68425382497146
+Predicted Best Class: Iris-virginica
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -12.563985213389257
+Class Iris-virginica Log Probability: -13.390853354044513
+Class Iris-setosa Log Probability: -13.93004353319977
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -12.563985213389257
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -13.93004353319977
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -12.406662133125579
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.608507651112681
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -14.566032299919767
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -12.406662133125579
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -12.945919824087227
+Class Iris-virginica Log Probability: -11.891618581744027
+Class Iris-setosa Log Probability: -14.566032299919767
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -11.619966883679849
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -8.159123475013773
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.390853354044513
+Class Iris-virginica Log Probability: -14.37285619736516
+Class Iris-setosa Log Probability: -10.97549675151522
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.27598152859559
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -15.036636073873778
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -15.036636073873778
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.27598152859559
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -13.756177174989151
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -12.406662133125579
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.390853354044513
+Class Iris-virginica Log Probability: -14.37285619736516
+Class Iris-setosa Log Probability: -12.406662133125579
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -15.036636073873778
+Predicted Best Class: Iris-setosa
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -14.062343068716311
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -9.901397386363803
+Class Iris-virginica Log Probability: -11.891618581744027
+Class Iris-setosa Log Probability: -13.319928388763355
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -12.736244653386407
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.608507651112681
+Class Iris-virginica Log Probability: -13.390853354044513
+Class Iris-setosa Log Probability: -12.587086567599787
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.927338002987169
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.927338002987169
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -12.563985213389257
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -12.587086567599787
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.927338002987169
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.380496707827543
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -8.524183531212506
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.390853354044513
+Class Iris-virginica Log Probability: -14.37285619736516
+Class Iris-setosa Log Probability: -12.736244653386407
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.927338002987169
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.380496707827543
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -8.524183531212506
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.380496707827543
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -8.524183531212506
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.312863455856629
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -13.050349242290707
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -13.469086474549975
+Predicted Best Class: Iris-setosa
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -15.579772777735108
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.629890447788288
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.853217067524117
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -13.774138201462957
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.406929964895696
+Class Iris-virginica Log Probability: -15.380496707827543
+Class Iris-setosa Log Probability: -8.191533039578426
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.853217067524117
+Class Iris-virginica Log Probability: -17.417378635088582
+Class Iris-setosa Log Probability: -12.36721025179672
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -13.346180556228013
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.629890447788288
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -15.273398572271173
+Class Iris-virginica Log Probability: -9.366567381280305
+Class Iris-setosa Log Probability: -17.52273915074641
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -7.706815896688749
+Class Iris-virginica Log Probability: -13.93882628448775
+Class Iris-setosa Log Probability: -17.52273915074641
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.273398572271173
+Class Iris-virginica Log Probability: -9.366567381280305
+Class Iris-setosa Log Probability: -17.52273915074641
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.098769162203306
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -15.505370037708946
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -13.141841029452323
+Class Iris-virginica Log Probability: -13.242536574128216
+Class Iris-setosa Log Probability: -15.393625999269336
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -6.840672624181822
+Class Iris-virginica Log Probability: -13.390853354044513
+Class Iris-setosa Log Probability: -15.505370037708946
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -9.660784107073825
+Class Iris-virginica Log Probability: -12.797654381400843
+Class Iris-setosa Log Probability: -17.52273915074641
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -12.028879066595072
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -12.385118742571452
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -12.10844088943126
+Class Iris-virginica Log Probability: -15.435120771907934
+Class Iris-setosa Log Probability: -15.393625999269336
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.005919207136913
+Class Iris-virginica Log Probability: -17.887382264334317
+Class Iris-setosa Log Probability: -15.544406375599245
+Predicted Best Class: Iris-versicolor
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -13.443943086642406
+Class Iris-virginica Log Probability: -15.745139821415451
+Class Iris-setosa Log Probability: -10.348077524014208
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -8.111842552311153
+Class Iris-virginica Log Probability: -12.758744804527115
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.903522975228984
+Class Iris-virginica Log Probability: -15.333263613004803
+Class Iris-setosa Log Probability: -12.209023121853923
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -6.681771807237151
+Class Iris-virginica Log Probability: -13.140679415225083
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.381192095154983
+Class Iris-virginica Log Probability: -13.390853354044513
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.109952948270111
+Class Iris-virginica Log Probability: -15.90512440115367
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.45020438365749
+Class Iris-virginica Log Probability: -13.86085698329025
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.903522975228984
+Class Iris-virginica Log Probability: -15.333263613004803
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.034077756799928
+Class Iris-virginica Log Probability: -13.93882628448775
+Class Iris-setosa Log Probability: -15.380496707827543
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -14.76800073936504
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -13.354567939067955
+Class Iris-virginica Log Probability: -9.666580646059598
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -6.293527140552969
+Class Iris-virginica Log Probability: -15.333263613004803
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -10.637175392141652
+Class Iris-virginica Log Probability: -11.276238457462297
+Class Iris-setosa Log Probability: -14.37285619736516
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -8.687300395973276
+Class Iris-virginica Log Probability: -15.333263613004803
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -9.60446059329284
+Class Iris-virginica Log Probability: -12.843116755477602
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-versicolor
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -10.875744762823963
+Class Iris-virginica Log Probability: -15.90512440115367
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -10.696857106877925
+Class Iris-virginica Log Probability: -13.242536574128216
+Class Iris-setosa Log Probability: -15.380496707827543
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -13.52299751611628
+Class Iris-virginica Log Probability: -15.771593008529146
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -7.465207171719577
+Class Iris-virginica Log Probability: -15.803267242250538
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -14.44074466445172
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.628512438401565
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -14.44074466445172
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.190098745554224
+Class Iris-virginica Log Probability: -15.333263613004803
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.40140018934115
+Class Iris-virginica Log Probability: -15.669735849626015
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -10.124334764023683
+Class Iris-virginica Log Probability: -13.86085698329025
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -11.40140018934115
+Class Iris-virginica Log Probability: -10.970266095339522
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.696857106877925
+Class Iris-virginica Log Probability: -13.242536574128216
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -9.377860669555558
+Class Iris-virginica Log Probability: -12.843116755477602
+Class Iris-setosa Log Probability: -13.881261935527057
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -6.578623803979462
+Class Iris-virginica Log Probability: -13.390853354044513
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -9.965432448189517
+Class Iris-virginica Log Probability: -15.427735281305555
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -10.24709313777324
+Class Iris-virginica Log Probability: -15.497241563772748
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -7.537932442387002
+Class Iris-virginica Log Probability: -10.036554478372864
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -9.86067622463577
+Class Iris-virginica Log Probability: -15.431785676459757
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -12.028879066595072
+Class Iris-virginica Log Probability: -15.794967390193637
+Class Iris-setosa Log Probability: -12.384959451275247
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -10.24709313777324
+Class Iris-virginica Log Probability: -15.497241563772748
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -6.7109764382117145
+Class Iris-virginica Log Probability: -13.368128412295674
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -7.375413512889228
+Class Iris-virginica Log Probability: -13.368128412295674
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -9.646929200717643
+Class Iris-virginica Log Probability: -12.822743456566926
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.066543828953346
+Class Iris-virginica Log Probability: -17.52273915074641
+Class Iris-setosa Log Probability: -15.470480343660373
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -7.375413512889228
+Class Iris-virginica Log Probability: -13.368128412295674
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -13.30768579591968
+Class Iris-virginica Log Probability: -11.03575726609153
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.744576371152018
+Class Iris-virginica Log Probability: -12.807906116786494
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.579772777735108
+Class Iris-virginica Log Probability: -13.192440687614136
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -12.892741943856972
+Class Iris-virginica Log Probability: -13.856318495546267
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.580552748135773
+Class Iris-virginica Log Probability: -14.353562862715101
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -16.62385218174083
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.863768193497709
+Class Iris-virginica Log Probability: -18.02536800730822
+Class Iris-setosa Log Probability: -15.705187770403734
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -17.599700191882533
+Class Iris-virginica Log Probability: -11.346754056786121
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.48640532499854
+Class Iris-virginica Log Probability: -14.476225567105228
+Class Iris-setosa Log Probability: -14.37285619736516
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -13.588441424368664
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.449523397737497
+Class Iris-virginica Log Probability: -13.01171732106
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -12.823817497973085
+Class Iris-virginica Log Probability: -14.286477407582906
+Class Iris-setosa Log Probability: -14.37285619736516
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -10.735572360577645
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.753947280645594
+Class Iris-virginica Log Probability: -13.178075026864944
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -12.185476263374566
+Class Iris-virginica Log Probability: -14.704494656016973
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -13.267201840943542
+Class Iris-virginica Log Probability: -13.242658235280363
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.48640532499854
+Class Iris-virginica Log Probability: -14.087527318854132
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -16.62385218174083
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -14.62160980478439
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -9.947648773565193
+Class Iris-virginica Log Probability: -13.806553062811012
+Class Iris-setosa Log Probability: -12.209023121853923
+Predicted Best Class: Iris-versicolor
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -13.11301772765359
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.433718961517107
+Class Iris-virginica Log Probability: -13.317886393855218
+Class Iris-setosa Log Probability: -15.365743605277586
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -17.599700191882533
+Class Iris-virginica Log Probability: -14.888130660031873
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-setosa
+Class Iris-versicolor Log Probability: -10.786935570712044
+Class Iris-virginica Log Probability: -13.201789850823157
+Class Iris-setosa Log Probability: -14.37285619736516
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.907500167397316
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -17.599700191882533
+Class Iris-virginica Log Probability: -11.293130551070654
+Class Iris-setosa Log Probability: -15.380496707827543
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.786935570712044
+Class Iris-virginica Log Probability: -13.201789850823157
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -10.606621774312547
+Class Iris-virginica Log Probability: -10.10494202896375
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.807364062914903
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -18.0051652999907
+Class Iris-virginica Log Probability: -12.933117462876417
+Class Iris-setosa Log Probability: -15.380496707827543
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -17.599700191882533
+Class Iris-virginica Log Probability: -11.293130551070654
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -17.599700191882533
+Class Iris-virginica Log Probability: -14.888130660031873
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.807364062914903
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -9.746027959266723
+Class Iris-virginica Log Probability: -13.70461979324931
+Class Iris-setosa Log Probability: -14.754790808063127
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -13.942786685703847
+Class Iris-virginica Log Probability: -15.95952263114319
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Calculated Tree Model:
+Attribute 0 Parent: null
+Attribute 1 Parent: 0
+Attribute 2 Parent: 3
+Attribute 3 Parent: 0
+Class Iris-versicolor Log Probability: -17.417378635088582
+Class Iris-virginica Log Probability: -11.311422758945714
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.267201840943542
+Class Iris-virginica Log Probability: -11.504144459006742
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.786935570712044
+Class Iris-virginica Log Probability: -14.18820914151318
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -10.606621774312547
+Class Iris-virginica Log Probability: -10.814062131494202
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -9.816688181489244
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.708626637014454
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.427735281305555
+Class Iris-virginica Log Probability: -11.326691600912309
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.65114421203597
+Class Iris-virginica Log Probability: -13.167702395288531
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.708626637014454
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.708626637014454
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -15.304083768204585
+Class Iris-virginica Log Probability: -13.708626637014454
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.786935570712044
+Class Iris-virginica Log Probability: -13.360424095349558
+Class Iris-setosa Log Probability: -14.37285619736516
+Predicted Best Class: Iris-versicolor
+Class Iris-versicolor Log Probability: -15.48640532499854
+Class Iris-virginica Log Probability: -14.039051055726564
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -13.267201840943542
+Class Iris-virginica Log Probability: -11.504144459006742
+Class Iris-setosa Log Probability: -17.417378635088582
+Predicted Best Class: Iris-virginica
+Class Iris-versicolor Log Probability: -10.606621774312547
+Class Iris-virginica Log Probability: -10.814062131494202
+Class Iris-setosa Log Probability: -15.745139821415451
+Predicted Best Class: Iris-versicolor
+Percent correct 0.7933333333333333
+All tests finished
