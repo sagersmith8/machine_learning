@@ -13,7 +13,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +22,7 @@ public class Main {
         System.out.println("Beginning testing...");
         OptionSet optionSet = getOptions(args);
         List<DataModel> dataModelList = new ArrayList<>();
-        if (((String) optionSet.valueOf("files")).equals("")) {
+        if ((optionSet.valueOf("files")).equals("")) {
             dataModelList = Arrays.asList(
                     DynamicObject.newInstance(DataModel.class).fromFile("breast-cancer-wisconsin.data.txt"),
                     DynamicObject.newInstance(DataModel.class).fromFile("glass.data.txt"),
@@ -32,7 +31,7 @@ public class Main {
                     DynamicObject.newInstance(DataModel.class).fromFile("soybean-small.data.txt")
             );
         } else {
-            List<String> files = (List<String>) optionSet.valueOf("files");
+            List<String> files = Arrays.asList(optionSet.valueOf("files").toString().split(",", 0));
             for (String fileName: files) {
                 dataModelList.add(DynamicObject.newInstance(DataModel.class).fromFile(fileName+".data.txt"));
             }
@@ -41,12 +40,12 @@ public class Main {
         List<Classifier> classifiers = new ArrayList<>();
         Map<String, Classifier> classifierRegistry = new HashMap<>();
         classifierRegistry.put("default", new ClassifierDefault());
-	classifierRegistry.put("naive-bayes", new NaiveBayes());
+        classifierRegistry.put("naive-bayes", new NaiveBayes());
 
-        if (((String) optionSet.valueOf("classifiers")).equals("")) {
+        if ((optionSet.valueOf("classifiers")).equals("")) {
             classifiers.addAll(classifierRegistry.values());
         } else {
-            List<String> classifierList = (List<String>) optionSet.valueOf("classifiers");
+            List<String> classifierList = Arrays.asList(optionSet.valueOf("classifiers").toString().split(",", 0));
             for (String classifierId: classifierList) {
                 Classifier classifier = classifierRegistry.get(classifierId);
                 if (classifier != null) {
