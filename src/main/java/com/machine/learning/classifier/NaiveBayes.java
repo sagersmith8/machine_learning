@@ -22,7 +22,7 @@ public class NaiveBayes implements Classifier {
 
     //Keeps track of the occurences of an attribute value for each class
     private Map<String, List<Map<String, AtomicInteger>>> attributeCount;
-
+    
     private int numPoints, numAttributes;
 
     /**
