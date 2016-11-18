@@ -12,6 +12,6 @@ public class MadScientistTest {
     @Test
     public void madScientistNoOp() {
         MadScientist madScientist = new MadScientist(Collections.emptyList(), Collections.emptyList());
-        assertThat(madScientist.getResults(), is(equalTo("\\\\\n")));
+        assertThat(madScientist.getResults(), is(equalTo("\\begin{table}\\n\\begin{tabular}{c|c|c|c|c|c|}\\n\\\\\\n\\hline\\n\\end{tabular}\\n\\end{table}")));
     }
 }
