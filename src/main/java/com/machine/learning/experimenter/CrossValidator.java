@@ -51,7 +51,7 @@ public class CrossValidator {
      * @return Result of k-fold-cross-validation
      */
     public Result evaluate() {
-        StringBuilder result = new StringBuilder();
+        List<Double> results = new ArrayList<>();
         for (int i = 0; i < folds.size(); i++) {
             List<DataPoint> trainingData = new ArrayList<>();
             for (int j = 0; j < folds.size(); j++) {
@@ -68,11 +68,15 @@ public class CrossValidator {
                 }
             }
 
-            result.append((double)numCorrect/(double)folds.get(i).size());
-            if (i != folds.size()-1) {
-                result.append(" ");
-            }
+            results.add((double)numCorrect/(double)folds.get(i).size());
         }
-        return DynamicObject.newInstance(Result.class).withResults(result.toString());
+
+        double average = 0D;
+        for (Double result : results) {
+            average += result;
+        }
+        average/=(double)results.size();
+
+        return DynamicObject.newInstance(Result.class).withResults(""+average);
     }
 }
