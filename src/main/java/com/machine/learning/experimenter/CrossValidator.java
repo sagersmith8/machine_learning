@@ -63,7 +63,7 @@ public class CrossValidator {
             classifier.train(trainingData);
             int numCorrect = 0;
             for (DataPoint datapoint: folds.get(i)) {
-                if (classifier.classify(datapoint).equals(datapoint.getClazz().orElse(""))) {
+                if (classifier.classify(datapoint.getData().get()).equals(datapoint.getClassLabel().orElse(""))) {
                     numCorrect++;
                 }
             }

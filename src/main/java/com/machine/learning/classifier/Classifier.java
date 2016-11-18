@@ -18,5 +18,5 @@ public interface Classifier {
      * @param dataPoint data to classify
      * @return  class label
      */
-    String classify(DataPoint dataPoint);
+    String classify(List dataPoint);
 }

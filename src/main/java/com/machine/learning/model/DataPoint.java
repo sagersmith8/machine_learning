@@ -33,7 +33,7 @@ public interface DataPoint extends DynamicObject<DataPoint> {
     /**
      * Getter for class
      */
-    Optional<String> getClazz();
+    Optional<String> getClassLabel();
 
     default DataPoint fromData(List data) {
         data = new ArrayList(data);

@@ -15,6 +15,6 @@ public class DataPointTest {
     public void testDataPoint() {
         DataPoint dataPoint = DynamicObject.newInstance(DataPoint.class).fromData(new ArrayList<>(Arrays.asList("0", "0")));
         assertThat(dataPoint.getData().get(), is(equalTo(Arrays.asList("0"))));
-        assertThat(dataPoint.getClazz().get(), is(equalTo("0")));
+        assertThat(dataPoint.getClassLabel().get(), is(equalTo("0")));
     }
 }

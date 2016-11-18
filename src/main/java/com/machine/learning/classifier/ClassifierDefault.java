@@ -8,7 +8,7 @@ public class ClassifierDefault implements Classifier {
     public void train(List<DataPoint> dataPoints) {
     }
 
-    public String classify(DataPoint datapoint) {
+    public String classify(List datapoint) {
         return "";
     }
 }
