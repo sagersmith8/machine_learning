@@ -232,7 +232,7 @@ public class ID3 implements Classifier {
 	//     }
 	// }
 	int attrIndex = 0;
-	String attributeValue;
+	String attributeValue = "";
 	double minEntropy = Double.MAX_VALUE;
 	ArrayList<DataPoint> posData = new ArrayList<>();
 	ArrayList<DataPoint> negData = new ArrayList<>();
