@@ -46,7 +46,7 @@ public class ID3 implements Classifier {
 	trainingData.clear();
 	validationData.clear();
 	trainingData.addAll(dataPoints.subList(0, (int)(0.6*dataPoints.size())));
-	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size()+1));
+	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size()));
 
 	// Construct decision tree
 	dt = constructDT(trainingData);
@@ -193,7 +193,7 @@ public class ID3 implements Classifier {
 	ArrayList<ArrayList<String>> usedAttrValues = new ArrayList<>();
 
 	for(int i = 0; i < remainingData.get(0).getData().get().size(); i++) {
-	    usedAttrValues.set(i, new ArrayList<>());
+	    usedAttrValues.add(new ArrayList<>());
 	}
 
 	for (DataPoint dataPoint : remainingData) {
