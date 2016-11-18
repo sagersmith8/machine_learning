@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class NaiveBayes implements Classifier {
     //Keeps track of the occurences of each class
-    private Map<String, Counter> classCount;
+    private Map<String, AtomicInteger> classCount;
 
     //Keeps track of the occurences of an attribute value for each class
-    private Map<String, List<Map<String, Counter>>> attributeCount;
+    private Map<String, List<Map<String, AtomicInteger>>> attributeCount;
 
     private int numPoints, numAttributes;
 
@@ -58,14 +59,14 @@ public class NaiveBayes implements Classifier {
     private void countPoint(List dataPoint, String classLabel) {
 	//count the class for the given point
 	ensureClass(classLabel);
-	classCount.get(classLabel).increment();
+	classCount.get(classLabel).incrementAndGet();
 	    
 	for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
 	    String attributeValue = (String)dataPoint.get(attrNum);
 
 	    //count each attribute value for the given point, grouped by the point's class label
 	    ensureClassAttribute(classLabel, attrNum, attributeValue);
-	    attributeCount.get(classLabel).get(attrNum).get(attributeValue).increment();
+	    attributeCount.get(classLabel).get(attrNum).get(attributeValue).incrementAndGet();
 	}
     }
 
@@ -80,11 +81,11 @@ public class NaiveBayes implements Classifier {
 	if (classCount.containsKey(classLabel)) {
 	    return;
 	}
-	classCount.put(classLabel, new Counter());
+	classCount.put(classLabel, new AtomicInteger());
 	
-	List<Map<String, Counter>> classAttributeCounts = new ArrayList<>();
+	List<Map<String, AtomicInteger>> classAttributeCounts = new ArrayList<>();
 	for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
-	    classAttributeCounts.add(new HashMap<String, Counter>());
+	    classAttributeCounts.add(new HashMap<String, AtomicInteger>());
 	}
 	
 	attributeCount.put(classLabel, classAttributeCounts);
@@ -103,7 +104,7 @@ public class NaiveBayes implements Classifier {
 	    return;
 	}
 	
-	attributeCount.get(classLabel).get(attributeNum).put(attributeValue, new Counter());
+	attributeCount.get(classLabel).get(attributeNum).put(attributeValue, new AtomicInteger());
     }
 
     /**
@@ -119,7 +120,7 @@ public class NaiveBayes implements Classifier {
 	//Calculate the unnormalized probability of observing each class for the given
 	//point, using the conditional independence assumption of naive bayes
 	for (String classLabel : classCount.keySet()) {
-	    final int numClassPoints = classCount.get(classLabel).getValue();
+	    final int numClassPoints = classCount.get(classLabel).intValue();
 	    final double unseenPoints = numClassPoints * MISSING_POINT_RATE;
 	    
 	    //Start with the prior probability, P(class)
@@ -128,7 +129,7 @@ public class NaiveBayes implements Classifier {
 	    //Factor in each conditional probability, P(attribute n = data point value | class)
 	    for (int attrNum = 0; attrNum < numAttributes; attrNum++) {
 		String attributeValue = (String)dataPoint.get(attrNum);
-		int attrCount = attributeCount.get(classLabel).get(attrNum).get(attributeValue).getValue();
+		int attrCount = attributeCount.get(classLabel).get(attrNum).get(attributeValue).intValue();
 		
 		prob *= (attrCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) / (numClassPoints + unseenPoints);
 	    }
@@ -141,29 +142,5 @@ public class NaiveBayes implements Classifier {
 	}
 
 	return bestClassLabel;
-    }
-}
-
-/* A convenience class for counting points.
- * Stores only an integer and only supports incrementing.
- * Starts at 0.
- */
-class Counter {
-    private int value = 0;
-
-    /**
-     * Incrememnts the value stored in the counter.
-     */
-    public void increment() {
-	value++;
-    }
-
-    /**
-     * Gives the value stored in the counter.
-     *
-     * @return the counter's value
-     */
-    public int getValue() {
-	return value;
     }
 }
