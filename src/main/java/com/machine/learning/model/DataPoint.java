@@ -3,6 +3,7 @@ package com.machine.learning.model;
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.github.rschmitt.dynamicobject.Key;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,8 +35,9 @@ public interface DataPoint extends DynamicObject<DataPoint> {
      */
     Optional<String> getClazz();
 
-    default DataPoint fromData(List<String> data) {
-        String clazz = data.remove(data.size()-1);
+    default DataPoint fromData(List data) {
+        data = new ArrayList(data);
+        String clazz = ""+data.remove(data.size()-1);
         return DynamicObject.newInstance(DataPoint.class)
                 .withClass(clazz)
                 .withData(data);
