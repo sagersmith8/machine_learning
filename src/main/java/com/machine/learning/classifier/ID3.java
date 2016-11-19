@@ -187,7 +187,7 @@ public class ID3 implements Classifier {
 
     public DecisionTree constructDT(List<DataPoint> remainingData) {
 	ArrayList<String> classes = new ArrayList<>();
-        remainingData.get(0).getClassLabel().get();
+        classes.add(remainingData.get(0).getClassLabel().get());
 	//ArrayList<double> classProportion = new ArrayList<>();
 	boolean allOneClazz = true;
 	ArrayList<ArrayList<String>> usedAttrValues = new ArrayList<>();
