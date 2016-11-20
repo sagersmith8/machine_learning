@@ -279,7 +279,7 @@ public class ID3 implements Classifier {
 
 	return proportions;
     }
-    
+
     public double calculateEntropy(List<DataPoint> remainingData) {
 	double sum = 0.0;
 	for (double proportion : classProportions(remainingData).values()) {
@@ -297,7 +297,7 @@ public class ID3 implements Classifier {
 	String retS = "";
 	for (int i = 0; i < indent; i++) {
 	    retS += "\t";
-	}	
+	}
 	if (dt.clazz == null) {
 	    retS += "a["+dt.attributeIndex+"]="+dt.attributeValue+":\n";
 	    if (dt.pos != null) {
@@ -306,7 +306,7 @@ public class ID3 implements Classifier {
 	    for (int i = 0; i < indent; i++) {
 		retS += "\t";
 	    }
-	    retS += "else:\n";	    
+	    retS += "else:\n";
 	    if (dt.neg != null) {
 		retS += printTree(dt.neg, indent + 1);
 	    }
