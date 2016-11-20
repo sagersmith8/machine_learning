@@ -50,11 +50,9 @@ public class ID3 implements Classifier {
     public void train(List<DataPoint> dataPoints) {
 	// Seperate data into training and validation
 	Collections.shuffle(dataPoints);
-	trainingData.clear();
-	validationData.clear();
 	subtrees = new HashSet<>();
-	trainingData.addAll(dataPoints.subList(0, (int)(0.6*dataPoints.size())));
-	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size()));
+	trainingData = dataPoints.subList(0, (int)(0.6*dataPoints.size()));
+	validationData = dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size());
 
 	// Construct decision tree
 	dt = constructDT(trainingData);
@@ -63,11 +61,10 @@ public class ID3 implements Classifier {
 
 	// Prune decision tree
 	pruneTree();
-
     }
 
     private void findSubtrees(DecisionTree subtree) {
-	if(subtree.clazz == null) {
+	if (subtree.clazz == null) {
 	    subtrees.add(subtree);
 
 	    findSubtrees(subtree.pos);
