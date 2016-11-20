@@ -2,11 +2,10 @@ package com.machine.learning;
 
 import com.github.rschmitt.dynamicobject.DynamicObject;
 import com.machine.learning.classifier.Classifier;
-import com.machine.learning.classifier.ClassifierDefault;
+import com.machine.learning.classifier.ID3;
 import com.machine.learning.classifier.KNearestNeighbors;
 import com.machine.learning.classifier.NaiveBayes;
 import com.machine.learning.classifier.TreeAugmentedNaiveBayes;
-import com.machine.learning.classifier.ID3;
 import com.machine.learning.experimenter.MadScientist;
 import com.machine.learning.model.DataModel;
 import joptsimple.OptionParser;
@@ -44,8 +43,7 @@ public class Main {
 
         List<Classifier> classifiers = new ArrayList<>();
         Map<String, Classifier> classifierRegistry = new HashMap<>();
-        classifierRegistry.put("default", new ClassifierDefault());
-	for (int i = 1; i <= 15; i += 2) {
+        for (int i = 1; i <= 15; i += 2) {
             classifierRegistry.put("kNN"+i, new KNearestNeighbors(i));
         }
         classifierRegistry.put("naive-bayes", new NaiveBayes());

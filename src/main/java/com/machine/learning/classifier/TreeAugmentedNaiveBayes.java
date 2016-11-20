@@ -297,7 +297,7 @@ public class TreeAugmentedNaiveBayes implements Classifier {
     
     @Override
     public String toString() {
-	return TreeAugmentedNaiveBayes.class.getName();
+		return "TreeAugmentedNaiveBayes";
     }
 }
 
