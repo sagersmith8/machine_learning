@@ -61,7 +61,6 @@ public class KNearestNeighbors implements Classifier {
 			data.add(new DataWithDistance(dataPoint));
 		}
 		vdm = new ValueDifferenceMetric(dataPoints);
-		System.out.println("Training on data...");
 	}
 
 	@Override
@@ -69,9 +68,8 @@ public class KNearestNeighbors implements Classifier {
 		for (int i = 0; i < data.size(); i++) {
 			data.get(i).distance = vdm.calculateDistance(data.get(i).data, dataPoint);
 		}
-		System.out.println("Classifying datapoint: "+dataPoint);
+
 		String vote = vote(k);
-		System.out.println("Voted data to be class: "+vote);
 		return vote;
 	}
 
@@ -87,8 +85,6 @@ public class KNearestNeighbors implements Classifier {
 	 * @return the class of a queried point, as voted on by the k nearest neighbors
 	 */
 	public String vote(int k) {
-		System.out.println("Voting on class with k="+k+"...");
-		System.out.println("Sorting data...");
 		Collections.sort(data);
 		voteResults = new HashMap<>();
 		for (int i = 0; i < k; i++) {
@@ -97,7 +93,6 @@ public class KNearestNeighbors implements Classifier {
 				voteResults.put(classLabel, new AtomicInteger());
 			}
 			voteResults.get(classLabel).incrementAndGet();
-			System.out.println("Class Label: "+classLabel + " Distance: "+ data.get(i).distance);
 		}
 		int max = 0;
 		ArrayList<String> results = new ArrayList<String>();
@@ -111,7 +106,7 @@ public class KNearestNeighbors implements Classifier {
 				results.add(classLabel);
 			}
 		}
-		System.out.println("Shuffling results...");
+
 		Collections.shuffle(results);
 		return results.get(0);
 	}

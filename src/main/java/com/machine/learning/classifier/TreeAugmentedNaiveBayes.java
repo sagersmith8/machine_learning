@@ -58,15 +58,6 @@ public class TreeAugmentedNaiveBayes implements Classifier {
 	}
 
 	attributeTree = computeTree();
-	System.out.println("Trained Tree Model:");
-	for (int i = 0; i < numAttributes; i++) {
-	    Tree attributeParent = attributeTree.get(i).parent;
-	    String attributeParentNum = "null";
-	    if (attributeParent != null) {
-		attributeParentNum = Integer.toString(attributeParent.attributeNum);
-	    }
-	    System.out.println("Attribute "+i+" Parent: " + attributeParentNum);
-	}
     }
 
     /**
@@ -285,18 +276,22 @@ public class TreeAugmentedNaiveBayes implements Classifier {
 		    int attrPairCount = getAttributePairCount(i, attributeValue,
 							      attrParent, parentValue, classLabel);
 		    double unseenPoints = numClassPoints * MISSING_POINT_RATE;
-		    prob += Math.log((attrPairCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) /
-				     (parentAttrCount + unseenPoints));
+		    if (attrPairCount == 0) {
+			int attrCount = getAttributeCount(i, attributeValue, classLabel);
+			prob += Math.log((attrCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) /
+					 (numClassPoints + unseenPoints));
+		    } else {
+			prob += Math.log((attrPairCount + unseenPoints * ATTRIBUTE_OCCURANCE_RATE) /
+					 (parentAttrCount + unseenPoints));
+		    }
 		}
 	    }
 	    
-	    System.out.println("Class "+classLabel+" Log Probability: "+prob);
 	    if (prob > bestProb) {
 		bestProb = prob;
 		bestClassLabel = classLabel;
 	    }
 	}
-	System.out.println("Predicted Best Class: " + bestClassLabel);
 	return bestClassLabel;
     }
     
