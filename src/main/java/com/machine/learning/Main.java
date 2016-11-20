@@ -6,7 +6,6 @@ import com.machine.learning.classifier.ClassifierDefault;
 import com.machine.learning.classifier.KNearestNeighbors;
 import com.machine.learning.classifier.NaiveBayes;
 import com.machine.learning.classifier.TreeAugmentedNaiveBayes;
-import com.machine.learning.classifier.ID3;
 import com.machine.learning.experimenter.MadScientist;
 import com.machine.learning.model.DataModel;
 import joptsimple.OptionParser;
@@ -50,7 +49,6 @@ public class Main {
 	}
         classifierRegistry.put("naive-bayes", new NaiveBayes());
         classifierRegistry.put("tree-naive-bayes", new TreeAugmentedNaiveBayes());
-        classifierRegistry.put("iterative-dichotomiser-3", new ID3());
 
         if ((optionSet.valueOf("classifiers")).equals("")) {
             classifiers.addAll(classifierRegistry.values());
