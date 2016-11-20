@@ -56,8 +56,6 @@ public class ID3 implements Classifier {
 	// Prune decision tree
 	pruneTree();
 
-	//System.out.println("Printing pruned decision tree:");
-	//System.out.println(printTree(dt));
     }
 
     private void findSubtrees(DecisionTree subtree) {
@@ -167,7 +165,6 @@ public class ID3 implements Classifier {
 	if (remainingData == null || remainingData.size() == 0) {
 	    return null;
 	}
-	//System.out.println("Size: " + remainingData.size());
 	Set<String> classes = new HashSet<>();
 	List<Set<String>> usedAttrValues = new ArrayList<>();
 
@@ -191,8 +188,6 @@ public class ID3 implements Classifier {
 		usedAttrValues.get(i).add(datum.get(i));
 	    }
 	}
-
-	//System.out.println("Attr values"
 
 	int attrIndex = 0;
 	String attributeValue = "";
@@ -245,7 +240,6 @@ public class ID3 implements Classifier {
 	cur.neg = constructDT(negData);
 
 	return cur;
-	
     }
 
     private static final double EPSILON = 0.000001;
