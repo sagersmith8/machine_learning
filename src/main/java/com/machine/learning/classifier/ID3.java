@@ -62,7 +62,11 @@ public class ID3 implements Classifier {
 	// Prune decision tree
 	pruneTree();
     }
-
+    /**
+     * Finds the subtrees of a given subtree
+     *
+     * @param subtree the subtree to find subtrees on
+     */
     private void findSubtrees(DecisionTree subtree) {
 	if (subtree.clazz == null) {
 	    subtrees.add(subtree);
@@ -100,7 +104,11 @@ public class ID3 implements Classifier {
 	    }
 	} while(bestSubtree != null);
     }
-
+    /**
+     * Recursively remove subtrees from a tree
+     *
+     * @param subtree the subtree to be deleted
+     */
     private void removeSubtrees(DecisionTree subtree) {
 	subtrees.remove(subtree);
 
@@ -241,6 +249,14 @@ public class ID3 implements Classifier {
     }
 
     private static final double EPSILON = 0.000001;
+
+    /**
+     * Determines if 2 double are within epsilon of each other to combat rounding error
+     *
+     * @param a first value to compare equality
+     * @param b second value to compare equality
+     * @return whether or not the values are withing epsilon
+     */
     private boolean aboutEqual(double a, double b) {
 	return Math.abs(a - b) < EPSILON;
     }
@@ -263,6 +279,12 @@ public class ID3 implements Classifier {
 	return commonClasses.get((int)(commonClasses.size()*Math.random()));
     }
 
+    /**
+     * Determines the proportions of each class present in a set of data
+     * 
+     * @param remainingData the dataset to count over
+     * @return a map from a class to that class' proportion in the given data set
+     */
     public Map<String, Double> classProportions(List<DataPoint> remainingData) {
 	Map<String, Double> proportions = new HashMap<>();
 
