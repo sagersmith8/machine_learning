@@ -45,7 +45,7 @@ public class Main {
         List<Classifier> classifiers = new ArrayList<>();
         Map<String, Classifier> classifierRegistry = new HashMap<>();
         classifierRegistry.put("default", new ClassifierDefault());
-        for (int i = 1; i <= 15; i+=2) { 
+	for (int i = 1; i <= 15; i += 2) {
             classifierRegistry.put("kNN"+i, new KNearestNeighbors(i));
         }
         classifierRegistry.put("naive-bayes", new NaiveBayes());

@@ -13,18 +13,20 @@ import java.util.Stack;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ID3 implements Classifier {
-
     List<DataPoint> trainingData = new ArrayList<>();
     List<DataPoint> validationData = new ArrayList<>();
     DecisionTree dt;
     Set<DecisionTree> subtrees = new HashSet<>();
-    
+
+    /**
+     * Data structure for storing a decision tree over discrete attributes
+     */
     public class DecisionTree {
 	int attributeIndex;
 	String attributeValue;
 	String clazz;
 	String maxClass;
-	
+
 	DecisionTree pos;
 	DecisionTree neg;
 
@@ -36,9 +38,14 @@ public class ID3 implements Classifier {
 	public DecisionTree(String clazz) {
 	    this.clazz = clazz;
 	}
-	
     }
 
+    /**
+     * Trains a decision tree model based on the given training data, seperated
+     * into training and validation data.
+     *
+     * @param dataPoints the points to train on
+     */
     @Override
     public void train(List<DataPoint> dataPoints) {
 	// Seperate data into training and validation
@@ -53,6 +60,7 @@ public class ID3 implements Classifier {
 	dt = constructDT(trainingData);
 
 	findSubtrees(dt);
+
 	// Prune decision tree
 	pruneTree();
 
@@ -61,17 +69,19 @@ public class ID3 implements Classifier {
     private void findSubtrees(DecisionTree subtree) {
 	if(subtree.clazz == null) {
 	    subtrees.add(subtree);
-	
+
 	    findSubtrees(subtree.pos);
 	    findSubtrees(subtree.neg);
 	}
     }
 
+    /**
+     * Prunes the given tree by pruning nodes until it can no longer reduce error.
+     */
     private void pruneTree() {
 	DecisionTree bestSubtree = null;
-	
+
 	do {
-	    
 	    int bestError = validationError(dt);
 	    bestSubtree = null;
 	    
@@ -80,7 +90,7 @@ public class ID3 implements Classifier {
 		subtree.clazz = subtree.maxClass; //prune the node to be its majority class
 		int newError = validationError(subtree);
 		subtree.clazz = null; //unprune the node for now
-		
+
 		if (newError < bestError) {
 		    bestError = newError;
 		    bestSubtree = subtree;
@@ -103,37 +113,11 @@ public class ID3 implements Classifier {
 	}
     }
 
-    private Map<String, AtomicInteger> countClasses(DecisionTree dt, DecisionTree count) {
-	Map<String, AtomicInteger> classCounts = new HashMap<>();
-
-	for (DataPoint point : trainingData) {
-	    String classLabel = point.getClassLabel().get();
-	    if (!classCounts.containsKey(point.getClassLabel().get())) {
-		classCounts.put(point.getClassLabel().get(), new AtomicInteger());
-	    }
-	    if (reaches(dt, count, point.getData().get())) {
-		classCounts.get(classLabel).incrementAndGet();
-	    }
-	}
-
-	return classCounts;
-    }
-
-    private boolean reaches(DecisionTree curDT, DecisionTree count, List dataPoint) {
-	while (curDT.clazz == null) {
-	    if (curDT == count) {
-		return true;
-	    }
-	    if (dataPoint.get(curDT.attributeIndex).equals(curDT.attributeValue)) {
-		curDT = curDT.pos;
-	    } else {
-		curDT = curDT.neg;
-	    }
-	}
-	
-	return false;
-    }
-
+    /**
+     * Calculates the error of the given decision tree on the validation set.
+     *
+     * @returns the number of errors from running the given decision tree on the validation data
+     */
     private int validationError(DecisionTree dt) {
 	int errors = 0;
 	for (DataPoint point : validationData) {
@@ -144,11 +128,24 @@ public class ID3 implements Classifier {
 	return errors;
     }
 
+    /**
+     * Classify the given point based on the stored decision tree.
+     *
+     * @param dataPoint the point to classify
+     * @return the class label for the given point
+     */
     @Override
     public String classify(List dataPoint) {
 	return classify(dataPoint, dt);
     }
 
+    /**
+     * Classify the given point based on a given decision tree.
+     *
+     * @param dataPoint the point to classify
+     * @param curDT the decision tree to classify with
+     * @return the class label for the given point
+     */
     private String classify(List dataPoint, DecisionTree curDT) {
 	while (curDT.clazz == null) {
 	    if (dataPoint.get(curDT.attributeIndex).equals(curDT.attributeValue)) {
@@ -161,6 +158,12 @@ public class ID3 implements Classifier {
 	return curDT.clazz;
     }
 
+    /**
+     * Constructs the decision tree for a set of data
+     *
+     * @param remainingData the data to construct a decision tree from
+     * @return a decision tree that best memorizes the given data
+     */
     public DecisionTree constructDT(List<DataPoint> remainingData) {
 	if (remainingData == null || remainingData.size() == 0) {
 	    return null;
@@ -176,9 +179,8 @@ public class ID3 implements Classifier {
 	    String singleClass = classes.iterator().next();
 	    return new DecisionTree(singleClass);
 	}
-	
 
-	for(int i = 0; i < remainingData.get(0).getData().get().size(); i++) {
+	for (int i = 0; i < remainingData.get(0).getData().get().size(); i++) {
 	    usedAttrValues.add(new HashSet<String>());
 	}
 
@@ -192,14 +194,14 @@ public class ID3 implements Classifier {
 	int attrIndex = 0;
 	String attributeValue = "";
 	double minEntropy = Double.MAX_VALUE;
-	ArrayList<DataPoint> posData = new ArrayList<>();
-	ArrayList<DataPoint> negData = new ArrayList<>();
+	List<DataPoint> posData = new ArrayList<>();
+	List<DataPoint> negData = new ArrayList<>();
 	double curEntropy = calculateEntropy(remainingData);
 	for (int i = 0; i < usedAttrValues.size(); i++) {
 	    for (String attrValue : usedAttrValues.get(i)) {
 		posData.clear();
 		negData.clear();
-		
+
 		for (DataPoint dataPoint : remainingData) {
 		    if (dataPoint.getData().get().get(i).equals(attrValue)) {
 			posData.add(dataPoint);
@@ -207,7 +209,7 @@ public class ID3 implements Classifier {
 			negData.add(dataPoint);
 		    }
 		}
-		
+
 		double entropy = (calculateEntropy(posData)*posData.size()/remainingData.size() +
 				  calculateEntropy(negData)*negData.size()/remainingData.size());
 		if(entropy < minEntropy){
@@ -218,14 +220,13 @@ public class ID3 implements Classifier {
 	    }
 	}
 
-
 	if (aboutEqual(curEntropy, minEntropy) || minEntropy > curEntropy) {
 	    return new DecisionTree(mostCommonClass(remainingData));
 	}
-	
+
 	posData.clear();
 	negData.clear();
-	
+
 	for (DataPoint dataPoint : remainingData) {
 	    if (dataPoint.getData().get().get(attrIndex).equals(attributeValue)) {
 		posData.add(dataPoint);
@@ -233,7 +234,7 @@ public class ID3 implements Classifier {
 		negData.add(dataPoint);
 	    }
 	}
-	
+
 	DecisionTree cur = new DecisionTree(attrIndex, attributeValue);
 	cur.maxClass = mostCommonClass(remainingData);	
 	cur.pos = constructDT(posData);
@@ -246,15 +247,15 @@ public class ID3 implements Classifier {
     private boolean aboutEqual(double a, double b) {
 	return Math.abs(a - b) < EPSILON;
     }
-    
+
     public String mostCommonClass(List<DataPoint> remainingData) {
 	double maxProp = 0;
 	List<String> commonClasses = new ArrayList<>();
-	
+
 	for (Map.Entry<String, Double> prop : classProportions(remainingData).entrySet()) {
 	    if (prop.getValue() > maxProp) {
 		maxProp = prop.getValue();
-		
+
 		commonClasses.clear();
 		commonClasses.add(prop.getKey());
 	    } else if (aboutEqual(prop.getValue(), maxProp)) {
@@ -280,6 +281,12 @@ public class ID3 implements Classifier {
 	return proportions;
     }
 
+    /**
+     * Calculates the entropy for the given set of data points.
+     *
+     * @param remainingData the data to calculate entropy on
+     * @return the entropy for the set of data
+     */
     public double calculateEntropy(List<DataPoint> remainingData) {
 	double sum = 0.0;
 	for (double proportion : classProportions(remainingData).values()) {
@@ -289,10 +296,23 @@ public class ID3 implements Classifier {
 	return sum;
     }
 
+    /**
+     * Creates a string representation of a decision tree.
+     *
+     * @param dt the decision tree to stringify
+     * @return string representation of the given tree
+     */
     public String printTree(DecisionTree dt) {
 	return printTree(dt, 0);
     }
-    
+
+    /**
+     * Creates a string representation of a decision tree.
+     *
+     * @param dt the decision tree to stringify
+     * @param indent the current indentation level to print with
+     * @return string representation of the given tree
+     */
     public String printTree(DecisionTree dt, int indent) {
 	String retS = "";
 	for (int i = 0; i < indent; i++) {
