@@ -261,6 +261,14 @@ public class ID3 implements Classifier {
 	return Math.abs(a - b) < EPSILON;
     }
 
+    /**
+     * Iterates over the given data, finding the most common
+     * class in the data and picking randomly if two classes
+     * occur equally often.
+     *
+     * @param remainingData the data to iterate over
+     * @return the most common class in the given data
+     */
     public String mostCommonClass(List<DataPoint> remainingData) {
 	double maxProp = 0;
 	List<String> commonClasses = new ArrayList<>();
