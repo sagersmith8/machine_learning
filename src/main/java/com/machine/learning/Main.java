@@ -45,12 +45,12 @@ public class Main {
         List<Classifier> classifiers = new ArrayList<>();
         Map<String, Classifier> classifierRegistry = new HashMap<>();
         classifierRegistry.put("default", new ClassifierDefault());
-	for (int i = 1; i <= 15; i+=2) { 
-	    classifierRegistry.put("kNN"+i, new KNearestNeighbors(i));
-	}
+        for (int i = 1; i <= 15; i+=2) { 
+            classifierRegistry.put("kNN"+i, new KNearestNeighbors(i));
+        }
         classifierRegistry.put("naive-bayes", new NaiveBayes());
         classifierRegistry.put("tree-naive-bayes", new TreeAugmentedNaiveBayes());
-	classifierRegistry.put("id3", new ID3());
+        classifierRegistry.put("id3", new ID3());
 
         if ((optionSet.valueOf("classifiers")).equals("")) {
             classifiers.addAll(classifierRegistry.values());
