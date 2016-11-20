@@ -45,86 +45,64 @@ public class ID3 implements Classifier {
 	Collections.shuffle(dataPoints);
 	trainingData.clear();
 	validationData.clear();
+	subtrees = new HashSet<>();
 	trainingData.addAll(dataPoints.subList(0, (int)(0.6*dataPoints.size())));
 	validationData.addAll(dataPoints.subList((int)(0.6*dataPoints.size()), dataPoints.size()));
 
 	// Construct decision tree
 	dt = constructDT(trainingData);
 
+	findSubtrees(dt);
 	// Prune decision tree
 	pruneTree();
 
-	System.out.println("Printing pruned decision tree:");
-	System.out.println(printTree(dt));
+	//System.out.println("Printing pruned decision tree:");
+	//System.out.println(printTree(dt));
+    }
+
+    private void findSubtrees(DecisionTree subtree) {
+	if(subtree.clazz == null) {
+	    subtrees.add(subtree);
+	
+	    findSubtrees(subtree.pos);
+	    findSubtrees(subtree.neg);
+	}
     }
 
     private void pruneTree() {
-	while(pruneNode());
-    }
-
-    private boolean pruneNode() {
-	int initialError = validationError(dt);
-
-	if (dt.maxClass == null) {
-	    //find the majority node for each subtree, if it hasn't been determined yet
-	    Stack<DecisionTree> toVisit = new Stack<>();
-
-	    while(!toVisit.empty()) {
-		DecisionTree next = toVisit.pop();
-		if (next.clazz != null)
-		    continue;
-
-		subtrees.add(next);
-		
-		Map<String, AtomicInteger> classCounts = countClasses(dt, next);
-
-		String maxClass = null;
-		int maxOccurences = 0;
-		
-		for (String classLabel : classCounts.keySet()) {
-		    if (classCounts.get(classLabel).intValue() > maxOccurences) {
-			maxOccurences = classCounts.get(classLabel).intValue();
-			maxClass = classLabel;
-		    }
-		}
-
-		next.maxClass = maxClass;
-
-		toVisit.push(next.pos);
-		toVisit.push(next.neg);
-	    }
-	}
-
-	int bestError = initialError;
 	DecisionTree bestSubtree = null;
 	
-	//test on each of the subtree nodes
-	for (DecisionTree subtree : subtrees) {
-	    subtree.clazz = subtree.maxClass; //prune the node to be its majority class
-	    int newError = validationError(subtree);
-	    subtree.clazz = null; //unprune the node for now
-
-	    if (newError < bestError) {
-		bestError = newError;
-		bestSubtree = subtree;
-	    }
-	}
-
-	if (bestSubtree != null) {
-	    bestSubtree.clazz = bestSubtree.maxClass;
-	    removeSubtree(bestSubtree);
+	do {
 	    
-	    bestSubtree.pos = bestSubtree.neg = null;	    
-	    return true;
-	}
-	return false;
+	    int bestError = validationError(dt);
+	    bestSubtree = null;
+	    
+	    //test on each of the subtree nodes
+	    for (DecisionTree subtree : subtrees) {
+		subtree.clazz = subtree.maxClass; //prune the node to be its majority class
+		int newError = validationError(subtree);
+		subtree.clazz = null; //unprune the node for now
+		
+		if (newError < bestError) {
+		    bestError = newError;
+		    bestSubtree = subtree;
+		}
+	    }
+	    if (bestSubtree != null) {
+		bestSubtree.clazz = bestSubtree.maxClass;
+		bestSubtree.pos = bestSubtree.neg = null;
+		removeSubtrees(bestSubtree);
+	    }
+	} while(bestSubtree != null);
     }
 
-    private void removeSubtree(DecisionTree subtree) {
+    private void removeSubtrees(DecisionTree subtree) {
 	subtrees.remove(subtree);
-	
-	removeSubtree(subtree.pos);
-	removeSubtree(subtree.neg);
+
+	if(subtree.pos != null) {
+	    removeSubtrees(subtree.pos);
+	    removeSubtrees(subtree.neg);	    
+	}
     }
 
     private Map<String, AtomicInteger> countClasses(DecisionTree dt, DecisionTree count) {
@@ -155,13 +133,13 @@ public class ID3 implements Classifier {
 	    }
 	}
 	
-	    return false;
+	return false;
     }
 
     private int validationError(DecisionTree dt) {
 	int errors = 0;
 	for (DataPoint point : validationData) {
-	    if (classify(point.getData().get(), dt).equals(point.getClassLabel().get())) {
+	    if (!classify(point.getData().get(), dt).equals(point.getClassLabel().get())) {
 		errors++;
 	    }
 	}
@@ -186,84 +164,75 @@ public class ID3 implements Classifier {
     }
 
     public DecisionTree constructDT(List<DataPoint> remainingData) {
-	ArrayList<String> classes = new ArrayList<>();
-        classes.add(remainingData.get(0).getClassLabel().get());
-	//ArrayList<double> classProportion = new ArrayList<>();
-	boolean allOneClazz = true;
-	ArrayList<ArrayList<String>> usedAttrValues = new ArrayList<>();
+	if (remainingData == null || remainingData.size() == 0) {
+	    return null;
+	}
+	//System.out.println("Size: " + remainingData.size());
+	Set<String> classes = new HashSet<>();
+	List<Set<String>> usedAttrValues = new ArrayList<>();
+
+	for (DataPoint dataPoint : remainingData) {
+	    classes.add(dataPoint.getClassLabel().get());
+	}
+
+	if (classes.size() == 1) {
+	    String singleClass = classes.iterator().next();
+	    return new DecisionTree(singleClass);
+	}
+	
 
 	for(int i = 0; i < remainingData.get(0).getData().get().size(); i++) {
-	    usedAttrValues.add(new ArrayList<>());
+	    usedAttrValues.add(new HashSet<String>());
 	}
 
 	for (DataPoint dataPoint : remainingData) {
-	    if (allOneClazz && !dataPoint.getClassLabel().get().equals(classes.get(0))) {
-		allOneClazz = false;
+	    List<String> datum = dataPoint.getData().get();
+	    for (int i = 0; i < datum.size(); i++) { 
+		usedAttrValues.get(i).add(datum.get(i));
 	    }
-	    if (!classes.contains(dataPoint.getClassLabel().get())) {
-		classes.add(dataPoint.getClassLabel().get());
-		//classProportion.add(1.0);
-	    } else {
-		int index = classes.indexOf(dataPoint.getClassLabel().get());
-		//classProportion.set(index, classProportion.get(index)++);
-	    }
-	    /*
-	    ArrayList<String> curData = dataPoint.getData().get();
-	    for(int j = 0; j < curData.size(); j++){
-		if (!usedAttrValues.get(j).contains(curData.get(j))) {
-		    usedAttrValues.get(j).add(curData.get(j));
-		}
-	    }
-	    */
 	}
 
-	if (allOneClazz) {
-	    return new DecisionTree(classes.get(0));
-	}
+	//System.out.println("Attr values"
 
-	// for (int i = 0;  i < classProportion.size(); i++) {
-	//     classProportion.set(i, classProportion.get(i)/remainingData.size());
-	// }
-	
-	// for (DataPoint dataPoint : remainingData) {
-	//     for (String attr : dataPoint.getData().get()) {
-	// 	//store somewhere//
-	// 	calculateEntropy(attr, remainingData);
-	//     }
-	// }
 	int attrIndex = 0;
 	String attributeValue = "";
 	double minEntropy = Double.MAX_VALUE;
 	ArrayList<DataPoint> posData = new ArrayList<>();
 	ArrayList<DataPoint> negData = new ArrayList<>();
-
+	double curEntropy = calculateEntropy(remainingData);
 	for (int i = 0; i < usedAttrValues.size(); i++) {
 	    for (String attrValue : usedAttrValues.get(i)) {
+		posData.clear();
+		negData.clear();
+		
 		for (DataPoint dataPoint : remainingData) {
-		    posData.clear();
-		    negData.clear();
-
-		    if (dataPoint.getData().get().contains(attrValue)) {
+		    if (dataPoint.getData().get().get(i).equals(attrValue)) {
 			posData.add(dataPoint);
 		    } else {
 			negData.add(dataPoint);
 		    }
-		    double entropy = Math.min(calculateEntropy(posData), calculateEntropy(negData));
-		    if(entropy < minEntropy){
-			minEntropy = entropy;
-			attrIndex = i;
-			attributeValue = attrValue;
-		    }
 		}
+		
+		double entropy = (calculateEntropy(posData)*posData.size()/remainingData.size() +
+				  calculateEntropy(negData)*negData.size()/remainingData.size());
+		if(entropy < minEntropy){
+		    minEntropy = entropy;
+		    attrIndex = i;
+		    attributeValue = attrValue;
+		}		
 	    }
 	}
 
+
+	if (aboutEqual(curEntropy, minEntropy) || minEntropy > curEntropy) {
+	    return new DecisionTree(mostCommonClass(remainingData));
+	}
+	
 	posData.clear();
 	negData.clear();
-
-	//get attribute (attrValue) and index (attrIndex) of lowest entropy value
+	
 	for (DataPoint dataPoint : remainingData) {
-	    if (dataPoint.getData().get().contains(attributeValue)) {
+	    if (dataPoint.getData().get().get(attrIndex).equals(attributeValue)) {
 		posData.add(dataPoint);
 	    } else {
 		negData.add(dataPoint);
@@ -271,6 +240,7 @@ public class ID3 implements Classifier {
 	}
 	
 	DecisionTree cur = new DecisionTree(attrIndex, attributeValue);
+	cur.maxClass = mostCommonClass(remainingData);	
 	cur.pos = constructDT(posData);
 	cur.neg = constructDT(negData);
 
@@ -278,42 +248,77 @@ public class ID3 implements Classifier {
 	
     }
 
-    public double calculateEntropy(List<DataPoint> remainingData) {
-	ArrayList<Double> proportions = new ArrayList<>();
-	ArrayList<String> classes = new ArrayList<>();
-
-	for (DataPoint dataPoint : remainingData) {
-	    if (!classes.contains(dataPoint.getClassLabel().get())) {
-		classes.add(dataPoint.getClassLabel().get());
-		proportions.add(1.0/remainingData.size());
-	    } else {
-		int index = proportions.indexOf(dataPoint.getClassLabel().get());
-		proportions.set(index, proportions.get(index)+1/remainingData.size());
+    private static final double EPSILON = 0.000001;
+    private boolean aboutEqual(double a, double b) {
+	return Math.abs(a - b) < EPSILON;
+    }
+    
+    public String mostCommonClass(List<DataPoint> remainingData) {
+	double maxProp = 0;
+	List<String> commonClasses = new ArrayList<>();
+	
+	for (Map.Entry<String, Double> prop : classProportions(remainingData).entrySet()) {
+	    if (prop.getValue() > maxProp) {
+		maxProp = prop.getValue();
+		
+		commonClasses.clear();
+		commonClasses.add(prop.getKey());
+	    } else if (aboutEqual(prop.getValue(), maxProp)) {
+		commonClasses.add(prop.getKey());
 	    }
 	}
 
-	double sum = 0.0;
-	for (double proportion : proportions) {
-	    sum += proportion * Math.log(proportion);
+	return commonClasses.get((int)(commonClasses.size()*Math.random()));
+    }
+
+    public Map<String, Double> classProportions(List<DataPoint> remainingData) {
+	Map<String, Double> proportions = new HashMap<>();
+
+	for (DataPoint dataPoint : remainingData) {
+	    String classLabel = dataPoint.getClassLabel().get();
+	    if (!proportions.containsKey(classLabel)) {
+		proportions.put(classLabel, 1.0/remainingData.size());
+	    } else {
+		proportions.put(classLabel, proportions.get(classLabel)+1.0/remainingData.size());
+	    }
 	}
 
-	return -sum;
+	return proportions;
+    }
+    
+    public double calculateEntropy(List<DataPoint> remainingData) {
+	double sum = 0.0;
+	for (double proportion : classProportions(remainingData).values()) {
+	    sum -= proportion * Math.log(proportion);
+	}
+
+	return sum;
     }
 
     public String printTree(DecisionTree dt) {
-	String retS = "(";
-	if (dt.pos != null || dt.neg != null) {
-	    retS += "["+dt.attributeIndex+","+dt.attributeValue+"]";
+	return printTree(dt, 0);
+    }
+    
+    public String printTree(DecisionTree dt, int indent) {
+	String retS = "";
+	for (int i = 0; i < indent; i++) {
+	    retS += "\t";
+	}	
+	if (dt.clazz == null) {
+	    retS += "a["+dt.attributeIndex+"]="+dt.attributeValue+":\n";
 	    if (dt.pos != null) {
-		retS += printTree(dt.pos);
+		retS += printTree(dt.pos, indent + 1);
 	    }
+	    for (int i = 0; i < indent; i++) {
+		retS += "\t";
+	    }
+	    retS += "else:\n";	    
 	    if (dt.neg != null) {
-		retS += printTree(dt.neg);
+		retS += printTree(dt.neg, indent + 1);
 	    }
 	} else {
-	    retS += "Class= " + dt.clazz;
+	    retS += "Class: " + dt.clazz + "\n";
 	}
-	retS += ")";
 	return retS;
     }
 }
