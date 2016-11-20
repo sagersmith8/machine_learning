@@ -9,8 +9,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Stack;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ID3 implements Classifier {
     List<DataPoint> trainingData = new ArrayList<>();
@@ -39,6 +37,11 @@ public class ID3 implements Classifier {
 	    this.clazz = clazz;
 	}
     }
+
+    @Override
+	public String toString() {
+		return "ID3";
+	}
 
     /**
      * Trains a decision tree model based on the given training data, seperated

@@ -18,7 +18,7 @@ public class MadScientist {
      * @param classifiers List of classifiers to evaluate
      */
     public MadScientist(List<DataModel> dataModels, List<Classifier> classifiers) {
-        StringBuilder stringBuilder = new StringBuilder("\\begin{table}\n\\begin{tabular}{c|c|c|c|c|c|}\n");
+        StringBuilder stringBuilder = new StringBuilder("\\begin{table}[!h]\n\\begin{tabular}{c|c|c|c|c|c|}\n");
         for (DataModel dataModel: dataModels) {
             stringBuilder
                     .append(" & ")
